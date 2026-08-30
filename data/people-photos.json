@@ -1,0 +1,189 @@
+{
+  "generated_at": "2026-08-31",
+  "purpose": "Candidate portraits for the DatAI website",
+  "selection_policy": {
+    "source_priority": [
+      "official university profile",
+      "official research lab or funded project",
+      "professional conference speaker profile",
+      "self-managed academic profile"
+    ],
+    "minimum_target": "800x800 px for long-term use; 400x400 px is acceptable for small web cards",
+    "hotlinking": false,
+    "rights_note": "Public availability does not grant republication rights. Obtain approval from the subject and, where applicable, the photographer or source organisation before publishing. Ask each member for the original file whenever possible."
+  },
+  "people": [
+    {
+      "id": "flavio-maria-de-paoli",
+      "name": "Flavio Maria De Paoli",
+      "recommended": {
+        "source_page_url": "https://intertwino.gate-ai.eu/flavio-de-paoli/",
+        "image_url": "https://intertwino.gate-ai.eu/wp-content/uploads/2021/12/flavio2.jpeg",
+        "source_type": "funded_research_project_profile",
+        "width": 1200,
+        "height": 1600,
+        "quality": "good",
+        "crop": "Use a centered 4:5 or square crop; preserve the full head and shoulders.",
+        "notes": "Clean portrait and strong resolution. The image dates from the InterTwino team publication in 2021."
+      },
+      "rights_status": "permission_required"
+    },
+    {
+      "id": "andrea-maurino",
+      "name": "Andrea Maurino",
+      "recommended": {
+        "source_page_url": "https://www.unimib.it/andrea-maurino",
+        "image_url": "https://www.unimib.it/sites/default/files/foto/21-05-2018/maurino2.jpg",
+        "source_type": "official_university_profile",
+        "width": 1609,
+        "height": 1378,
+        "quality": "good_with_crop",
+        "crop": "Crop tightly to a square around the face to remove the partial person at the lower-right edge.",
+        "notes": "Official and high-resolution, but dated 2018 and not originally framed as a formal headshot."
+      },
+      "rights_status": "permission_required"
+    },
+    {
+      "id": "michele-ciavotta",
+      "name": "Michele Ciavotta",
+      "recommended": {
+        "source_page_url": "https://intertwino.gate-ai.eu/our-team/",
+        "image_url": "https://intertwino.gate-ai.eu/wp-content/uploads/2021/12/ciavotta-scaled-e1640015167470.jpg",
+        "source_type": "funded_research_project_team",
+        "width": 799,
+        "height": 799,
+        "quality": "good",
+        "crop": "Already square; retain the current head-and-shoulders framing.",
+        "notes": "Professional-looking, neutral background, and visually consistent with a people grid."
+      },
+      "rights_status": "permission_required"
+    },
+    {
+      "id": "matteo-luigi-palmonari",
+      "name": "Matteo Luigi Palmonari",
+      "recommended": {
+        "source_page_url": "https://www.theinnovationgroup.it/speakers/matteo-palmonari/",
+        "image_url": "https://www.theinnovationgroup.it/wp-content/uploads/2019/03/Matteo-Palmonari.jpg",
+        "source_type": "professional_speaker_profile",
+        "width": 448,
+        "height": 449,
+        "quality": "acceptable_for_small_cards",
+        "crop": "Use the existing square framing; do not upscale beyond roughly 220 CSS px at 2x density.",
+        "notes": "Clean, friendly portrait on a light background. Ask for the original because the published derivative is only 448 px."
+      },
+      "rights_status": "permission_required"
+    },
+    {
+      "id": "blerina-spahiu",
+      "name": "Blerina Spahiu",
+      "recommended": {
+        "source_page_url": "https://prolingknower.disco.unimib.it/",
+        "image_url": "https://lh3.googleusercontent.com/sitesv/AG8ngQXy1AOomfPBHpjdQze7WDqWgrzM4fSuxzX7Ls53boIbSqWBJ06dVBaD0lLz54tliajBxVJHSkv3Tnd83rNgK4CaCqqD-Ud-ofBllWll3bzKu7PLDoJRqpY0p-9JWBTL8Uo7Q00hAGeAtFw0sTWvlqMJAPilZbMa3K1-6lANaUwDbXDIwtZo9m6mg0UR8ITY6cZFW8qc_b_clVRqziQxnEauNtM1b8x7f_v1-xLmRWE=w1280",
+        "source_type": "official_disco_event_site",
+        "width": 1280,
+        "height": 1115,
+        "quality": "good_with_crop",
+        "crop": "Use a tight square crop centered on the face; remove the partial person at the right edge.",
+        "notes": "Strong resolution and expression, but casual lighting. Prefer a newer original headshot if available."
+      },
+      "alternative": {
+        "source_page_url": "https://scholar.google.co.uk/citations?hl=en&user=bzWWMXAAAAAJ",
+        "image_url": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=bzWWMXAAAAAJ&citpid=5",
+        "width": 241,
+        "height": 256,
+        "reason_not_selected": "Too small and more dated than the recommended image."
+      },
+      "rights_status": "permission_required"
+    },
+    {
+      "id": "abubakari-alidu",
+      "name": "Abubakari Alidu",
+      "recommended": {
+        "source_page_url": "https://scholar.google.co.uk/citations?hl=en&user=thpWhEkAAAAJ",
+        "image_url": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=thpWhEkAAAAJ&citpid=1",
+        "source_type": "self_managed_academic_profile",
+        "width": 256,
+        "height": 256,
+        "quality": "provisional_low_resolution",
+        "crop": "Already square; use only as a temporary placeholder at small display sizes.",
+        "notes": "Professional headshot and correct identity, but too small for production-quality retina cards. Request the original directly."
+      },
+      "rights_status": "permission_and_original_required"
+    },
+    {
+      "id": "emanuele-petriglia",
+      "name": "Emanuele Petriglia",
+      "recommended": {
+        "source_page_url": "https://www.unimib.it/emanuele-petriglia",
+        "image_url": "https://www.unimib.it/sites/default/files/2024-11/emanuele_petriglia.jpg",
+        "source_type": "official_university_profile",
+        "width": 742,
+        "height": 742,
+        "quality": "good",
+        "crop": "Already square; keep the face centered and retain enough of the environmental context.",
+        "notes": "Recent official image with a friendly tone, though more casual than a conventional academic headshot."
+      },
+      "rights_status": "permission_required"
+    },
+    {
+      "id": "federica-filippini",
+      "name": "Federica Filippini",
+      "recommended": {
+        "source_page_url": "https://www.unimib.it/federica-filippini",
+        "image_url": "https://www.unimib.it/sites/default/files/2025-10/IMG_8272.jpg",
+        "source_type": "official_university_profile",
+        "width": 2155,
+        "height": 2535,
+        "quality": "excellent",
+        "crop": "Create a square or 4:5 crop from mid-chest upward, retaining the clean white background.",
+        "notes": "Best production-ready portrait in the set: high resolution, neutral background, and clear eye contact."
+      },
+      "rights_status": "permission_required"
+    },
+    {
+      "id": "marco-cremaschi",
+      "name": "Marco Cremaschi",
+      "recommended": {
+        "source_page_url": "https://www.unimib.it/marco-cremaschi",
+        "image_url": "https://www.unimib.it/sites/default/files/2023-02/IMG_20210928_112029.jpeg",
+        "source_type": "official_university_profile",
+        "width": 1689,
+        "height": 2348,
+        "quality": "good_with_crop",
+        "crop": "Use a 4:5 crop around the upper body; keep part of the research poster as meaningful lab context and remove the desk phone.",
+        "notes": "Distinctive and authentic research-context portrait; less uniform than a studio headshot but strong for storytelling."
+      },
+      "rights_status": "permission_required"
+    },
+    {
+      "id": "riccardo-pozzi",
+      "name": "Riccardo Pozzi",
+      "recommended": {
+        "source_page_url": "https://www.unimib.it/riccardo-pozzi",
+        "image_url": "https://www.unimib.it/sites/default/files/2025-02/foto_profilo_2023.jpg",
+        "source_type": "official_university_profile",
+        "width": 961,
+        "height": 1280,
+        "quality": "good",
+        "crop": "Create a centered square or 4:5 head-and-shoulders crop.",
+        "notes": "Official, high enough resolution, simple background, and easy to normalize with the rest of the grid."
+      },
+      "rights_status": "permission_required"
+    },
+    {
+      "id": "renzo-arturo-alva-principe",
+      "name": "Renzo Arturo Alva Principe",
+      "recommended": {
+        "source_page_url": "https://scholar.google.co.uk/citations?hl=en&user=c_C-5OsAAAAJ",
+        "image_url": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=c_C-5OsAAAAJ&citpid=5",
+        "source_type": "self_managed_academic_profile",
+        "width": 236,
+        "height": 256,
+        "quality": "provisional_low_resolution",
+        "crop": "Use only as a temporary small placeholder; the existing crop includes another person's arm.",
+        "notes": "Correct identity and friendly expression, but resolution and framing are below production standard. Request a new original portrait directly."
+      },
+      "rights_status": "permission_and_original_required"
+    }
+  ]
+}

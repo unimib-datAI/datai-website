@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-paper-50">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10292b" />
+    <meta name="description" content="DatAI is the Data for Artificial Intelligence research lab at the University of Milano-Bicocca, connecting data management and AI through verifiable research outputs." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DatAI — Data for Artificial Intelligence" />
+    <meta property="og:description" content="Research at the intersection of data management and artificial intelligence, grounded in people, software, datasets and publications." />
+    <meta property="og:image" content="https://inside.disco.unimib.it/assets/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="DatAI research artifacts connected through data and knowledge-graph structures" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://inside.disco.unimib.it/" />
+    <title>DatAI | Data for Artificial Intelligence — University of Milano-Bicocca</title>
+    <link rel="icon" href="/assets/datai-logo.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ResearchOrganization",
+        "name": "DatAI — Data for Artificial Intelligence",
+        "alternateName": ["DatAI", "INSID\u0026S Lab"],
+        "url": "https://inside.disco.unimib.it/",
+        "logo": "https://inside.disco.unimib.it/assets/datai-logo.svg",
+        "parentOrganization": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Milano-Bicocca",
+          "url": "https://www.unimib.it/"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Viale Sarca 336, Building U14, Room 1033",
+          "postalCode": "20126",
+          "addressLocality": "Milano",
+          "addressCountry": "IT"
+        },
+        "sameAs": [
+          "https://github.com/unimib-datAI",
+          "https://www.disco.unimib.it/it/ricerca/laboratori-ricerca"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!--
+      impeccable:direction-contract
+      THESIS: Every DatAI claim appears as a labeled specimen with its people and verifiable artifacts attached; the site refuses generic university card grids and neon AI tropes.
+      OWN-WORLD: Deep petroleum, DatAI bright green, off-white backlit surfaces, etched specimen labels, and geometry derived from the official wordmark.
+      STORY: The visitor understands the lab and then follows research question → people → project/resource → publication.
+      FIRST VIEWPORT: A large thesis occupies the left field while a horizontal tray of three research specimens sits to the right, with compact anchor navigation and direct routes to research and the group.
+      FORM: Evidence Slide Tray, grounded direction #6, seed 57e260a9.
+      RAISED: Dependency honesty, visible causality, and identity cohesion.
+      RISK: Avoid wet-lab implications by using computing artifacts, metadata, DOIs, repositories, queries, and knowledge-graph language.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+    -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header fixed inset-x-0 top-0 z-50 h-[var(--header-height)] text-paper-50">
+      <div class="mx-auto flex h-full max-w-[96rem] items-center justify-between gap-8 px-5 md:px-8 xl:px-12">
+        <a class="flex items-center gap-3" href="#top" aria-label="DatAI home">
+          <span class="wordmark-crop" aria-hidden="true"><img src="/assets/datai-logo.svg" alt="" width="512" height="512" /></span>
+          <span class="hidden max-w-[17rem] border-l border-paper-50/25 pl-3 text-[0.65rem] font-semibold leading-[1.25] text-paper-50/75 lg:block">DISCo · University of<br />Milano-Bicocca</span>
+        </a>
+        <nav aria-label="Primary navigation" class="hidden md:block">
+          <ul class="flex items-center gap-1 whitespace-nowrap text-[0.72rem] font-bold tracking-[0.04em] md:gap-5">
+            <li><a class="block px-2 py-3 text-paper-50/78 hover:text-acid-300" href="#research">Research</a></li>
+            <li><a class="block px-2 py-3 text-paper-50/78 hover:text-acid-300" href="#evidence">Evidence</a></li>
+            <li><a class="block px-2 py-3 text-paper-50/78 hover:text-acid-300" href="#people">People</a></li>
+            <li><a class="block px-2 py-3 text-paper-50/78 hover:text-acid-300" href="#publications">Publications</a></li>
+            <li><a class="ml-1 block border border-acid-500 px-3 py-2.5 text-acid-300 hover:bg-acid-500 hover:text-petrol-950" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <details class="mobile-nav relative md:hidden" data-mobile-nav>
+          <summary class="cursor-pointer border border-acid-500 px-3 py-2 text-xs font-extrabold text-acid-300">Menu</summary>
+          <nav aria-label="Mobile navigation" class="absolute right-0 top-[calc(100%+1.05rem)] w-56 border border-paper-50/25 bg-petrol-950 p-3">
+            <ul class="grid text-sm font-extrabold">
+              <li><a class="block border-b border-paper-50/15 px-3 py-3 hover:text-acid-300" href="#research">Research</a></li>
+              <li><a class="block border-b border-paper-50/15 px-3 py-3 hover:text-acid-300" href="#evidence">Evidence</a></li>
+              <li><a class="block border-b border-paper-50/15 px-3 py-3 hover:text-acid-300" href="#people">People</a></li>
+              <li><a class="block border-b border-paper-50/15 px-3 py-3 hover:text-acid-300" href="#resources">Projects &amp; resources</a></li>
+              <li><a class="block border-b border-paper-50/15 px-3 py-3 hover:text-acid-300" href="#publications">Publications</a></li>
+              <li><a class="block px-3 py-3 text-acid-300" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero-field min-h-screen overflow-hidden pt-[var(--header-height)] text-paper-50">
+        <div class="mx-auto grid min-h-[calc(100vh-var(--header-height))] max-w-[96rem] grid-cols-1 items-center gap-12 px-5 py-12 md:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 lg:py-16 xl:px-12">
+          <div class="relative z-10">
+            <p class="mb-8 max-w-[30rem] text-xs font-bold uppercase tracking-[0.16em] text-acid-300">Data for Artificial Intelligence · Milano</p>
+            <h1 class="hero-title font-extrabold text-paper-50">Make data <span class="serif-turn text-acid-300">work</span> for AI.</h1>
+            <span class="hero-line my-8" aria-hidden="true"></span>
+            <p class="max-w-[43rem] text-lg leading-relaxed text-paper-50/80 md:text-xl">DatAI studies how data management can make AI systems more grounded, inspectable and useful—from semantic enrichment and document intelligence to agentic and distributed systems.</p>
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a class="inline-flex min-h-12 items-center border border-acid-500 bg-acid-500 px-5 text-sm font-extrabold text-petrol-950 hover:bg-acid-300" href="#research">Explore research <span aria-hidden="true" class="ml-3">↘</span></a>
+              <a class="inline-flex min-h-12 items-center border border-paper-50/35 px-5 text-sm font-extrabold text-paper-50 hover:border-paper-50" href="#people">Meet the group <span aria-hidden="true" class="ml-3">↓</span></a>
+            </div>
+          </div>
+
+          <div class="lg:pl-5">
+            <div class="mb-3 flex items-end justify-between gap-6 border-b border-paper-50/20 pb-3 text-[0.67rem] font-bold uppercase tracking-[0.14em] text-paper-50/62">
+              <span>Research specimen tray</span>
+              <span>03 connected questions</span>
+            </div>
+            <div class="specimen-tray grid gap-3 md:grid-cols-3 lg:grid-cols-[repeat(3,minmax(13.5rem,1fr))]">
+              <article class="specimen flex flex-col justify-between p-5">
+                <div>
+                  <div class="mb-12 flex items-center justify-between text-[0.65rem] font-extrabold uppercase tracking-[0.14em] text-paper-50/55"><span class="specimen-index">D/01</span><span>Data semantics</span></div>
+                  <h2 class="max-w-[11ch] font-serif text-[2rem] leading-[0.98] text-paper-50">What must data mean before AI can use it?</h2>
+                </div>
+                <p class="relative z-10 max-w-[18rem] text-sm leading-relaxed text-paper-50/70">Annotations, knowledge graphs and data enrichment with traceable inputs.</p>
+              </article>
+              <article class="specimen flex flex-col justify-between p-5 md:translate-y-7">
+                <div>
+                  <div class="mb-12 flex items-center justify-between text-[0.65rem] font-extrabold uppercase tracking-[0.14em] text-paper-50/55"><span class="specimen-index">D/02</span><span>Documents</span></div>
+                  <h2 class="max-w-[11ch] font-serif text-[2rem] leading-[0.98] text-paper-50">How do we ask better questions of complex documents?</h2>
+                </div>
+                <p class="relative z-10 max-w-[18rem] text-sm leading-relaxed text-paper-50/70">Structured query, retrieval and evidence-aware generation.</p>
+              </article>
+              <article class="specimen flex flex-col justify-between p-5 md:translate-y-14">
+                <div>
+                  <div class="mb-12 flex items-center justify-between text-[0.65rem] font-extrabold uppercase tracking-[0.14em] text-paper-50/55"><span class="specimen-index">D/03</span><span>AI systems</span></div>
+                  <h2 class="max-w-[11ch] font-serif text-[2rem] leading-[0.98] text-paper-50">How should AI systems behave under real constraints?</h2>
+                </div>
+                <p class="relative z-10 max-w-[18rem] text-sm leading-relaxed text-paper-50/70">Cost, performance and quality across agentic and distributed execution.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="border-b border-ink-950/15 bg-paper-50 py-24 md:py-32">
+        <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
+          <div class="grid gap-12 lg:grid-cols-[20rem_1fr] lg:gap-20">
+            <div>
+              <p class="section-index mb-5">01 · Research</p>
+              <h2 class="max-w-[9ch] font-serif text-5xl leading-[0.94] tracking-[-0.035em] text-petrol-950 md:text-6xl">Follow the evidence chain.</h2>
+              <p class="mt-6 max-w-[29rem] text-base leading-relaxed text-ink-700">Each question is tied to the people investigating it and to public work you can inspect. Choose a line of research to see the chain.</p>
+              <div class="research-tablist mt-9 border-t border-ink-950/20" role="tablist" aria-label="Research areas" aria-orientation="vertical">
+                <button class="research-control flex w-full items-center gap-4 border-b border-ink-950/20 py-4 text-left text-sm font-extrabold text-ink-700" type="button" role="tab" id="tab-semantic" aria-controls="panel-semantic" aria-selected="true" data-research-control="semantic"><span class="research-marker h-3 w-3 rounded-full border border-ink-950/45"></span><span>Semantic data &amp; knowledge graphs</span></button>
+                <button class="research-control flex w-full items-center gap-4 border-b border-ink-950/20 py-4 text-left text-sm font-extrabold text-ink-700" type="button" role="tab" id="tab-documents" aria-controls="panel-documents" aria-selected="false" data-research-control="documents"><span class="research-marker h-3 w-3 rounded-full border border-ink-950/45"></span><span>Document intelligence &amp; retrieval</span></button>
+                <button class="research-control flex w-full items-center gap-4 border-b border-ink-950/20 py-4 text-left text-sm font-extrabold text-ink-700" type="button" role="tab" id="tab-agents" aria-controls="panel-agents" aria-selected="false" data-research-control="agents"><span class="research-marker h-3 w-3 rounded-full border border-ink-950/45"></span><span>Reliable agents &amp; data pipelines</span></button>
+                <button class="research-control flex w-full items-center gap-4 border-b border-ink-950/20 py-4 text-left text-sm font-extrabold text-ink-700" type="button" role="tab" id="tab-distributed" aria-controls="panel-distributed" aria-selected="false" data-research-control="distributed"><span class="research-marker h-3 w-3 rounded-full border border-ink-950/45"></span><span>Distributed AI systems</span></button>
+              </div>
+            </div>
+
+            <div class="min-h-[36rem] bg-petrol-900 p-6 text-paper-50 md:p-10 lg:p-12">
+              <article id="panel-semantic" role="tabpanel" aria-labelledby="tab-semantic" data-research-panel="semantic">
+                <div class="mb-16 flex items-center justify-between border-b border-paper-50/22 pb-4 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-paper-50/60"><span>Specimen R/01</span><span>Semantic data</span></div>
+                <h3 class="max-w-[13ch] font-serif text-4xl leading-[1] tracking-[-0.03em] md:text-6xl">Make heterogeneous data legible to machines—and its meaning legible to people.</h3>
+                <ol class="evidence-chain mt-12 grid gap-8 md:grid-cols-3">
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">1</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">Question</strong><span class="mt-2 block text-sm leading-relaxed text-paper-50/72">How can tables and knowledge sources be annotated and linked reliably?</span></li>
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">2</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">People</strong><span class="mt-2 block text-sm leading-relaxed text-paper-50/72">Maurino · Palmonari · Spahiu · Cremaschi · Pozzi</span></li>
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">3</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">Evidence</strong><a class="mt-2 block text-sm font-bold leading-relaxed underline decoration-acid-500 underline-offset-4 hover:text-acid-300" href="https://github.com/unimib-datAI/mammotab">MammoTab dataset &amp; code ↗</a></li>
+                </ol>
+              </article>
+
+              <article id="panel-documents" role="tabpanel" aria-labelledby="tab-documents" data-research-panel="documents">
+                <div class="mb-16 flex items-center justify-between border-b border-paper-50/22 pb-4 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-paper-50/60"><span>Specimen R/02</span><span>Document intelligence</span></div>
+                <h3 class="max-w-[13ch] font-serif text-4xl leading-[1] tracking-[-0.03em] md:text-6xl">Turn document collections into inspectable analytical spaces.</h3>
+                <ol class="evidence-chain mt-12 grid gap-8 md:grid-cols-3">
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">1</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">Question</strong><span class="mt-2 block text-sm leading-relaxed text-paper-50/72">How can domain experts query long, knowledge-intensive documents?</span></li>
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">2</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">People</strong><span class="mt-2 block text-sm leading-relaxed text-paper-50/72">Palmonari · Pozzi · Alva Principe · Cremaschi</span></li>
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">3</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">Evidence</strong><a class="mt-2 block text-sm font-bold leading-relaxed underline decoration-acid-500 underline-offset-4 hover:text-acid-300" href="https://github.com/unimib-datAI/DAVE">DAVE framework ↗</a></li>
+                </ol>
+              </article>
+
+              <article id="panel-agents" role="tabpanel" aria-labelledby="tab-agents" data-research-panel="agents">
+                <div class="mb-16 flex items-center justify-between border-b border-paper-50/22 pb-4 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-paper-50/60"><span>Specimen R/03</span><span>Reliable agents</span></div>
+                <h3 class="max-w-[13ch] font-serif text-4xl leading-[1] tracking-[-0.03em] md:text-6xl">Engineer AI workflows whose data, budget and quality can be examined.</h3>
+                <ol class="evidence-chain mt-12 grid gap-8 md:grid-cols-3">
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">1</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">Question</strong><span class="mt-2 block text-sm leading-relaxed text-paper-50/72">How should agents prepare data and choose actions under explicit constraints?</span></li>
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">2</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">People</strong><span class="mt-2 block text-sm leading-relaxed text-paper-50/72">De Paoli · Ciavotta · Spahiu · Filippini · Alidu</span></li>
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">3</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">Evidence</strong><a class="mt-2 block text-sm font-bold leading-relaxed underline decoration-acid-500 underline-offset-4 hover:text-acid-300" href="https://arxiv.org/abs/2509.13487">Prompt2DAG preprint ↗</a></li>
+                </ol>
+              </article>
+
+              <article id="panel-distributed" role="tabpanel" aria-labelledby="tab-distributed" data-research-panel="distributed">
+                <div class="mb-16 flex items-center justify-between border-b border-paper-50/22 pb-4 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-paper-50/60"><span>Specimen R/04</span><span>Distributed systems</span></div>
+                <h3 class="max-w-[13ch] font-serif text-4xl leading-[1] tracking-[-0.03em] md:text-6xl">Measure and optimize AI workloads from edge to cloud.</h3>
+                <ol class="evidence-chain mt-12 grid gap-8 md:grid-cols-3">
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">1</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">Question</strong><span class="mt-2 block text-sm leading-relaxed text-paper-50/72">Where should data-intensive tasks run when load and resources change?</span></li>
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">2</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">People</strong><span class="mt-2 block text-sm leading-relaxed text-paper-50/72">Ciavotta · Filippini</span></li>
+                  <li class="relative pl-9"><span class="absolute left-0 top-0.5 flex h-[1.65rem] w-[1.65rem] items-center justify-center rounded-full border border-acid-500 text-[0.65rem] font-extrabold text-acid-300">3</span><strong class="block text-xs uppercase tracking-[0.1em] text-acid-300">Evidence</strong><a class="mt-2 block text-sm font-bold leading-relaxed underline decoration-acid-500 underline-offset-4 hover:text-acid-300" href="https://github.com/unimib-datAI/dfaas">DFaaS platform ↗</a></li>
+                </ol>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="evidence" class="border-b border-ink-950/15 bg-paper-100 py-24 md:py-32">
+        <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
+          <div class="mb-16 grid gap-8 md:grid-cols-[0.65fr_1.35fr] md:items-end">
+            <div>
+              <p class="section-index mb-5">02 · Evidence</p>
+              <h2 class="max-w-[10ch] font-serif text-5xl leading-[0.95] tracking-[-0.035em] text-petrol-950 md:text-7xl">Results you can inspect.</h2>
+            </div>
+            <p class="max-w-[42rem] text-lg leading-relaxed text-ink-700">Papers are paired with code, data or runnable systems when a public artifact exists. Every link below points to a research source rather than a promotional summary.</p>
+          </div>
+
+          <div>
+            <article class="artifact-row">
+              <p class="artifact-type">System<br />2025</p>
+              <div><h3 class="font-serif text-3xl leading-tight text-petrol-950">DAVE</h3><p class="mt-2 max-w-[46rem] text-sm leading-relaxed text-ink-700">A framework for assisted analysis of document collections in knowledge-intensive domains.</p></div>
+              <p class="text-sm leading-relaxed text-ink-700"><strong class="block text-xs uppercase tracking-[0.09em] text-ink-950">Connected people</strong> Agazzi · Alva Principe · Pozzi · Ripamonti · Palmonari</p>
+              <div class="flex flex-col items-start gap-2 text-sm font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://github.com/unimib-datAI/DAVE">Code ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=QmrLvqYAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=QmrLvqYAAAAJ:MLfJN-KU85MC">Paper ↗</a></div>
+            </article>
+            <article class="artifact-row">
+              <p class="artifact-type">Dataset<br />2025</p>
+              <div><h3 class="font-serif text-3xl leading-tight text-petrol-950">MammoTab 25</h3><p class="mt-2 max-w-[46rem] text-sm leading-relaxed text-ink-700">A large-scale dataset for training, testing and finding weaknesses in semantic table interpretation systems.</p></div>
+              <p class="text-sm leading-relaxed text-ink-700"><strong class="block text-xs uppercase tracking-[0.09em] text-ink-950">Connected people</strong> Cremaschi · Belotti · D’Souza · Palmonari</p>
+              <div class="flex flex-col items-start gap-2 text-sm font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://github.com/unimib-datAI/mammotab">Data &amp; code ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=QmrLvqYAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=QmrLvqYAAAAJ:VaXvl8Fpj5cC">Paper ↗</a></div>
+            </article>
+            <article class="artifact-row">
+              <p class="artifact-type">Method<br />2025</p>
+              <div><h3 class="font-serif text-3xl leading-tight text-petrol-950">ReFactX</h3><p class="mt-2 max-w-[46rem] text-sm leading-relaxed text-ink-700">Scalable reasoning with reliable facts through constrained generation.</p></div>
+              <p class="text-sm leading-relaxed text-ink-700"><strong class="block text-xs uppercase tracking-[0.09em] text-ink-950">Connected people</strong> Pozzi · Palmonari · Coletta · Bellomarini · Lehmann · Vahdati</p>
+              <div class="flex flex-col items-start gap-2 text-sm font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=QmrLvqYAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=QmrLvqYAAAAJ:kuK5TVdYjLIC">Paper ↗</a></div>
+            </article>
+            <article class="artifact-row">
+              <p class="artifact-type">Language<br />2026</p>
+              <div><h3 class="font-serif text-3xl leading-tight text-petrol-950">VCL</h3><p class="mt-2 max-w-[46rem] text-sm leading-relaxed text-ink-700">A bridge between natural language and structured control for domain-specific document analysis.</p></div>
+              <p class="text-sm leading-relaxed text-ink-700"><strong class="block text-xs uppercase tracking-[0.09em] text-ink-950">Connected people</strong> Alva Principe · Armani · Palmonari · Batini</p>
+              <div class="flex flex-col items-start gap-2 text-sm font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://github.com/unimib-datAI/VCL">Code ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=QmrLvqYAAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=QmrLvqYAAAAJ:S16KYo8Pm5AC">Paper ↗</a></div>
+            </article>
+            <article class="artifact-row">
+              <p class="artifact-type">Platform<br />Active</p>
+              <div><h3 class="font-serif text-3xl leading-tight text-petrol-950">DFaaS</h3><p class="mt-2 max-w-[46rem] text-sm leading-relaxed text-ink-700">An open decentralized Function-as-a-Service platform, accompanied by work on edge workload forecasting and orchestration.</p></div>
+              <p class="text-sm leading-relaxed text-ink-700"><strong class="block text-xs uppercase tracking-[0.09em] text-ink-950">Connected people</strong> Ciavotta · Filippini and collaborators</p>
+              <div class="flex flex-col items-start gap-2 text-sm font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://github.com/unimib-datAI/dfaas">Code ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=726XWk0AAAAJ&amp;pagesize=100&amp;sortby=pubdate&amp;citation_for_view=726XWk0AAAAJ:3_f9JqYsqVQC">Related paper ↗</a></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="people" class="bg-petrol-950 py-24 text-paper-50 md:py-32">
+        <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
+          <div class="mb-14 grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+            <div><p class="mb-5 text-[0.72rem] font-extrabold uppercase tracking-[0.14em] text-acid-300">03 · People</p><h2 class="max-w-[9ch] font-serif text-5xl leading-[0.95] tracking-[-0.035em] md:text-7xl">The group behind the work.</h2></div>
+            <div><p class="max-w-[42rem] text-lg leading-relaxed text-paper-50/72">DatAI brings together faculty, doctoral researchers and research staff across data management, knowledge representation, AI systems and distributed computing.</p><p class="mt-4 max-w-[42rem] text-xs leading-relaxed text-paper-50/55">Portrait candidates have been researched from institutional and academic sources. Typographic identifiers are used here until publication permissions and original files are confirmed.</p></div>
+          </div>
+
+          <div>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">FD</div><div><h3 class="text-lg font-extrabold">Flavio Maria De Paoli</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Lab head · Faculty</p></div><p class="text-sm text-paper-50/62">Primary affiliation</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://www.unimib.it/flavio-de-paoli">UniMiB ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=bEA7qmUAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">AM</div><div><h3 class="text-lg font-extrabold">Andrea Maurino</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Faculty</p></div><p class="text-sm text-paper-50/62">Primary affiliation</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://www.unimib.it/andrea-maurino">UniMiB ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=pdov_QQAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">MC</div><div><h3 class="text-lg font-extrabold">Michele Ciavotta</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Faculty</p></div><p class="text-sm text-paper-50/62">Primary affiliation</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://www.unimib.it/michele-ciavotta">UniMiB ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=726XWk0AAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">MP</div><div><h3 class="text-lg font-extrabold">Matteo Luigi Palmonari</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Faculty</p></div><p class="text-sm text-paper-50/62">Primary affiliation</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://www.unimib.it/matteo-palmonari">UniMiB ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=QmrLvqYAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">BS</div><div><h3 class="text-lg font-extrabold">Blerina Spahiu</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Faculty</p></div><p class="text-sm text-paper-50/62">Primary affiliation</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://www.unimib.it/blerina-spahiu">UniMiB ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=bzWWMXAAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">AA</div><div><h3 class="text-lg font-extrabold">Abubakari Alidu</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Doctoral researcher</p></div><p class="text-sm text-paper-50/62">Primary affiliation</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=thpWhEkAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">EP</div><div><h3 class="text-lg font-extrabold">Emanuele Petriglia</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Doctoral researcher</p></div><p class="text-sm text-paper-50/62">Secondary affiliation</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://www.unimib.it/emanuele-petriglia">UniMiB ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=Ip-LZCoAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">FF</div><div><h3 class="text-lg font-extrabold">Federica Filippini</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Research fellow</p></div><p class="text-sm text-paper-50/62">Confirmed member</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://www.unimib.it/federica-filippini">UniMiB ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=F63c78AAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">MC</div><div><h3 class="text-lg font-extrabold">Marco Cremaschi</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Researcher</p></div><p class="text-sm text-paper-50/62">Confirmed member</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://www.unimib.it/marco-cremaschi">UniMiB ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=tleqpQkAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">RP</div><div><h3 class="text-lg font-extrabold">Riccardo Pozzi</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Researcher</p></div><p class="text-sm text-paper-50/62">Confirmed member</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://www.unimib.it/riccardo-pozzi">UniMiB ↗</a><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=P1KsTkwAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+            <article class="person-row"><div class="person-mark" aria-hidden="true">RA</div><div><h3 class="text-lg font-extrabold">Renzo Arturo Alva Principe</h3><p class="mt-1 text-xs uppercase tracking-[0.1em] text-acid-300">Research fellow</p></div><p class="text-sm text-paper-50/62">Confirmed member</p><div class="flex gap-4 text-xs font-extrabold"><a class="underline decoration-acid-500 underline-offset-4" href="https://scholar.google.com/citations?user=c_C-5OsAAAAJ&amp;hl=en">Scholar ↗</a></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="border-b border-ink-950/15 bg-paper-50 py-24 md:py-32">
+        <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
+          <div class="mb-16 grid gap-8 md:grid-cols-[0.7fr_1.3fr] md:items-end">
+            <div><p class="section-index mb-5">04 · Projects &amp; resources</p><h2 class="max-w-[10ch] font-serif text-5xl leading-[0.95] tracking-[-0.035em] text-petrol-950 md:text-7xl">Work that leaves the lab.</h2></div>
+            <p class="max-w-[43rem] text-lg leading-relaxed text-ink-700">A live route into the lab’s public engineering work. Status labels describe what is visible in the DatAI GitHub organization; project claims are limited to repository and publication evidence.</p>
+          </div>
+          <div>
+            <article class="resource-line"><p class="artifact-type">01</p><div><h3 class="font-serif text-2xl text-petrol-950">DAVE</h3><p class="mt-1 text-sm text-ink-700">Assisted analysis of document collections.</p></div><p class="text-sm text-ink-700">TypeScript · Public repository</p><a class="text-sm font-extrabold underline decoration-acid-500 underline-offset-4" href="https://github.com/unimib-datAI/DAVE">Open repository ↗</a></article>
+            <article class="resource-line"><p class="artifact-type">02</p><div><h3 class="font-serif text-2xl text-petrol-950">VCL</h3><p class="mt-1 text-sm text-ink-700">A document query language.</p></div><p class="text-sm text-ink-700">Python · Public repository</p><a class="text-sm font-extrabold underline decoration-acid-500 underline-offset-4" href="https://github.com/unimib-datAI/VCL">Open repository ↗</a></article>
+            <article class="resource-line"><p class="artifact-type">03</p><div><h3 class="font-serif text-2xl text-petrol-950">MammoTab</h3><p class="mt-1 text-sm text-ink-700">Semantic table interpretation benchmark resources.</p></div><p class="text-sm text-ink-700">Python · Public repository</p><a class="text-sm font-extrabold underline decoration-acid-500 underline-offset-4" href="https://github.com/unimib-datAI/mammotab">Open repository ↗</a></article>
+            <article class="resource-line"><p class="artifact-type">04</p><div><h3 class="font-serif text-2xl text-petrol-950">DFaaS</h3><p class="mt-1 text-sm text-ink-700">A decentralized Function-as-a-Service platform.</p></div><p class="text-sm text-ink-700">Python · Active public repository</p><a class="text-sm font-extrabold underline decoration-acid-500 underline-offset-4" href="https://github.com/unimib-datAI/dfaas">Open repository ↗</a></article>
+            <article class="resource-line"><p class="artifact-type">05</p><div><h3 class="font-serif text-2xl text-petrol-950">lamAPI</h3><p class="mt-1 text-sm text-ink-700">A knowledge graph indexing tool.</p></div><p class="text-sm text-ink-700">Notebook · Public repository</p><a class="text-sm font-extrabold underline decoration-acid-500 underline-offset-4" href="https://github.com/unimib-datAI/lamAPI">Open repository ↗</a></article>
+          </div>
+          <a class="mt-10 inline-flex min-h-12 items-center border border-petrol-950 px-5 text-sm font-extrabold text-petrol-950 hover:bg-petrol-950 hover:text-paper-50" href="https://github.com/unimib-datAI">Browse all public repositories <span aria-hidden="true" class="ml-3">↗</span></a>
+        </div>
+      </section>
+
+      <section id="publications" class="bg-paper-100 py-24 md:py-32">
+        <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
+          <div class="mb-14 grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-end">
+            <div><p class="section-index mb-5">05 · Publications</p><h2 class="max-w-[10ch] font-serif text-5xl leading-[0.95] tracking-[-0.035em] text-petrol-950 md:text-7xl"><!-- PUBLICATION_COUNT --> works, one searchable record.</h2></div>
+            <div><p class="max-w-[43rem] text-lg leading-relaxed text-ink-700">A deduplicated catalogue assembled from the confirmed members’ Google Scholar profiles. Citation counts are a dated snapshot, not live metrics.</p><p class="mt-3 text-xs font-bold uppercase tracking-[0.09em] text-ink-700">Snapshot <!-- DATA_UPDATED --> · Sources: Google Scholar</p></div>
+          </div>
+
+          <div class="publication-toolbar mb-10 grid gap-4 border-y border-ink-950/20 py-5 md:grid-cols-[1fr_12rem_auto] md:items-end">
+            <div><label for="publication-search">Search title, author or venue</label><input id="publication-search" type="search" inputmode="search" autocomplete="off" placeholder="e.g. knowledge graph, Filippini, ISWC" data-publication-search /></div>
+            <div><label for="publication-year">Year</label><select id="publication-year" data-publication-year><option value="all">All years</option><!-- PUBLICATION_YEARS --></select></div>
+            <button class="min-h-[3.25rem] border border-ink-950 px-5 text-sm font-extrabold hover:bg-petrol-950 hover:text-paper-50" type="button" data-publication-clear hidden>Clear filters</button>
+          </div>
+
+          <p class="mb-5 text-sm text-ink-700" aria-live="polite" data-publication-status>All publications are listed chronologically.</p>
+          <noscript><p class="mb-5 border-l-4 border-acid-500 pl-4 text-sm text-ink-700">JavaScript is off. The complete archive remains available below in chronological order.</p></noscript>
+          <ol class="publication-list">
+            <!-- PUBLICATION_ARCHIVE -->
+          </ol>
+          <button class="mx-auto mt-10 min-h-12 border border-petrol-950 px-6 text-sm font-extrabold text-petrol-950 hover:bg-petrol-950 hover:text-paper-50" type="button" data-publication-load-more>Show 24 more</button>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-acid-500 py-24 text-petrol-950 md:py-32">
+        <div class="mx-auto grid max-w-[90rem] gap-14 px-5 md:grid-cols-[1.25fr_0.75fr] md:px-8 xl:px-12">
+          <div>
+            <p class="mb-5 text-[0.72rem] font-extrabold uppercase tracking-[0.14em]">06 · About &amp; contact</p>
+            <h2 class="max-w-[12ch] font-serif text-5xl leading-[0.94] tracking-[-0.035em] md:text-7xl">Bring a hard data problem.</h2>
+            <p class="mt-7 max-w-[43rem] text-lg font-semibold leading-relaxed">DatAI welcomes research collaborations and conversations with students about theses, internships and doctoral work. Use the institutional profile of the lab head for a verified contact route.</p>
+            <a class="mt-9 inline-flex min-h-12 items-center bg-petrol-950 px-5 text-sm font-extrabold text-paper-50 hover:bg-petrol-900" href="https://www.unimib.it/flavio-de-paoli">Contact Flavio De Paoli <span aria-hidden="true" class="ml-3">↗</span></a>
+          </div>
+          <div class="border-t border-petrol-950/35 pt-6 md:border-l md:border-t-0 md:pl-10 md:pt-0">
+            <dl class="grid gap-7 text-sm">
+              <div><dt class="text-xs font-extrabold uppercase tracking-[0.1em]">Lab</dt><dd class="mt-2 font-semibold">DatAI — Data for Artificial Intelligence<br /><span class="font-normal">formerly INSID&amp;S Lab</span></dd></div>
+              <div><dt class="text-xs font-extrabold uppercase tracking-[0.1em]">Department</dt><dd class="mt-2 font-semibold">Department of Informatics, Systems and Communication<br />University of Milano-Bicocca</dd></div>
+              <div><dt class="text-xs font-extrabold uppercase tracking-[0.1em]">Visit</dt><dd class="mt-2 font-semibold">Building U14 · Room 1033<br />Viale Sarca 336 · 20126 Milano · Italy</dd></div>
+              <div><dt class="text-xs font-extrabold uppercase tracking-[0.1em]">Institutional sources</dt><dd class="mt-2 flex flex-wrap gap-x-5 gap-y-2 font-extrabold"><a class="underline decoration-petrol-950/50 underline-offset-4" href="https://www.disco.unimib.it/it/ricerca/laboratori-ricerca">DISCo listing ↗</a><a class="underline decoration-petrol-950/50 underline-offset-4" href="https://github.com/unimib-datAI">GitHub ↗</a></dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-petrol-950 py-12 text-paper-50">
+      <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
+        <div class="grid gap-10 border-b border-paper-50/18 pb-10 md:grid-cols-[1fr_auto] md:items-start">
+          <div class="flex items-start gap-5"><span class="wordmark-crop mt-1" aria-hidden="true"><img src="/assets/datai-logo.svg" alt="" width="512" height="512" /></span><p class="max-w-[38rem] text-sm leading-relaxed text-paper-50/65">Data for Artificial Intelligence at DISCo, University of Milano-Bicocca. Institutional details and the current roster are maintained as verifiable public records.</p></div>
+          <a class="text-sm font-extrabold text-acid-300 underline underline-offset-4" href="#top">Back to top ↑</a>
+        </div>
+        <div class="grid gap-8 pt-8 text-xs leading-relaxed text-paper-50/60 md:grid-cols-3">
+          <p><strong class="block text-paper-50">Editorial responsibility</strong>DatAI Lab. Last content review: <!-- DATA_UPDATED -->.</p>
+          <details><summary class="cursor-pointer font-extrabold text-paper-50">Privacy &amp; accessibility</summary><p class="mt-2">This static site sets no analytics or advertising cookies. It is designed for keyboard use, reduced motion and WCAG 2.2 AA contrast. Accessibility feedback can be sent through the DISCo web editorial contact.</p></details>
+          <details id="sources"><summary class="cursor-pointer font-extrabold text-paper-50">Sources &amp; data notes</summary><p class="mt-2">Institutional facts: DISCo and UniMiB. Projects: public DatAI GitHub repositories. Publications: a deduplicated Google Scholar snapshot; profile attribution and limitations are preserved in the project data.</p></details>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.tmp/
+.DS_Store
+.codex/
+.agents/
+.impeccable/config.local.json
+.impeccable/questions/

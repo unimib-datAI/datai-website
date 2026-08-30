@@ -1,0 +1,23 @@
+{
+  "datai-logo.svg": {
+    "type": "official_vector_asset",
+    "source": "Figma file DATAI - Logo, node 7:187",
+    "source_url": "https://www.figma.com/design/9HoGz1UEnENGmhSNXnPnRY/DATAI---Logo?node-id=7-187&m=dev",
+    "retrieved": "2026-08-31"
+  },
+  "datai-og-base.png": {
+    "type": "ai_generated_raster",
+    "generator": "OpenAI image generation",
+    "prompt_summary": "Petroleum academic data topology with tables, documents, and knowledge-graph connections; no text or logos.",
+    "generated": "2026-08-31",
+    "sha256": "925b8ee3a097e8ee93f79d373ca557f45c1cd07f7299d189c4dd8fb1664b83dd",
+    "source_path": "assets/social/datai-og-base.png",
+    "shipping": false
+  },
+  "og-card.png": {
+    "type": "composite_raster",
+    "derived_from": ["assets/social/datai-og-base.png", "public/assets/datai-logo.svg", "assets/social/og-card.svg"],
+    "purpose": "Open Graph and social preview",
+    "generated": "2026-08-31"
+  }
+}
