@@ -26,6 +26,7 @@
   --motion-immediate: 140ms;
   --motion-routine: 220ms;
   --motion-focal: 680ms;
+  --motion-logo-intro: 1650ms;
   --ease-arrive: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -217,6 +218,51 @@ footer a {
   font-style: italic;
   font-weight: 430;
   letter-spacing: -0.025em;
+}
+
+.hero-work {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.hero-work-crt {
+  position: absolute;
+  right: auto;
+  bottom: 0.045em;
+  left: 0;
+  display: none;
+  width: max-content;
+  color: #b8ed51;
+  font-family: "Courier New", ui-monospace, monospace;
+  font-size: 0.82em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1;
+  text-shadow: 0 0 0.18rem rgba(184, 237, 81, 0.86), 0 0.1rem 0.5rem rgba(139, 207, 0, 0.56);
+  white-space: nowrap;
+}
+
+.hero-work-final {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.hero-work::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: #b8ed51;
+  box-shadow: 0 0 0.65rem rgba(184, 237, 81, 0.74);
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center;
 }
 
 .hero-line {
@@ -1168,15 +1214,28 @@ a.publication-title:hover {
 @media (prefers-reduced-motion: no-preference) {
   .site-header .wordmark-crt {
     display: block;
-    animation: logo-crt-boot 1250ms linear both;
+    animation: logo-crt-boot var(--motion-logo-intro) linear both;
   }
 
   .site-header .wordmark-official {
-    animation: logo-official-materialize 1250ms linear both;
+    animation: logo-official-materialize var(--motion-logo-intro) linear both;
   }
 
   .site-header .wordmark--animated::after {
-    animation: logo-phosphor-beam 1250ms linear both;
+    animation: logo-phosphor-beam var(--motion-logo-intro) linear both;
+  }
+
+  .hero-work-crt {
+    display: inline-block;
+    animation: logo-crt-boot var(--motion-logo-intro) linear both;
+  }
+
+  .hero-work-final {
+    animation: logo-official-materialize var(--motion-logo-intro) linear both;
+  }
+
+  .hero-work::after {
+    animation: logo-phosphor-beam var(--motion-logo-intro) linear both;
   }
 
   .hero-title {
