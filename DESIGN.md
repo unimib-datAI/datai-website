@@ -154,9 +154,9 @@ Without JavaScript, the complete chronological archive remains visible. Citation
 
 ## People and portrait policy
 
-People are border-separated records, not a portrait grid. Circular Newsreader initials provide identity without implying image permission.
+People remain border-separated records rather than a conventional portrait grid. Consistent 4:5 crops now make the group visible while preserving the evidence-led roster structure.
 
-Do not publish a portrait until the person’s publication consent and a usable original file are confirmed. Future portraits must record source, permission status, retrieval date, and derived crops. The researched candidates in `data/people-photos.json` are editorial leads, not cleared shipping assets.
+The user directed the researched public portraits to ship in the private preview on 31 August 2026. Every derivative records its source, retrieval date and rights status in `public/assets/provenance.json`; unresolved permissions and low-resolution originals remain editorial follow-ups before a public institutional launch.
 
 ## Accessibility
 

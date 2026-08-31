@@ -19,5 +19,115 @@
     "derived_from": ["assets/social/datai-og-base.png", "public/assets/datai-logo.svg", "assets/social/og-card.svg"],
     "purpose": "Open Graph and social preview",
     "generated": "2026-08-31"
+  },
+  "team/flavio-maria-de-paoli.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Flavio Maria De Paoli",
+    "source_page_url": "https://intertwino.gate-ai.eu/flavio-de-paoli/",
+    "source_url": "https://intertwino.gate-ai.eu/wp-content/uploads/2021/12/flavio2.jpeg",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_required_before_public_launch",
+    "sha256": "5319eaf91e20506d8b49e041f5655312150bf799d7ce4c315d254bb05608bccb"
+  },
+  "team/andrea-maurino.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Andrea Maurino",
+    "source_page_url": "https://www.unimib.it/andrea-maurino",
+    "source_url": "https://www.unimib.it/sites/default/files/foto/21-05-2018/maurino2.jpg",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_required_before_public_launch",
+    "sha256": "699f46848f94dc47d1a6292a2d452aa6c2335c7ba904331f98adb1ab07e1ebaf"
+  },
+  "team/michele-ciavotta.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Michele Ciavotta",
+    "source_page_url": "https://intertwino.gate-ai.eu/our-team/",
+    "source_url": "https://intertwino.gate-ai.eu/wp-content/uploads/2021/12/ciavotta-scaled-e1640015167470.jpg",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_required_before_public_launch",
+    "sha256": "1fc3c4a6993a520a62940e438dfaed2604b37533635941aaff87e6d708c50333"
+  },
+  "team/matteo-luigi-palmonari.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Matteo Luigi Palmonari",
+    "source_page_url": "https://www.theinnovationgroup.it/speakers/matteo-palmonari/",
+    "source_url": "https://www.theinnovationgroup.it/wp-content/uploads/2019/03/Matteo-Palmonari.jpg",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_required_before_public_launch",
+    "sha256": "fda081457b998aba87d3dbefe6a0fa5344a57d56e8feafeea9b98efa956dd0e3"
+  },
+  "team/blerina-spahiu.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Blerina Spahiu",
+    "source_page_url": "https://scholar.google.co.uk/citations?hl=en&user=bzWWMXAAAAAJ",
+    "source_url": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=bzWWMXAAAAAJ&citpid=5",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_and_original_required_before_public_launch",
+    "sha256": "62ee2858f02b2a3cc118a5f70bc291ce0ef2214a744302acf0ca54af4a369289"
+  },
+  "team/abubakari-alidu.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Abubakari Alidu",
+    "source_page_url": "https://scholar.google.co.uk/citations?hl=en&user=thpWhEkAAAAJ",
+    "source_url": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=thpWhEkAAAAJ&citpid=1",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_and_original_required_before_public_launch",
+    "sha256": "0910612bae99c1d51ecfe49ca49b56afd21a0ca1452723c3f10e8a092e7b2db9"
+  },
+  "team/emanuele-petriglia.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Emanuele Petriglia",
+    "source_page_url": "https://www.unimib.it/emanuele-petriglia",
+    "source_url": "https://www.unimib.it/sites/default/files/2024-11/emanuele_petriglia.jpg",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_required_before_public_launch",
+    "sha256": "a797ceff8563caabe50e112eb042a89e9289ff8bfd790270579f7b23be4a06a3"
+  },
+  "team/federica-filippini.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Federica Filippini",
+    "source_page_url": "https://www.unimib.it/federica-filippini",
+    "source_url": "https://www.unimib.it/sites/default/files/2025-10/IMG_8272.jpg",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_required_before_public_launch",
+    "sha256": "bd791ab2e218c5ad23ee686b8803028813501413704c64e3f6903a133c11a4ec"
+  },
+  "team/marco-cremaschi.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Marco Cremaschi",
+    "source_page_url": "https://www.unimib.it/marco-cremaschi",
+    "source_url": "https://www.unimib.it/sites/default/files/2023-02/IMG_20210928_112029.jpeg",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_required_before_public_launch",
+    "sha256": "9ea2f18281eb58239396dfa6df8fb46c31849fc48bc996a0c51850fff353f6e0"
+  },
+  "team/riccardo-pozzi.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Riccardo Pozzi",
+    "source_page_url": "https://www.unimib.it/riccardo-pozzi",
+    "source_url": "https://www.unimib.it/sites/default/files/2025-02/foto_profilo_2023.jpg",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_required_before_public_launch",
+    "sha256": "601ef7e69fe8b95eca380a9986a1ad8214bcccf9f19eac0654a7a7eb93e2fe34"
+  },
+  "team/renzo-arturo-alva-principe.webp": {
+    "type": "derived_public_portrait",
+    "subject": "Renzo Arturo Alva Principe",
+    "source_page_url": "https://scholar.google.co.uk/citations?hl=en&user=c_C-5OsAAAAJ",
+    "source_url": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=c_C-5OsAAAAJ&citpid=5",
+    "retrieved": "2026-08-31",
+    "transform": "centered 4:5 crop, 480 × 600 WebP",
+    "rights_status": "permission_and_original_required_before_public_launch",
+    "sha256": "1983aeaab01819306711f82741781f6e4893a176aafaef98226aa9eb43918c58"
   }
 }
