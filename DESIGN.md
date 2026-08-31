@@ -158,6 +158,10 @@ On 31 August 2026 the user directed every sourced portrait to be regenerated thr
 
 Every final WebP records its source set, generation method, prompt intent, date, transform, checksum and rights status in `public/assets/provenance.json`. Full source images, prior web crops and generated masters remain outside the public asset directory. Source and subject permissions remain mandatory editorial follow-ups before a public institutional launch; generated portraits are presentation assets and never documentary research evidence.
 
+## Institutional endorsement
+
+The University of Milano-Bicocca mark appears once in the shared footer as an institutional endorsement, not as part of the DatAI wordmark. Its official positive black-and-grey artwork remains unmodified and sits on an independent white field inside the petroleum footer. The field padding preserves the Brand Book 2025 clear area, while the department relationship is written outside that protected area. Do not recolor, distort, crop, merge, or visually compete with the mark.
+
 ## Accessibility
 
 - Preserve semantic sections, headings, lists, buttons, links, labels, `<details>`, and ARIA tab relationships.
@@ -187,6 +191,7 @@ Every final WebP records its source set, generation method, prompt intent, date,
 - Generated rasters record generator, prompt summary, date, SHA-256, source path, and shipping status.
 - Composites list every item in `derived_from`, plus purpose and date.
 - `datai-logo.svg` remains authoritative to Figma node `7:187`.
+- `unimib-institutional-logo.png` remains the official positive mark served by `unimib.it`; its white support, proportions and clear area follow the University Brand Book 2025.
 - Never use an AI-generated visual as documentary research evidence.
 
 ## Maintenance

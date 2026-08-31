@@ -109,6 +109,23 @@ select {
   transform: translateY(-2.79rem);
 }
 
+.unimib-mark-field {
+  display: inline-flex;
+  width: 7rem;
+  min-height: 7.35rem;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  padding: 0.875rem;
+  background: #fff;
+}
+
+.unimib-mark-field img {
+  display: block;
+  width: 4.5rem;
+  height: auto;
+}
+
 .hero-field {
   background: #10292b;
 }

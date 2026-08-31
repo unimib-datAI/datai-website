@@ -5,6 +5,17 @@
     "source_url": "https://www.figma.com/design/9HoGz1UEnENGmhSNXnPnRY/DATAI---Logo?node-id=7-187&m=dev",
     "retrieved": "2026-08-31"
   },
+  "unimib-institutional-logo.png": {
+    "type": "official_raster_asset",
+    "source": "University of Milano-Bicocca institutional website",
+    "source_url": "https://www.unimib.it/sites/default/files/logo.png",
+    "guideline_url": "https://www.unimib.it/sites/default/files/2025-02/BrandBook_2025.pdf",
+    "policy_url": "https://www.unimib.it/societa/stampa-e-comunicazione/policy-utilizzo-del-nome-logo-e-immagine-dellateneo",
+    "retrieved": "2026-08-31",
+    "original_dimensions": "160 × 172 px",
+    "usage": "Official positive black-and-grey mark on a protected white field in the shared footer",
+    "sha256": "99fd1154d56e35b123f006bd6254883bc307ad7a55e10428ebc5b4f6f67c4035"
+  },
   "datai-og-base.png": {
     "type": "ai_generated_raster",
     "generator": "OpenAI image generation",

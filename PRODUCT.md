@@ -66,7 +66,8 @@ Le fonti interne più recenti precisano il territorio come intersezione tra inte
 - Espansione: **Data for Artificial Intelligence**.
 - Affiliazione da rendere sempre riconoscibile: Dipartimento di Informatica, Sistemistica e Comunicazione, Università degli Studi di Milano-Bicocca.
 - Nome storico: **INSID&S Lab** / **INSIDes Lab**, solo dove utile a continuità e reperibilità.
-- Fonte autorevole del logo DatAI: file Figma `DATAI - Logo`, nodo `7:187` (`https://www.figma.com/design/9HoGz1UEnENGmhSNXnPnRY/DATAI---Logo?node-id=7-187&m=dev`). Il marchio usa il wordmark `dat·AI` verde brillante su fondo verde petrolio scuro. Le eventuali regole di co-branding UniMiB/DISCo restano da confermare.
+- Fonte autorevole del logo DatAI: file Figma `DATAI - Logo`, nodo `7:187` (`https://www.figma.com/design/9HoGz1UEnENGmhSNXnPnRY/DATAI---Logo?node-id=7-187&m=dev`). Il marchio usa il wordmark `dat·AI` verde brillante su fondo verde petrolio scuro.
+- Il marchio istituzionale UniMiB compare nel footer condiviso come firma autonoma, separata dal marchio DatAI. L'inserimento segue il Brand Book 2025: versione positiva nero/grigio invariata, proporzioni originali, supporto bianco sul footer colorato e area di rispetto priva di altri elementi. La policy d'Ateneo consente l'uso istituzionale sui siti delle strutture universitarie.
 
 ## Evidence on Hand
 
