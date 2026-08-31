@@ -168,8 +168,8 @@ The University of Milano-Bicocca relationship must be explicit in the first view
 
 - Preserve semantic sections, headings, lists, buttons, links, labels, `<details>`, and ARIA tab relationships.
 - Keep the skip link and visible keyboard focus.
-- Default focus: `3px` acid outline with `4px` offset.
-- On the acid contact field, focus changes to CRT black.
+- Default focus on paper: `3px` forest `#27513c` outline with `4px` offset (`8.06:1`).
+- Focus on CRT-black and forest fields uses acid `#8bcf00`; on the acid contact field it changes to CRT black.
 - Maintain WCAG 2.2 AA contrast; publication venue text uses `#4a5d51` on paper (`6.28:1`).
 - Acid focus on CRT black and CRT-black focus on acid both exceed AA (`9.35:1`).
 - Selection uses marker fill, border, text, and `aria-selected`, not color alone.

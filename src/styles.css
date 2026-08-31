@@ -42,8 +42,15 @@ body {
 }
 
 :focus-visible {
-  outline: 3px solid #8bcf00;
+  outline: 3px solid #27513c;
   outline-offset: 4px;
+}
+
+.site-header :focus-visible,
+.hero-field :focus-visible,
+.bg-petrol-950 :focus-visible,
+.bg-petrol-900 :focus-visible {
+  outline-color: #8bcf00;
 }
 
 #contact :focus-visible {
