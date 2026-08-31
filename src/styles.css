@@ -6,19 +6,19 @@
   --font-sans: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Newsreader Variable", ui-serif, Georgia, serif;
   --color-petrol-950: #0a1b12;
-  --color-petrol-900: #1d393b;
-  --color-petrol-800: #2c4b4c;
+  --color-petrol-900: #1b3b2c;
+  --color-petrol-800: #27513c;
   --color-acid-500: #8bcf00;
   --color-acid-300: #b8ed51;
-  --color-paper-50: #f4f2e9;
-  --color-paper-100: #e9e6da;
-  --color-ink-950: #142122;
-  --color-ink-700: #425152;
+  --color-paper-50: #f2f3e8;
+  --color-paper-100: #e6e8da;
+  --color-ink-950: #132019;
+  --color-ink-700: #425449;
 }
 
 :root {
-  color: #142122;
-  background: #f4f2e9;
+  color: #132019;
+  background: #f2f3e8;
   font-family: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,7 +33,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #f4f2e9;
+  background: #f2f3e8;
 }
 
 ::selection {
@@ -83,7 +83,7 @@ select {
 
 .site-header {
   background: #0a1b12;
-  border-bottom: 1px solid rgba(244, 242, 233, 0.18);
+  border-bottom: 1px solid rgba(242, 243, 232, 0.18);
 }
 
 .site-header a[aria-current="page"] {
@@ -158,7 +158,7 @@ select {
   display: block;
   width: min(100%, 44rem);
   height: 1px;
-  background: rgba(244, 242, 233, 0.24);
+  background: rgba(242, 243, 232, 0.24);
 }
 
 .hero-line::before {
@@ -171,15 +171,15 @@ select {
 
 .specimen-tray {
   scrollbar-width: thin;
-  scrollbar-color: #8bcf00 rgba(244, 242, 233, 0.12);
+  scrollbar-color: #8bcf00 rgba(242, 243, 232, 0.12);
 }
 
 .specimen {
   position: relative;
   min-height: 20.5rem;
   overflow: hidden;
-  border: 1px solid rgba(244, 242, 233, 0.26);
-  background: rgba(29, 57, 59, 0.82);
+  border: 1px solid rgba(242, 243, 232, 0.26);
+  background: rgba(27, 59, 44, 0.82);
   transition: transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1), border-color 180ms ease, background 180ms ease;
 }
 
@@ -203,7 +203,7 @@ a.specimen {
 .specimen:focus-within {
   transform: translateY(-0.4rem);
   border-color: #8bcf00;
-  background: #1d393b;
+  background: #1b3b2c;
 }
 
 .specimen-index {
@@ -216,8 +216,8 @@ a.specimen {
   gap: 1.5rem;
   align-items: baseline;
   padding: 1.75rem 0;
-  border-top: 1px solid rgba(20, 33, 34, 0.2);
-  color: #142122;
+  border-top: 1px solid rgba(19, 32, 25, 0.2);
+  color: #132019;
   text-decoration: none;
 }
 
@@ -229,7 +229,7 @@ a.specimen {
 }
 
 .route-index {
-  color: #596768;
+  color: #586a5f;
   font-size: 0.68rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
@@ -249,7 +249,7 @@ a.specimen {
 
 .route-line p {
   max-width: 42rem;
-  color: #425152;
+  color: #425449;
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -289,11 +289,11 @@ a.specimen {
 .lab-gallery-pair {
   display: grid;
   gap: 1px;
-  background: rgba(20, 33, 34, 0.24);
+  background: rgba(19, 32, 25, 0.24);
 }
 
 .lab-gallery {
-  border: 1px solid rgba(20, 33, 34, 0.24);
+  border: 1px solid rgba(19, 32, 25, 0.24);
 }
 
 .lab-photo {
@@ -301,7 +301,7 @@ a.specimen {
   min-width: 0;
   grid-template-rows: auto minmax(4.5rem, auto);
   background: #0a1b12;
-  color: #f4f2e9;
+  color: #f2f3e8;
 }
 
 .lab-photo-media {
@@ -309,7 +309,7 @@ a.specimen {
   min-height: 0;
   overflow: hidden;
   aspect-ratio: 595 / 420;
-  background: #1d393b;
+  background: #1b3b2c;
 }
 
 .lab-gallery--current .lab-photo-media {
@@ -363,7 +363,7 @@ a.specimen {
   padding: 0.9rem 1rem 1rem;
   font-size: 0.75rem;
   line-height: 1.5;
-  color: rgba(244, 242, 233, 0.72);
+  color: rgba(242, 243, 232, 0.72);
 }
 
 .lab-photo figcaption span:first-child {
@@ -427,7 +427,7 @@ a.specimen {
 }
 
 .section-index {
-  color: #5b6868;
+  color: #596b60;
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -455,7 +455,7 @@ a.specimen {
 html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   margin-top: 5rem;
   padding-top: 3rem;
-  border-top: 1px solid rgba(244, 242, 233, 0.28);
+  border-top: 1px solid rgba(242, 243, 232, 0.28);
 }
 
 .evidence-chain {
@@ -469,7 +469,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   top: 2rem;
   bottom: -1.15rem;
   width: 1px;
-  background: #8ca0a0;
+  background: #849c8b;
 }
 
 .evidence-step {
@@ -500,13 +500,13 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 .evidence-chain li > a {
   display: block;
   margin-top: 0.5rem;
-  color: rgba(244, 242, 233, 0.72);
+  color: rgba(242, 243, 232, 0.72);
   font-size: 0.875rem;
   line-height: 1.625;
 }
 
 .evidence-chain li > a {
-  color: #f4f2e9;
+  color: #f2f3e8;
   font-weight: 700;
   text-decoration-line: underline;
   text-decoration-color: #8bcf00;
@@ -519,15 +519,15 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   gap: 2rem;
   align-items: start;
   padding: 2rem 0;
-  border-top: 1px solid rgba(20, 33, 34, 0.22);
+  border-top: 1px solid rgba(19, 32, 25, 0.22);
 }
 
 .artifact-row:last-child {
-  border-bottom: 1px solid rgba(20, 33, 34, 0.22);
+  border-bottom: 1px solid rgba(19, 32, 25, 0.22);
 }
 
 .artifact-type {
-  color: #596768;
+  color: #586a5f;
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -540,7 +540,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   gap: 1.5rem;
   align-items: center;
   padding: 1rem 0;
-  border-top: 1px solid rgba(244, 242, 233, 0.2);
+  border-top: 1px solid rgba(242, 243, 232, 0.2);
 }
 
 .person-row > :last-child {
@@ -555,7 +555,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 }
 
 .person-row:last-child {
-  border-bottom: 1px solid rgba(244, 242, 233, 0.2);
+  border-bottom: 1px solid rgba(242, 243, 232, 0.2);
 }
 
 .person-portrait {
@@ -563,7 +563,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border: 1px solid rgba(184, 237, 81, 0.62);
-  background: #1d393b;
+  background: #1b3b2c;
 }
 
 .person-portrait img {
@@ -579,11 +579,11 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   gap: 1.5rem;
   align-items: start;
   padding: 1.55rem 0;
-  border-top: 1px solid rgba(20, 33, 34, 0.2);
+  border-top: 1px solid rgba(19, 32, 25, 0.2);
 }
 
 .resource-line:last-child {
-  border-bottom: 1px solid rgba(20, 33, 34, 0.2);
+  border-bottom: 1px solid rgba(19, 32, 25, 0.2);
 }
 
 .evidence-link,
@@ -596,7 +596,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 }
 
 .profile-link {
-  color: #f4f2e9;
+  color: #f2f3e8;
   font-size: 0.75rem;
 }
 
@@ -624,7 +624,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 
 .publication-total span,
 .publication-chart figcaption {
-  color: #425152;
+  color: #425449;
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -660,7 +660,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   justify-content: space-between;
   padding-bottom: 1.75rem;
   box-sizing: border-box;
-  color: #536162;
+  color: #526459;
   font-size: 0.62rem;
   font-variant-numeric: tabular-nums;
   font-weight: 750;
@@ -683,8 +683,8 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   position: absolute;
   z-index: 0;
   inset: 0 0 1.75rem;
-  border-bottom: 1px solid rgba(20, 33, 34, 0.2);
-  background-image: linear-gradient(to bottom, rgba(20, 33, 34, 0.16) 1px, transparent 1px);
+  border-bottom: 1px solid rgba(19, 32, 25, 0.2);
+  background-image: linear-gradient(to bottom, rgba(19, 32, 25, 0.16) 1px, transparent 1px);
   background-size: 100% 50%;
   pointer-events: none;
 }
@@ -716,7 +716,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 }
 
 .publication-histogram > li:hover .publication-histogram-bar {
-  background: #2c4b4c;
+  background: #27513c;
 }
 
 .publication-histogram-year {
@@ -725,7 +725,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   left: 50%;
   display: none;
   transform: translateX(-50%);
-  color: #536162;
+  color: #526459;
   font-size: 0.58rem;
   font-variant-numeric: tabular-nums;
   font-weight: 750;
@@ -751,7 +751,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 .publication-toolbar label {
   display: block;
   margin-bottom: 0.55rem;
-  color: #5b6868;
+  color: #596b60;
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -762,16 +762,16 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 .publication-toolbar select {
   width: 100%;
   min-height: 3.25rem;
-  border: 1px solid rgba(20, 33, 34, 0.4);
+  border: 1px solid rgba(19, 32, 25, 0.4);
   border-radius: 0;
-  background: #f4f2e9;
+  background: #f2f3e8;
   padding: 0.7rem 0.9rem;
-  color: #142122;
+  color: #132019;
   font: inherit;
 }
 
 .publication-list {
-  border-top: 1px solid rgba(20, 33, 34, 0.35);
+  border-top: 1px solid rgba(19, 32, 25, 0.35);
 }
 
 .publication-item {
@@ -780,12 +780,12 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   gap: 1.5rem;
   align-items: start;
   padding: 1.4rem 0;
-  border-bottom: 1px solid rgba(20, 33, 34, 0.18);
+  border-bottom: 1px solid rgba(19, 32, 25, 0.18);
 }
 
 .publication-year {
   padding-top: 0.2rem;
-  color: #536162;
+  color: #526459;
   font-size: 0.77rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
@@ -808,14 +808,14 @@ a.publication-title:hover {
 
 .publication-authors {
   margin-top: 0.55rem;
-  color: #354748;
+  color: #354a3d;
   font-size: 0.8rem;
   line-height: 1.55;
 }
 
 .publication-venue {
   margin-top: 0.25rem;
-  color: #4b595a;
+  color: #4a5d51;
   font-size: 0.72rem;
   line-height: 1.45;
 }
@@ -826,7 +826,7 @@ a.publication-title:hover {
   gap: 0.35rem 0.8rem;
   align-items: baseline;
   margin-top: 0.7rem;
-  color: #536162;
+  color: #526459;
   font-size: 0.64rem;
   font-weight: 780;
   letter-spacing: 0.07em;
@@ -835,7 +835,7 @@ a.publication-title:hover {
 
 .publication-doi,
 .publication-scholar {
-  color: #173f42;
+  color: #16522f;
   font-weight: 800;
   text-decoration-line: underline;
   text-decoration-color: #8bcf00;
@@ -848,7 +848,7 @@ a.publication-title:hover {
 }
 
 .publication-doi-missing {
-  color: #6b7474;
+  color: #617067;
   font-weight: 700;
   text-decoration: none;
 }
@@ -863,7 +863,7 @@ a.publication-title:hover {
   display: grid;
   justify-items: end;
   padding-top: 0.1rem;
-  color: #536162;
+  color: #526459;
   font-variant-numeric: tabular-nums;
 }
 

@@ -3,14 +3,14 @@ name: DatAI — Data for Artificial Intelligence
 description: An evidence-led academic interface where every research claim connects to people and inspectable artifacts.
 colors:
   petrol-950: "#0a1b12"
-  petrol-900: "#1d393b"
-  petrol-800: "#2c4b4c"
+  petrol-900: "#1b3b2c"
+  petrol-800: "#27513c"
   acid-500: "#8bcf00"
   acid-300: "#b8ed51"
-  paper-50: "#f4f2e9"
-  paper-100: "#e9e6da"
-  ink-950: "#142122"
-  ink-700: "#425152"
+  paper-50: "#f2f3e8"
+  paper-100: "#e6e8da"
+  ink-950: "#132019"
+  ink-700: "#425449"
 typography:
   sans: "Manrope Variable, ui-sans-serif, system-ui, sans-serif"
   serif: "Newsreader Variable, ui-serif, Georgia, serif"
@@ -27,14 +27,14 @@ verdict: PASS
 
 DatAI presents research as labeled, connected specimens rather than a conventional institutional card grid. Every meaningful claim should lead through a visible chain of research question, people, project or resource, and publication.
 
-The visual world combines deep petroleum fields, the official DatAI green, warm backlit paper, etched dividers, compact metadata, and geometry derived from the official wordmark. It should feel academically authoritative, computational, and inspectable. Avoid generic university templates, decorative neon-AI imagery, wet-lab metaphors, glass effects, and ornamental technology graphics.
+The visual world combines CRT-black forest fields, the official DatAI green, cool backlit paper, etched dividers, compact metadata, and geometry derived from the official wordmark. It should feel academically authoritative, computational, and inspectable. Avoid generic university templates, decorative neon-AI imagery, wet-lab metaphors, glass effects, and ornamental technology graphics.
 
 ### Principles
 
 - **Evidence before claims.** Pair claims with inspectable public sources.
 - **Visible causality.** Connect questions explicitly to people and outputs.
 - **Dependency honesty.** Label unknown, dated, or permission-dependent content.
-- **Identity cohesion.** Petroleum, acid green, paper, serif inquiry, and specimen notation form one world.
+- **Identity cohesion.** CRT black, forest green, acid green, paper, serif inquiry, and specimen notation form one world.
 - **Progressive enhancement.** Essential research and publication content remains available without JavaScript.
 - **Flat, precise utility.** Structure comes from type, rules, contrast, and spacing—not decorative elevation.
 
@@ -51,19 +51,19 @@ The visual world combines deep petroleum fields, the official DatAI green, warm 
 
 | Token | Value | Use |
 |---|---:|---|
-| `petrol-950` | `#0a1b12` | Header, hero, people, footer, dark actions |
-| `petrol-900` | `#1d393b` | Research panels, specimens, dark hover states |
-| `petrol-800` | `#2c4b4c` | Tonal separation inside dark compositions |
+| `petrol-950` | `#0a1b12` | CRT-black header, hero, people, footer, dark actions |
+| `petrol-900` | `#1b3b2c` | Forest research panels, specimens, dark hover states |
+| `petrol-800` | `#27513c` | Tonal separation inside dark compositions |
 | `acid-500` | `#8bcf00` | Primary actions, selected states, focus, evidence accents |
 | `acid-300` | `#b8ed51` | Dark-surface links, labels, highlighted text |
-| `paper-50` | `#f4f2e9` | Default page field, dark-surface foreground, input fill |
-| `paper-100` | `#e9e6da` | Evidence and publication section alternation |
-| `ink-950` | `#142122` | Primary text on paper |
-| `ink-700` | `#425152` | Body and secondary copy |
-| metadata | `#5b6868` | Indices and compact labels |
-| rule connector | `#8ca0a0` | Evidence-chain lines |
+| `paper-50` | `#f2f3e8` | Default page field, dark-surface foreground, input fill |
+| `paper-100` | `#e6e8da` | Evidence and publication section alternation |
+| `ink-950` | `#132019` | Primary text on paper |
+| `ink-700` | `#425449` | Body and secondary copy |
+| metadata | `#596b60` | Indices and compact labels |
+| rule connector | `#849c8b` | Evidence-chain lines |
 
-Acid green identifies brand, state, evidence, or action. It is not a general decoration. Major sections use either petroleum or paper as a coherent field. Small paper text on petroleum must use at least 55% opacity.
+Acid green identifies brand, state, evidence, or action. It is not a general decoration. `#8bcf00` remains the exact green of the authoritative Figma wordmark and reaches a 9.35:1 contrast ratio on `#0a1b12`; it must not be shifted to compensate for the new dark field. Major sections use either CRT-black forest or paper as a coherent field. Small paper text on dark fields must use at least 55% opacity.
 
 ## Typography
 
@@ -114,7 +114,7 @@ Each specimen represents a real research question and connects to evidence.
 - Question: Newsreader `2rem`, approximately `11ch`.
 - Geometry: a `9rem` circular rule clipped `2.5rem` beyond the lower-right edge.
 - Desktop vertical offsets: `0`, `1.75rem`, and `3.5rem`.
-- Hover or focus-within: translate `-0.4rem`, acid border, opaque petroleum fill.
+- Hover or focus-within: translate `-0.4rem`, acid border, opaque forest fill.
 
 Do not reuse this as a generic marketing card pattern.
 
@@ -162,16 +162,16 @@ Archival laboratory photography is treated as documentary evidence, not as a cur
 
 ## Institutional endorsement
 
-The University of Milano-Bicocca relationship must be explicit in the first viewport of every route. The shared header identifies DatAI as a University research laboratory, and each masthead names the University in visible text. The University mark appears once in the shared footer as an institutional endorsement, not as part of the DatAI wordmark. Its official positive black-and-grey artwork remains unmodified and sits on an independent white field inside the petroleum footer. The field padding preserves the Brand Book 2025 clear area, while the department relationship is written outside that protected area. Do not recolor, distort, crop, merge, or visually compete with the mark.
+The University of Milano-Bicocca relationship must be explicit in the first viewport of every route. The shared header identifies DatAI as a University research laboratory, and each masthead names the University in visible text. The University mark appears once in the shared footer as an institutional endorsement, not as part of the DatAI wordmark. Its official positive black-and-grey artwork remains unmodified and sits on an independent white field inside the CRT-black footer. The field padding preserves the Brand Book 2025 clear area, while the department relationship is written outside that protected area. Do not recolor, distort, crop, merge, or visually compete with the mark.
 
 ## Accessibility
 
 - Preserve semantic sections, headings, lists, buttons, links, labels, `<details>`, and ARIA tab relationships.
 - Keep the skip link and visible keyboard focus.
 - Default focus: `3px` acid outline with `4px` offset.
-- On the acid contact field, focus changes to petroleum.
-- Maintain WCAG 2.2 AA contrast; publication venue text uses `#4b595a` on paper (`5.84:1`).
-- Acid focus on petroleum and petroleum focus on acid both exceed AA (`8.02:1`).
+- On the acid contact field, focus changes to CRT black.
+- Maintain WCAG 2.2 AA contrast; publication venue text uses `#4a5d51` on paper (`6.28:1`).
+- Acid focus on CRT black and CRT-black focus on acid both exceed AA (`9.35:1`).
 - Selection uses marker fill, border, text, and `aria-selected`, not color alone.
 - Prominent targets are at least `3rem` high.
 
