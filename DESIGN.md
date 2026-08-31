@@ -44,7 +44,7 @@ The visual world combines deep petroleum fields, the official DatAI green, warm 
 2. **Research:** Expand four areas into question → people → evidence chains, followed by selected systems, datasets, methods, languages, and public repositories.
 3. **People:** Identify the current group through portrait-led evidence records with roles, affiliations, and authoritative profiles.
 4. **Publications:** Expose the complete deduplicated archive with dated source context and progressive search/filter controls.
-5. **Contact:** Offer verified collaboration and student routes, physical location, institutional identity, and historical naming.
+5. **Contact:** Offer verified collaboration and student routes, all four physical laboratory spaces, institutional identity, and historical naming.
 6. **Shared shell:** Keep the fixed navigation, active-page state, editorial responsibility, privacy, accessibility, and source notes consistent across every route.
 
 ## Color system

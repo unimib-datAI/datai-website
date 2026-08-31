@@ -35,7 +35,7 @@ Le fonti interne più recenti precisano il territorio come intersezione tra inte
 ## Operating Context
 
 - Il laboratorio appartiene a DISCo, Università degli Studi di Milano-Bicocca.
-- La pagina dipartimentale corrente indica Flavio De Paoli come responsabile e la stanza 1033 nell'edificio U14, Viale Sarca 336, Milano.
+- La pagina dipartimentale corrente indica Flavio De Paoli come responsabile e la stanza 1033 nell'edificio U14, Viale Sarca 336, Milano. Il 31 agosto 2026 l'utente ha precisato che DatAI dispone di quattro spazi di laboratorio nell'edificio U14: le stanze 1031, 1032, 1033 e T35; questa indicazione più recente governa il sito.
 - Il sito dovrà collegare in modo chiaro le fonti istituzionali, l'organizzazione GitHub `unimib-datAI` e gli output pubblici dei progetti.
 - Le informazioni su persone, incarichi, progetti, pubblicazioni, software, eventi e opportunità devono provenire da fonti correnti e avere una responsabilità editoriale identificabile.
 
