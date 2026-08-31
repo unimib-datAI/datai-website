@@ -105,6 +105,17 @@ const publicationLoadMore = document.querySelector("[data-publication-load-more]
 const publicationClear = document.querySelector("[data-publication-clear]");
 const pageSize = 24;
 let publicationLimit = pageSize;
+let publicationRetraceTimer;
+
+function schedulePublicationRetrace() {
+  if (!publicationStatus || reducedMotion.matches) return;
+  window.clearTimeout(publicationRetraceTimer);
+  publicationRetraceTimer = window.setTimeout(() => {
+    publicationStatus.classList.remove("is-retracing");
+    void publicationStatus.offsetWidth;
+    publicationStatus.classList.add("is-retracing");
+  }, 80);
+}
 
 function normalized(value) {
   return value.trim().toLocaleLowerCase("en");
@@ -137,8 +148,14 @@ function updatePublications({ resetLimit = false } = {}) {
   if (publicationClear) publicationClear.hidden = !query && year === "all";
 }
 
-publicationSearch?.addEventListener("input", () => updatePublications({ resetLimit: true }));
-publicationYear?.addEventListener("change", () => updatePublications({ resetLimit: true }));
+publicationSearch?.addEventListener("input", () => {
+  updatePublications({ resetLimit: true });
+  schedulePublicationRetrace();
+});
+publicationYear?.addEventListener("change", () => {
+  updatePublications({ resetLimit: true });
+  schedulePublicationRetrace();
+});
 publicationLoadMore?.addEventListener("click", () => {
   publicationLimit += pageSize;
   updatePublications();
@@ -147,6 +164,7 @@ publicationClear?.addEventListener("click", () => {
   if (publicationSearch) publicationSearch.value = "";
   if (publicationYear) publicationYear.value = "all";
   updatePublications({ resetLimit: true });
+  schedulePublicationRetrace();
   publicationSearch?.focus();
 });
 
