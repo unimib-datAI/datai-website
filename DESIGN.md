@@ -158,6 +158,8 @@ On 31 August 2026 the user directed every sourced portrait to be regenerated thr
 
 Every final WebP records its source set, generation method, prompt intent, date, transform, checksum and rights status in `public/assets/provenance.json`. Full source images, prior web crops and generated masters remain outside the public asset directory. Source and subject permissions remain mandatory editorial follow-ups before a public institutional launch; generated portraits are presentation assets and never documentary research evidence.
 
+Archival laboratory photography is treated as documentary evidence, not as a current-team portrait source. The Home gallery uses an asymmetric lead-and-supporting-image composition, labels the INSID&S context and Drive file date, and never identifies pictured people unless a verified caption is available.
+
 ## Institutional endorsement
 
 The University of Milano-Bicocca relationship must be explicit in the first viewport of every route. The shared header identifies DatAI as a University research laboratory, and each masthead names the University in visible text. The University mark appears once in the shared footer as an institutional endorsement, not as part of the DatAI wordmark. Its official positive black-and-grey artwork remains unmodified and sits on an independent white field inside the petroleum footer. The field padding preserves the Brand Book 2025 clear area, while the department relationship is written outside that protected area. Do not recolor, distort, crop, merge, or visually compete with the mark.
@@ -191,6 +193,7 @@ The University of Milano-Bicocca relationship must be explicit in the first view
 - Generated rasters record generator, prompt summary, date, SHA-256, source path, and shipping status.
 - Composites list every item in `derived_from`, plus purpose and date.
 - `datai-logo.svg` is the transparent vector layer `7:188` extracted from the authoritative Figma logo frame `7:187`; never reintroduce the frame background into the asset.
+- Lab photographs remain exact user-owned Google Drive JPEGs from the INSID&S archive; keep their source IDs, dates, dimensions, checksums and historical-context label in provenance.
 - `unimib-institutional-logo.png` remains the official positive mark served by `unimib.it`; its white support, proportions and clear area follow the University Brand Book 2025.
 - Never use an AI-generated visual as documentary research evidence.
 

@@ -284,6 +284,85 @@ a.specimen {
   transform: translateY(1.5rem);
 }
 
+.lab-gallery,
+.lab-gallery-support,
+.lab-gallery-pair {
+  display: grid;
+  gap: 1px;
+  background: rgba(20, 33, 34, 0.24);
+}
+
+.lab-gallery {
+  border: 1px solid rgba(20, 33, 34, 0.24);
+}
+
+.lab-photo {
+  display: grid;
+  min-width: 0;
+  grid-template-rows: auto minmax(4.5rem, auto);
+  background: #10292b;
+  color: #f4f2e9;
+}
+
+.lab-photo-media {
+  min-height: 0;
+  overflow: hidden;
+  aspect-ratio: 595 / 420;
+  background: #1d393b;
+}
+
+.lab-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lab-photo figcaption {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  padding: 0.9rem 1rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: rgba(244, 242, 233, 0.72);
+}
+
+.lab-photo figcaption span:first-child {
+  color: #b8ed51;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+@media (min-width: 768px) {
+  .lab-gallery {
+    grid-template-columns: minmax(0, 1.16fr) minmax(0, 0.84fr);
+    align-items: stretch;
+  }
+
+  .lab-gallery-support {
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .lab-gallery-pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lab-photo--lead,
+  .lab-gallery-support > .lab-photo,
+  .lab-gallery-pair .lab-photo {
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
+  .lab-photo--lead .lab-photo-media,
+  .lab-gallery-support > .lab-photo .lab-photo-media,
+  .lab-gallery-pair .lab-photo-media {
+    aspect-ratio: auto;
+  }
+}
+
 .section-index {
   color: #5b6868;
   font-size: 0.72rem;

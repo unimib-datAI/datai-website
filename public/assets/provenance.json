@@ -35,6 +35,54 @@
     "logo_treatment": "Transparent Figma vector layer 7:188",
     "sha256": "9830c3287f9d6889baf2fbf792883c5980eefe11a55d2298258cecd974598861"
   },
+  "lab/inside3.jpg": {
+    "type": "user_owned_archival_photograph",
+    "source": "Google Drive folder lab, INSID&S archive",
+    "source_url": "https://drive.google.com/file/d/1NQTAAsHZhpqQwLrSXLByfjaVETPzFfny/view",
+    "drive_file_id": "1NQTAAsHZhpqQwLrSXLByfjaVETPzFfny",
+    "drive_created": "2019-11-13T17:06:52.000Z",
+    "retrieved": "2026-08-31",
+    "original_dimensions": "595 × 420 px",
+    "usage": "Historical INSID&S workspace documentation on the DatAI home page",
+    "rights_status": "provided by the site owner for publication; confirm depicted-person consent before a public institutional launch",
+    "sha256": "14b70b123b6daaf2317a26aef3a04ca81ddb4d85af81bba723a93f16d234f35e"
+  },
+  "lab/inside3-2.jpg": {
+    "type": "user_owned_archival_photograph",
+    "source": "Google Drive folder lab, INSID&S archive",
+    "source_url": "https://drive.google.com/file/d/1NQeGRpvhAmAuUsENawJ145too8oX0V6L/view",
+    "drive_file_id": "1NQeGRpvhAmAuUsENawJ145too8oX0V6L",
+    "drive_created": "2019-11-13T17:06:50.000Z",
+    "retrieved": "2026-08-31",
+    "original_dimensions": "595 × 420 px",
+    "usage": "Historical INSID&S workspace documentation on the DatAI home page",
+    "rights_status": "provided by the site owner for publication; confirm depicted-person consent before a public institutional launch",
+    "sha256": "ddbae67761fb8f87dab247b6146d59b068ef966ad9f6d0c24457eae584e73e36"
+  },
+  "lab/inside2.jpg": {
+    "type": "user_owned_archival_photograph",
+    "source": "Google Drive folder lab, INSID&S archive",
+    "source_url": "https://drive.google.com/file/d/1NPMFALUZS8MSAT7ycL-qaDDjRPgGUt_V/view",
+    "drive_file_id": "1NPMFALUZS8MSAT7ycL-qaDDjRPgGUt_V",
+    "drive_created": "2019-11-13T17:06:52.000Z",
+    "retrieved": "2026-08-31",
+    "original_dimensions": "595 × 420 px",
+    "usage": "Historical INSID&S workspace documentation on the DatAI home page",
+    "rights_status": "provided by the site owner for publication; confirm depicted-person consent before a public institutional launch",
+    "sha256": "93ca9de795f359f29ecfed7895aa1c3af5a023e7ec568c0dcf9e3b499a212c66"
+  },
+  "lab/miss.jpg": {
+    "type": "user_owned_archival_photograph",
+    "source": "Google Drive folder lab, INSID&S archive",
+    "source_url": "https://drive.google.com/file/d/1NP6xvkxjQmbzGge3Nw45HNdk_pFW-yrI/view",
+    "drive_file_id": "1NP6xvkxjQmbzGge3Nw45HNdk_pFW-yrI",
+    "drive_created": "2019-11-13T17:06:54.000Z",
+    "retrieved": "2026-08-31",
+    "original_dimensions": "595 × 420 px",
+    "usage": "Historical INSID&S workspace documentation on the DatAI home page",
+    "rights_status": "provided by the site owner for publication; confirm depicted-person consent before a public institutional launch",
+    "sha256": "3ad332b5a75e4d73431745392d9eb11312f517e8ef6cd0ead8578e664c69e66f"
+  },
   "team/flavio-maria-de-paoli.webp": {
     "type": "ai_edited_identity_preserving_portrait",
     "subject": "Flavio Maria De Paoli",
