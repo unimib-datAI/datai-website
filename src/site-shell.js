@@ -22,7 +22,7 @@ export function siteHeader(activePage) {
     <header class="site-header fixed inset-x-0 top-0 z-50 text-paper-50">
       <div class="mx-auto flex h-[var(--header-height)] max-w-[96rem] items-center justify-between px-5 md:px-8 xl:px-12">
         <a class="flex items-center gap-3" href="${SITE_BASE}" aria-label="DatAI home"${activePage === "home" ? ' aria-current="page"' : ""}>
-          <span class="wordmark" aria-hidden="true"><img src="${SITE_BASE}assets/datai-logo.svg" alt="" width="512" height="132" /></span>
+          <span class="wordmark wordmark--animated" aria-hidden="true"><span class="wordmark-crt">dat.ai</span><img class="wordmark-official" src="${SITE_BASE}assets/datai-logo.svg" alt="" width="512" height="132" /></span>
           <span class="hidden text-[0.62rem] font-bold uppercase leading-tight tracking-[0.11em] text-paper-50/65 lg:block">Research laboratory<br />University of Milano-Bicocca</span>
         </a>
         <nav class="hidden md:block" aria-label="Primary navigation">

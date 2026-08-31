@@ -125,6 +125,49 @@ footer a {
   flex: none;
 }
 
+.wordmark--animated {
+  position: relative;
+  display: grid;
+  min-height: 2rem;
+  align-items: center;
+}
+
+.wordmark--animated > * {
+  grid-area: 1 / 1;
+}
+
+.wordmark-crt {
+  display: none;
+  color: #b8ed51;
+  font-family: "Courier New", ui-monospace, monospace;
+  font-size: clamp(1.05rem, 3.4vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  line-height: 1;
+  text-shadow: 0 0 0.16rem rgba(184, 237, 81, 0.82), 0 0.08rem 0.42rem rgba(139, 207, 0, 0.52);
+  white-space: nowrap;
+}
+
+.wordmark-official {
+  position: relative;
+  z-index: 1;
+}
+
+.wordmark--animated::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: #b8ed51;
+  box-shadow: 0 0 0.45rem rgba(184, 237, 81, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center;
+}
+
 .wordmark img {
   display: block;
   width: 100%;
@@ -934,6 +977,114 @@ a.publication-title:hover {
   display: none;
 }
 
+@keyframes logo-crt-boot {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    filter: blur(1.6px) brightness(2);
+    opacity: 0;
+    transform: scaleX(0.96);
+  }
+
+  8% {
+    opacity: 0.9;
+  }
+
+  34% {
+    clip-path: inset(0);
+    filter: blur(0.35px) brightness(1.38);
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  45% {
+    opacity: 0.7;
+  }
+
+  49%,
+  66% {
+    clip-path: inset(0);
+    filter: blur(0.2px) brightness(1.18);
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  80% {
+    clip-path: inset(47% 0);
+    filter: blur(0.8px) brightness(2.25);
+    opacity: 0.88;
+    transform: scaleX(1.04);
+  }
+
+  90% {
+    clip-path: inset(49.5% 0);
+    filter: blur(1.2px) brightness(2.6);
+    opacity: 0.42;
+    transform: scaleX(0.92);
+  }
+
+  100% {
+    clip-path: inset(50% 0);
+    filter: blur(1.5px) brightness(2.8);
+    opacity: 0;
+    transform: scaleX(0.78);
+  }
+}
+
+@keyframes logo-official-materialize {
+  0%,
+  68% {
+    clip-path: inset(50% 0);
+    filter: blur(1.4px) brightness(2.2);
+    opacity: 0;
+  }
+
+  77% {
+    clip-path: inset(43% 0);
+    filter: blur(0.8px) brightness(1.8);
+    opacity: 0.76;
+  }
+
+  91% {
+    clip-path: inset(0);
+    filter: brightness(1.12);
+    opacity: 1;
+  }
+
+  100% {
+    clip-path: inset(0);
+    filter: none;
+    opacity: 1;
+  }
+}
+
+@keyframes logo-phosphor-beam {
+  0%,
+  64% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  70% {
+    opacity: 0.95;
+    transform: scaleX(0.18);
+  }
+
+  80% {
+    opacity: 0.82;
+    transform: scaleX(1.06);
+  }
+
+  91% {
+    opacity: 0.18;
+    transform: scaleX(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scaleX(1);
+  }
+}
+
 @keyframes hero-raster-reveal {
   0% {
     clip-path: inset(0 0 100% 0);
@@ -1015,6 +1166,19 @@ a.publication-title:hover {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .site-header .wordmark-crt {
+    display: block;
+    animation: logo-crt-boot 1250ms linear both;
+  }
+
+  .site-header .wordmark-official {
+    animation: logo-official-materialize 1250ms linear both;
+  }
+
+  .site-header .wordmark--animated::after {
+    animation: logo-phosphor-beam 1250ms linear both;
+  }
+
   .hero-title {
     animation: hero-raster-reveal var(--motion-focal) var(--ease-arrive) 80ms both;
   }
