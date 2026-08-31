@@ -152,16 +152,16 @@
     "subject": "Blerina Spahiu",
     "generator": "OpenAI built-in image generation",
     "use_case": "identity-preserve",
-    "source_page_urls": ["https://scholar.google.co.uk/citations?hl=en&user=bzWWMXAAAAAJ", "https://nexuslinguarum.eu/dt_team/blerina-spahiu/"],
-    "source_urls": ["https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=bzWWMXAAAAAJ&citpid=5", "https://nexuslinguarum.eu/wp-content/uploads/2020/06/Blerina-Spahiu.png"],
-    "derived_from": ["assets/team-sources/originals/blerina-spahiu-scholar.jpg", "assets/team-sources/originals/blerina-spahiu-nexus.png", "assets/team-sources/generated/flavio-maria-de-paoli.png", "assets/team-sources/generated/blerina-spahiu.png"],
+    "source_page_urls": ["https://nexuslinguarum.eu/dt_team/blerina-spahiu/"],
+    "source_urls": ["https://nexuslinguarum.eu/wp-content/uploads/2020/06/Blerina-Spahiu.png"],
+    "derived_from": ["assets/team-sources/originals/blerina-spahiu-nexus.png", "public/assets/team/andrea-maurino.webp", "assets/team-sources/generated/blerina-spahiu.png"],
     "retrieved": "2026-08-31",
     "generated": "2026-08-31",
-    "prompt_summary": "Preserve exact identity using Scholar as primary appearance and Nexus Linguarum as supporting facial reference; remove the graduation cap, retain blonde hair and smile, and match the shared straight-on 4:5 petroleum studio composition with a plain black crew-neck T-shirt.",
-    "transform": "identity-preserving studio edit; 480 × 600 WebP, quality 88",
-    "rights_status": "permission_and_original_required_before_public_launch",
+    "prompt_summary": "Use the Nexus Linguarum portrait as the sole identity authority; preserve dark wavy hair, facial proportions and broad natural smile while changing only the scarf, clothing, background, crop and studio lighting. Do not infer or blend the unrelated blonde graduation portrait.",
+    "transform": "identity-preserving studio edit, v2; 480 × 600 WebP, quality 88",
+    "rights_status": "permission_required_before_public_launch",
     "shipping": true,
-    "sha256": "7d10700c00829332b7d6976ecff9633f8d49fade4d38ffbe0477fbdbe2ca72d6"
+    "sha256": "2889c6e90ded2078e03912d9b7488f9246af76ea77aaddcd76c47eb2baa24c86"
   },
   "team/abubakari-alidu.webp": {
     "type": "ai_edited_identity_preserving_portrait",
@@ -218,14 +218,14 @@
     "use_case": "identity-preserve",
     "source_page_urls": ["https://www.unimib.it/marco-cremaschi"],
     "source_urls": ["https://www.unimib.it/sites/default/files/2023-02/IMG_20210928_112029.jpeg"],
-    "derived_from": ["assets/team-sources/originals/marco-cremaschi-flat.png", "assets/team-sources/generated/flavio-maria-de-paoli.png", "assets/team-sources/generated/marco-cremaschi.png"],
+    "derived_from": ["assets/team-sources/originals/marco-cremaschi.jpeg", "public/assets/team/andrea-maurino.webp", "assets/team-sources/generated/marco-cremaschi.png"],
     "retrieved": "2026-08-31",
     "generated": "2026-08-31",
-    "prompt_summary": "Preserve exact identity, blond-topped dark hair, beard, ear gauges, septum ring and smile; reorient without redesigning the face and match the shared straight-on 4:5 petroleum studio composition with a plain black crew-neck T-shirt.",
-    "transform": "identity-preserving studio edit; 480 × 600 WebP, quality 88",
+    "prompt_summary": "Use the original Bicocca portrait as the sole identity authority; preserve the slight head angle, natural asymmetry, blond-topped dark hair, beard, ear gauges, septum ring and smile while changing only clothing, background, crop and studio lighting.",
+    "transform": "identity-preserving studio edit, v2; 480 × 600 WebP, quality 88",
     "rights_status": "permission_required_before_public_launch",
     "shipping": true,
-    "sha256": "9861032e5821e024e53ed4f290d6c39d43b867a763c9e4eedd281083a247ad7a"
+    "sha256": "3e43284260c25217c9938763263f00548fb292a00c4e0ca42a7e4f4d32ea2eb2"
   },
   "team/riccardo-pozzi.webp": {
     "type": "ai_edited_identity_preserving_portrait",
