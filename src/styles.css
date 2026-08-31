@@ -5,7 +5,7 @@
 @theme {
   --font-sans: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Newsreader Variable", ui-serif, Georgia, serif;
-  --color-petrol-950: #10292b;
+  --color-petrol-950: #0a1b12;
   --color-petrol-900: #1d393b;
   --color-petrol-800: #2c4b4c;
   --color-acid-500: #8bcf00;
@@ -37,7 +37,7 @@ body {
 }
 
 ::selection {
-  color: #10292b;
+  color: #0a1b12;
   background: #b8ed51;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 #contact :focus-visible {
-  outline-color: #10292b;
+  outline-color: #0a1b12;
 }
 
 a,
@@ -64,7 +64,7 @@ select {
   left: 0.75rem;
   transform: translateY(-180%);
   background: #8bcf00;
-  color: #10292b;
+  color: #0a1b12;
   padding: 0.75rem 1rem;
   font-weight: 800;
 }
@@ -82,7 +82,7 @@ select {
 }
 
 .site-header {
-  background: #10292b;
+  background: #0a1b12;
   border-bottom: 1px solid rgba(244, 242, 233, 0.18);
 }
 
@@ -126,7 +126,7 @@ select {
 }
 
 .hero-field {
-  background: #10292b;
+  background: #0a1b12;
 }
 
 .page-masthead {
@@ -237,7 +237,7 @@ a.specimen {
 }
 
 .route-line strong {
-  color: #10292b;
+  color: #0a1b12;
   font-family: "Newsreader Variable", ui-serif, Georgia, serif;
   font-size: clamp(1.5rem, 2.25vw, 2rem);
   font-weight: 590;
@@ -255,7 +255,7 @@ a.specimen {
 }
 
 .route-action {
-  color: #10292b;
+  color: #0a1b12;
   font-size: 0.78rem;
   font-weight: 800;
   text-decoration: underline;
@@ -300,7 +300,7 @@ a.specimen {
   display: grid;
   min-width: 0;
   grid-template-rows: auto minmax(4.5rem, auto);
-  background: #10292b;
+  background: #0a1b12;
   color: #f4f2e9;
 }
 
@@ -338,7 +338,7 @@ a.specimen {
   align-items: center;
   min-height: 2.5rem;
   padding: 0.6rem 1rem 0.6rem 1.35rem;
-  color: #10292b;
+  color: #0a1b12;
   background: #b8ed51;
   clip-path: polygon(0.75rem 0, 100% 0, 100% 100%, 0 100%, 0.75rem 50%);
   font-size: 0.625rem;
@@ -435,8 +435,8 @@ a.specimen {
 }
 
 .research-control[aria-selected="true"] {
-  color: #10292b;
-  border-color: #10292b;
+  color: #0a1b12;
+  border-color: #0a1b12;
 }
 
 .research-control[aria-selected="true"] .research-marker {
@@ -613,7 +613,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 
 .publication-total strong {
   display: block;
-  color: #10292b;
+  color: #0a1b12;
   font-family: "Newsreader Variable", ui-serif, Georgia, serif;
   font-size: clamp(4.25rem, 8vw, 6rem);
   font-weight: 520;
@@ -792,7 +792,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 }
 
 .publication-title {
-  color: #10292b;
+  color: #0a1b12;
   font-family: "Newsreader Variable", ui-serif, Georgia, serif;
   font-size: clamp(1.15rem, 1.7vw, 1.45rem);
   font-weight: 590;

@@ -4,8 +4,8 @@
   "description": "Data for Artificial Intelligence research lab at the University of Milano-Bicocca.",
   "start_url": "/datai/",
   "display": "standalone",
-  "background_color": "#10292b",
-  "theme_color": "#10292b",
+  "background_color": "#0a1b12",
+  "theme_color": "#0a1b12",
   "icons": [
     {
       "src": "/datai/assets/datai-logo.svg",

@@ -2,7 +2,7 @@
 name: DatAI — Data for Artificial Intelligence
 description: An evidence-led academic interface where every research claim connects to people and inspectable artifacts.
 colors:
-  petrol-950: "#10292b"
+  petrol-950: "#0a1b12"
   petrol-900: "#1d393b"
   petrol-800: "#2c4b4c"
   acid-500: "#8bcf00"
@@ -51,7 +51,7 @@ The visual world combines deep petroleum fields, the official DatAI green, warm 
 
 | Token | Value | Use |
 |---|---:|---|
-| `petrol-950` | `#10292b` | Header, hero, people, footer, dark actions |
+| `petrol-950` | `#0a1b12` | Header, hero, people, footer, dark actions |
 | `petrol-900` | `#1d393b` | Research panels, specimens, dark hover states |
 | `petrol-800` | `#2c4b4c` | Tonal separation inside dark compositions |
 | `acid-500` | `#8bcf00` | Primary actions, selected states, focus, evidence accents |
