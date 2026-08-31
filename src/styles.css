@@ -311,6 +311,10 @@ a.specimen {
   background: #1d393b;
 }
 
+.lab-gallery--current .lab-photo-media {
+  aspect-ratio: 16 / 9;
+}
+
 .lab-photo img {
   display: block;
   width: 100%;
@@ -360,6 +364,18 @@ a.specimen {
   .lab-gallery-support > .lab-photo .lab-photo-media,
   .lab-gallery-pair .lab-photo-media {
     aspect-ratio: auto;
+  }
+
+  .lab-gallery--current {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lab-gallery--current .lab-photo {
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
+  .lab-gallery--current .lab-photo-media {
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -473,11 +489,22 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 
 .person-row {
   display: grid;
-  grid-template-columns: 5.25rem minmax(12rem, 1.2fr) minmax(10rem, 0.7fr) auto;
+  grid-template-columns: 5.25rem minmax(12rem, 1.2fr) minmax(10rem, 0.7fr) 8.75rem;
   gap: 1.5rem;
   align-items: center;
   padding: 1rem 0;
   border-top: 1px solid rgba(244, 242, 233, 0.2);
+}
+
+.person-row > :last-child {
+  display: grid;
+  grid-template-columns: 3.5rem 4.25rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.person-row > :last-child a[href*="scholar.google.com"] {
+  grid-column: 2;
 }
 
 .person-row:last-child {
