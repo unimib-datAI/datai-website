@@ -141,9 +141,9 @@ footer a {
   display: none;
   color: #b8ed51;
   font-family: "Courier New", ui-monospace, monospace;
-  font-size: clamp(1.05rem, 3.4vw, 1.45rem);
+  font-size: clamp(1.45rem, 4.8vw, 2rem);
   font-weight: 700;
-  letter-spacing: 0.035em;
+  letter-spacing: clamp(0.06rem, 0.25vw, 0.15rem);
   line-height: 1;
   text-shadow: 0 0 0.16rem rgba(184, 237, 81, 0.82), 0 0.08rem 0.42rem rgba(139, 207, 0, 0.52);
   white-space: nowrap;
