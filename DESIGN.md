@@ -144,11 +144,12 @@ Without JavaScript, the complete chronological archive remains visible. Citation
 
 ### Motion
 
-- Smooth anchor scrolling is the default.
-- Specimen lift: `280ms cubic-bezier(0.2, 0.75, 0.25, 1)`.
-- Border and background state changes: `180ms ease`.
-- No entrance sequences, autoplay, parallax, or ambient animation.
-- `prefers-reduced-motion: reduce` disables smooth scrolling and collapses transitions to `0.01ms`.
+- **Focal moment:** Home performs one evidence-scan sequence. The thesis is revealed through a bounded raster-like clip, the rule draws left-to-right, and the three specimens develop in order while one acid scan line passes through each record. The sequence completes within one second and never loops.
+- **Continuity:** Research panel changes use a `380ms` top-to-bottom clip transition so the selected control and its evidence record read as one state change.
+- **Data chronology:** Publication bars grow from the baseline over `560ms`; their `12ms` sibling stagger is capped at `360ms` across the full archive range.
+- **Feedback:** Button, navigation, marker, border and text-decoration changes use `140–220ms`; specimen lift uses the shared exponential arrival curve `cubic-bezier(0.16, 1, 0.3, 1)`.
+- Smooth anchor scrolling remains the default. There is no autoplay, parallax, ambient animation or added motion dependency.
+- `prefers-reduced-motion: reduce` removes the authored spatial sequence, panel wipe, histogram growth and specimen lift while preserving short color and border feedback.
 
 ## People and portrait policy
 

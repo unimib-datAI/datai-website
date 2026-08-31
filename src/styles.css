@@ -23,6 +23,10 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   --header-height: 4.75rem;
+  --motion-immediate: 140ms;
+  --motion-routine: 220ms;
+  --motion-focal: 680ms;
+  --ease-arrive: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 html {
@@ -64,6 +68,14 @@ select {
   -webkit-tap-highlight-color: transparent;
 }
 
+.inline-flex,
+button,
+.site-header a,
+.site-header summary,
+footer a {
+  transition: color var(--motion-immediate) ease, background-color var(--motion-immediate) ease, border-color var(--motion-immediate) ease, text-decoration-color var(--motion-immediate) ease;
+}
+
 .skip-link {
   position: fixed;
   z-index: 100;
@@ -101,6 +113,10 @@ select {
 .mobile-nav[open] summary {
   border-color: #8bcf00;
   color: #b8ed51;
+}
+
+.mobile-nav[open] nav {
+  transform-origin: top right;
 }
 
 .wordmark {
@@ -187,12 +203,23 @@ select {
   overflow: hidden;
   border: 1px solid rgba(242, 243, 232, 0.26);
   background: rgba(27, 59, 44, 0.82);
-  transition: transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1), border-color 180ms ease, background 180ms ease;
+  transition: transform var(--motion-routine) var(--ease-arrive), border-color var(--motion-immediate) ease, background-color var(--motion-immediate) ease;
 }
 
 a.specimen {
   color: inherit;
   text-decoration: none;
+}
+
+.specimen::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0 0 auto;
+  height: 1px;
+  background: #b8ed51;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .specimen::after {
@@ -233,6 +260,11 @@ a.specimen {
 .route-line:hover .route-action,
 .route-line:focus-visible .route-action {
   text-decoration-color: #8bcf00;
+}
+
+.route-line strong,
+.route-action {
+  transition: color var(--motion-immediate) ease, text-decoration-color var(--motion-immediate) ease;
 }
 
 .route-index {
@@ -446,9 +478,18 @@ a.specimen {
   border-color: #0a1b12;
 }
 
+.research-control {
+  transition: color var(--motion-immediate) ease, border-color var(--motion-immediate) ease;
+}
+
+.research-marker {
+  transition: transform var(--motion-routine) var(--ease-arrive), background-color var(--motion-immediate) ease, border-color var(--motion-immediate) ease;
+}
+
 .research-control[aria-selected="true"] .research-marker {
   background: #8bcf00;
   border-color: #8bcf00;
+  transform: scale(1.12);
 }
 
 .research-tablist {
@@ -715,7 +756,8 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   width: 100%;
   height: var(--bar-height);
   background: #8bcf00;
-  transition: background-color 160ms ease;
+  transform-origin: center bottom;
+  transition: background-color var(--motion-immediate) ease;
 }
 
 .publication-histogram-bar.has-publications {
@@ -892,6 +934,137 @@ a.publication-title:hover {
   display: none;
 }
 
+@keyframes hero-raster-reveal {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    filter: blur(3px) brightness(1.35);
+  }
+
+  68% {
+    filter: brightness(1.08);
+  }
+
+  100% {
+    clip-path: inset(0);
+    filter: none;
+  }
+}
+
+@keyframes hero-rule-draw {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes specimen-develop {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    filter: brightness(1.35);
+  }
+
+  100% {
+    clip-path: inset(0);
+    filter: none;
+  }
+}
+
+@keyframes specimen-scan {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  12% {
+    opacity: 0.82;
+  }
+
+  78% {
+    opacity: 0.46;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(26rem);
+  }
+}
+
+@keyframes mobile-nav-deploy {
+  from {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0.72;
+  }
+
+  to {
+    clip-path: inset(0);
+    opacity: 1;
+  }
+}
+
+@keyframes histogram-grow {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-title {
+    animation: hero-raster-reveal var(--motion-focal) var(--ease-arrive) 80ms both;
+  }
+
+  .hero-line {
+    transform-origin: left center;
+    animation: hero-rule-draw 520ms var(--ease-arrive) 210ms both;
+  }
+
+  .specimen-tray .specimen {
+    animation: specimen-develop 620ms var(--ease-arrive) both;
+  }
+
+  .specimen-tray .specimen:nth-child(1) {
+    animation-delay: 180ms;
+  }
+
+  .specimen-tray .specimen:nth-child(2) {
+    animation-delay: 260ms;
+  }
+
+  .specimen-tray .specimen:nth-child(3) {
+    animation-delay: 340ms;
+  }
+
+  .specimen-tray .specimen::before {
+    animation: specimen-scan 560ms var(--ease-arrive) both;
+  }
+
+  .specimen-tray .specimen:nth-child(1)::before {
+    animation-delay: 300ms;
+  }
+
+  .specimen-tray .specimen:nth-child(2)::before {
+    animation-delay: 380ms;
+  }
+
+  .specimen-tray .specimen:nth-child(3)::before {
+    animation-delay: 460ms;
+  }
+
+  .mobile-nav[open] nav {
+    animation: mobile-nav-deploy 180ms var(--ease-arrive) both;
+  }
+
+  .publication-histogram-bar {
+    animation: histogram-grow 560ms var(--ease-arrive) var(--bar-delay, 0ms) both;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -903,7 +1076,14 @@ a.publication-title:hover {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  }
+
+  .specimen {
+    transition-property: border-color, background-color;
+  }
+
+  .research-marker {
+    transition-property: background-color, border-color;
   }
 }
 

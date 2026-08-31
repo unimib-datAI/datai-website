@@ -2,8 +2,26 @@ document.documentElement.classList.add("js-enhanced");
 
 const researchControls = Array.from(document.querySelectorAll("[data-research-control]"));
 const researchPanels = Array.from(document.querySelectorAll("[data-research-panel]"));
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-function selectResearch(id, moveFocus = false) {
+function animateResearchPanel(panel) {
+  if (!panel || reducedMotion.matches || typeof panel.animate !== "function") return;
+  panel.getAnimations?.().forEach((animation) => animation.cancel());
+  panel.animate(
+    [
+      { clipPath: "inset(0 0 100% 0)", opacity: 0.72 },
+      { clipPath: "inset(0)", opacity: 1 },
+    ],
+    {
+      duration: 380,
+      easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+    },
+  );
+}
+
+function selectResearch(id, moveFocus = false, animatePanel = false) {
+  const previousPanel = researchPanels.find((panel) => !panel.hidden);
+  let activePanel;
   researchControls.forEach((control) => {
     const selected = control.dataset.researchControl === id;
     control.setAttribute("aria-selected", String(selected));
@@ -15,13 +33,16 @@ function selectResearch(id, moveFocus = false) {
     const selected = panel.dataset.researchPanel === id;
     panel.hidden = !selected;
     panel.classList.toggle("is-active", selected);
+    if (selected) activePanel = panel;
   });
+
+  if (animatePanel && activePanel !== previousPanel) animateResearchPanel(activePanel);
 }
 
 researchControls.forEach((control, index) => {
   control.addEventListener("click", () => {
     const id = control.dataset.researchControl;
-    selectResearch(id);
+    selectResearch(id, false, true);
     window.history.replaceState(null, "", `#${id}`);
   });
   control.addEventListener("keydown", (event) => {
@@ -32,7 +53,7 @@ researchControls.forEach((control, index) => {
     if (event.key === "ArrowUp") nextIndex = (index - 1 + researchControls.length) % researchControls.length;
     if (event.key === "Home") nextIndex = 0;
     if (event.key === "End") nextIndex = researchControls.length - 1;
-    selectResearch(researchControls[nextIndex].dataset.researchControl, true);
+    selectResearch(researchControls[nextIndex].dataset.researchControl, true, true);
   });
 });
 
@@ -45,7 +66,7 @@ if (researchControls.length && researchPanels.length) {
 
   window.addEventListener("hashchange", () => {
     const id = window.location.hash.slice(1);
-    if (researchControls.some((control) => control.dataset.researchControl === id)) selectResearch(id);
+    if (researchControls.some((control) => control.dataset.researchControl === id)) selectResearch(id, false, true);
   });
 }
 

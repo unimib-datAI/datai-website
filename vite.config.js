@@ -96,12 +96,12 @@ function publicationArchive() {
       );
       const publicationChartMax = Math.ceil(Math.max(...publicationYearHistogram.map(({ count }) => count)) / 10) * 10;
       const publicationChartMid = publicationChartMax / 2;
-      const publicationYearBars = publicationYearHistogram.map(({ year, count }) => {
+      const publicationYearBars = publicationYearHistogram.map(({ year, count }, index) => {
         const labelInterval = year === lastPublicationYear ? "end" : year % 10 === 0 ? "decade" : year % 5 === 0 ? "five" : "none";
         const label = `${year}: ${count} publication${count === 1 ? "" : "s"}`;
         const height = ((count / publicationChartMax) * 100).toFixed(2);
         return `<li data-year-label="${labelInterval}">
-          <span class="publication-histogram-plot" aria-hidden="true"><span class="publication-histogram-bar${count ? " has-publications" : ""}" style="--bar-height: ${height}%" title="${label}"></span></span>
+          <span class="publication-histogram-plot" aria-hidden="true"><span class="publication-histogram-bar${count ? " has-publications" : ""}" style="--bar-height: ${height}%; --bar-delay: ${Math.min(index * 12, 360)}ms" title="${label}"></span></span>
           <span class="publication-histogram-year" aria-hidden="true">${year}</span>
           <span class="sr-only">${label}</span>
         </li>`;
