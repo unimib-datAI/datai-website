@@ -581,6 +581,23 @@ a.specimen {
   transform: scale(1.12);
 }
 
+.research-panel-meta {
+  position: relative;
+}
+
+.research-panel-beam {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: #b8ed51;
+  box-shadow: 0 0 0.45rem rgba(184, 237, 81, 0.68);
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center;
+}
+
 .research-tablist {
   display: none;
 }
@@ -749,7 +766,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 }
 
 .publication-total strong {
-  display: block;
+  display: inline-grid;
   color: #0a1b12;
   font-family: "Newsreader Variable", ui-serif, Georgia, serif;
   font-size: clamp(4.25rem, 8vw, 6rem);
@@ -759,7 +776,49 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   line-height: 0.82;
 }
 
-.publication-total span,
+.publication-total-number {
+  position: relative;
+}
+
+.publication-total-number > span {
+  grid-area: 1 / 1;
+  margin: 0;
+}
+
+.publication-count-crt {
+  display: none;
+  align-self: center;
+  color: #527900;
+  font-family: "Courier New", ui-monospace, monospace;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 0 0.18rem rgba(139, 207, 0, 0.62), 0 0.08rem 0.42rem rgba(82, 121, 0, 0.35);
+}
+
+.publication-count-final {
+  position: relative;
+  z-index: 1;
+}
+
+.publication-total-number::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: #527900;
+  box-shadow: 0 0 0.45rem rgba(139, 207, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: center;
+}
+
+.publication-total > span,
 .publication-chart figcaption {
   color: #425449;
   font-size: 0.68rem;
@@ -768,7 +827,7 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   text-transform: uppercase;
 }
 
-.publication-total span {
+.publication-total > span {
   display: block;
   margin-top: 1rem;
 }
@@ -1285,6 +1344,19 @@ a.publication-title:hover {
 
   .publication-histogram-bar {
     animation: histogram-grow 560ms var(--ease-arrive) var(--bar-delay, 0ms) both;
+  }
+
+  .publication-count-crt {
+    display: block;
+    animation: logo-crt-boot 980ms linear 140ms both;
+  }
+
+  .publication-count-final {
+    animation: logo-official-materialize 980ms linear 140ms both;
+  }
+
+  .publication-total-number::after {
+    animation: logo-phosphor-beam 980ms linear 140ms both;
   }
 }
 

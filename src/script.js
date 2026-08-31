@@ -7,6 +7,11 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 function animateResearchPanel(panel) {
   if (!panel || reducedMotion.matches || typeof panel.animate !== "function") return;
   panel.getAnimations?.().forEach((animation) => animation.cancel());
+  const meta = panel.querySelector("[data-research-meta]");
+  const beam = meta?.querySelector(".research-panel-beam");
+  const labels = meta ? Array.from(meta.children).filter((child) => child !== beam) : [];
+  [meta, beam, ...labels].forEach((element) => element?.getAnimations?.().forEach((animation) => animation.cancel()));
+
   panel.animate(
     [
       { clipPath: "inset(0 0 100% 0)", opacity: 0.72 },
@@ -16,6 +21,28 @@ function animateResearchPanel(panel) {
       duration: 380,
       easing: "cubic-bezier(0.16, 1, 0.3, 1)",
     },
+  );
+
+  labels.forEach((label) => {
+    label.animate(
+      [
+        { clipPath: "inset(49.5% 0)", filter: "blur(0.9px) brightness(2)", opacity: 0 },
+        { clipPath: "inset(49.5% 0)", filter: "blur(0.6px) brightness(1.8)", opacity: 0.28, offset: 0.34 },
+        { clipPath: "inset(0)", filter: "blur(0.15px) brightness(1.12)", opacity: 1, offset: 0.72 },
+        { clipPath: "inset(0)", filter: "none", opacity: 1 },
+      ],
+      { duration: 380, easing: "linear" },
+    );
+  });
+
+  beam?.animate(
+    [
+      { opacity: 0, transform: "scaleX(0.08)" },
+      { opacity: 0.95, transform: "scaleX(0.28)", offset: 0.18 },
+      { opacity: 0.82, transform: "scaleX(1)", offset: 0.52 },
+      { opacity: 0, transform: "scaleX(1)" },
+    ],
+    { duration: 380, easing: "linear" },
   );
 }
 
