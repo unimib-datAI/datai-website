@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "build:og-source": "node scripts/build-og.mjs",
+    "audit:publications": "node scripts/refresh-scholar.mjs && node scripts/enrich-publications.mjs && node scripts/enrich-scholar-details.mjs && node scripts/validate-publications.mjs",
+    "validate:publications": "node scripts/validate-publications.mjs",
     "dev": "vite --host 127.0.0.1",
     "build": "vite build && node scripts/build-hosting.mjs",
     "build:pages": "vite build",

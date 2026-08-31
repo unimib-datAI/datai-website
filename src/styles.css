@@ -598,6 +598,45 @@ a.publication-title:hover {
   line-height: 1.45;
 }
 
+.publication-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem;
+  align-items: baseline;
+  margin-top: 0.7rem;
+  color: #536162;
+  font-size: 0.64rem;
+  font-weight: 780;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.publication-doi,
+.publication-scholar {
+  color: #173f42;
+  font-weight: 800;
+  text-decoration-line: underline;
+  text-decoration-color: #8bcf00;
+  text-underline-offset: 0.22rem;
+}
+
+.publication-doi {
+  overflow-wrap: anywhere;
+  text-transform: none;
+}
+
+.publication-doi-missing {
+  color: #6b7474;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.publication-scholar {
+  display: inline-block;
+  margin-top: 0.45rem;
+  font-size: 0.68rem;
+}
+
 .publication-citations {
   display: grid;
   justify-items: end;
