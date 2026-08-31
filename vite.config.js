@@ -78,12 +78,42 @@ function publicationArchive() {
         .map((year) => `<option value="${year}">${year}</option>`)
         .join("");
 
+      const datedPublicationYears = publications
+        .map((publication) => Number(publication.year))
+        .filter((year) => Number.isInteger(year) && year > 0);
+      const firstPublicationYear = Math.min(...datedPublicationYears);
+      const lastPublicationYear = Math.max(...datedPublicationYears);
+      const publicationCountsByYear = new Map();
+      datedPublicationYears.forEach((year) => {
+        publicationCountsByYear.set(year, (publicationCountsByYear.get(year) || 0) + 1);
+      });
+      const publicationYearHistogram = Array.from(
+        { length: lastPublicationYear - firstPublicationYear + 1 },
+        (_, index) => {
+          const year = firstPublicationYear + index;
+          return { year, count: publicationCountsByYear.get(year) || 0 };
+        },
+      );
+      const publicationChartMax = Math.ceil(Math.max(...publicationYearHistogram.map(({ count }) => count)) / 10) * 10;
+      const publicationChartMid = publicationChartMax / 2;
+      const publicationYearBars = publicationYearHistogram.map(({ year, count }) => {
+        const labelInterval = year === lastPublicationYear ? "end" : year % 10 === 0 ? "decade" : year % 5 === 0 ? "five" : "none";
+        const label = `${year}: ${count} publication${count === 1 ? "" : "s"}`;
+        const height = ((count / publicationChartMax) * 100).toFixed(2);
+        return `<li data-year-label="${labelInterval}">
+          <span class="publication-histogram-plot" aria-hidden="true"><span class="publication-histogram-bar${count ? " has-publications" : ""}" style="--bar-height: ${height}%" title="${label}"></span></span>
+          <span class="publication-histogram-year" aria-hidden="true">${year}</span>
+          <span class="sr-only">${label}</span>
+        </li>`;
+      }).join("");
+
       return html
-        .replace("<!-- PUBLICATION_COUNT -->", String(publications.length))
-        .replaceAll("<!-- SOURCE_ROW_COUNT -->", String(data.verification_summary?.source_row_count || data.scope?.source_row_count || ""))
-        .replaceAll("<!-- UNIQUE_RECORD_COUNT -->", String(data.verification_summary?.unique_publication_count || data.scope?.unique_publication_count || ""))
-        .replaceAll("<!-- DOI_COUNT -->", String(data.verification_summary?.included_doi_count || publications.filter((publication) => publication.doi).length))
-        .replaceAll("<!-- EXCLUDED_COUNT -->", String((data.verification_summary?.excluded_artifact_count || 0) + (data.verification_summary?.excluded_non_affiliate_authorship_count || 0)))
+        .replaceAll("<!-- PUBLICATION_COUNT -->", String(publications.length))
+        .replace("<!-- PUBLICATION_YEAR_RANGE -->", `${firstPublicationYear}–${lastPublicationYear}`)
+        .replace("<!-- PUBLICATION_CHART_MAX -->", String(publicationChartMax))
+        .replace("<!-- PUBLICATION_CHART_MID -->", String(publicationChartMid))
+        .replace("<!-- PUBLICATION_YEAR_COLUMN_COUNT -->", String(publicationYearHistogram.length))
+        .replace("<!-- PUBLICATION_YEAR_HISTOGRAM -->", publicationYearBars)
         .replace("<!-- PUBLICATION_YEARS -->", years)
         .replace("<!-- PUBLICATION_ARCHIVE -->", items)
         .replaceAll("<!-- DATA_UPDATED -->", escapeHtml(data.generated_at));

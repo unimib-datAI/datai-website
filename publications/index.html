@@ -31,14 +31,20 @@
         </div>
       </section>
 
-      <section class="border-b border-ink-950/15 bg-paper-100" aria-label="Archive verification summary">
-        <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
-          <div class="grid gap-px bg-ink-950/15 md:grid-cols-4">
-            <div class="bg-paper-100 py-6 md:pr-6"><strong class="block font-serif text-3xl text-petrol-950"><!-- SOURCE_ROW_COUNT --></strong><span class="text-xs font-bold uppercase tracking-[0.09em] text-ink-700">Scholar source rows checked</span></div>
-            <div class="bg-paper-100 py-6 md:px-6"><strong class="block font-serif text-3xl text-petrol-950"><!-- UNIQUE_RECORD_COUNT --></strong><span class="text-xs font-bold uppercase tracking-[0.09em] text-ink-700">Unique records preserved</span></div>
-            <div class="bg-paper-100 py-6 md:px-6"><strong class="block font-serif text-3xl text-petrol-950"><!-- DOI_COUNT --></strong><span class="text-xs font-bold uppercase tracking-[0.09em] text-ink-700">Verified DOI in this archive</span></div>
-            <div class="bg-paper-100 py-6 md:pl-6"><strong class="block font-serif text-3xl text-petrol-950"><!-- EXCLUDED_COUNT --></strong><span class="text-xs font-bold uppercase tracking-[0.09em] text-ink-700">Non-authored or misattributed rows excluded</span></div>
+      <section class="border-b border-ink-950/15 bg-paper-100" aria-labelledby="publication-overview-heading">
+        <h2 id="publication-overview-heading" class="sr-only">Publication overview</h2>
+        <div class="publication-overview mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
+          <div class="publication-total">
+            <strong><!-- PUBLICATION_COUNT --></strong>
+            <span>Total publications</span>
           </div>
+          <figure class="publication-chart">
+            <figcaption><span>Dated publications by year</span><span><!-- PUBLICATION_YEAR_RANGE --></span></figcaption>
+            <div class="publication-chart-frame">
+              <div class="publication-chart-axis" aria-hidden="true"><span><!-- PUBLICATION_CHART_MAX --></span><span><!-- PUBLICATION_CHART_MID --></span><span>0</span></div>
+              <ol class="publication-histogram" style="--histogram-columns: <!-- PUBLICATION_YEAR_COLUMN_COUNT -->" aria-label="Publication counts for each year"><!-- PUBLICATION_YEAR_HISTOGRAM --></ol>
+            </div>
+          </figure>
         </div>
       </section>
 

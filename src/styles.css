@@ -600,6 +600,154 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   font-size: 0.75rem;
 }
 
+.publication-overview {
+  display: grid;
+  gap: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.publication-total {
+  align-self: end;
+}
+
+.publication-total strong {
+  display: block;
+  color: #10292b;
+  font-family: "Newsreader Variable", ui-serif, Georgia, serif;
+  font-size: clamp(4.25rem, 8vw, 6rem);
+  font-weight: 520;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+  line-height: 0.82;
+}
+
+.publication-total span,
+.publication-chart figcaption {
+  color: #425152;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.publication-total span {
+  display: block;
+  margin-top: 1rem;
+}
+
+.publication-chart {
+  min-width: 0;
+}
+
+.publication-chart figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.publication-chart-frame {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.publication-chart-axis {
+  display: flex;
+  height: 13rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1.75rem;
+  box-sizing: border-box;
+  color: #536162;
+  font-size: 0.62rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.publication-histogram {
+  position: relative;
+  display: grid;
+  height: 13rem;
+  grid-template-columns: repeat(var(--histogram-columns), minmax(0, 1fr));
+  gap: clamp(0.08rem, 0.32vw, 0.3rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.publication-histogram::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 1.75rem;
+  border-bottom: 1px solid rgba(20, 33, 34, 0.2);
+  background-image: linear-gradient(to bottom, rgba(20, 33, 34, 0.16) 1px, transparent 1px);
+  background-size: 100% 50%;
+  pointer-events: none;
+}
+
+.publication-histogram > li {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-width: 0;
+  grid-template-rows: minmax(0, 1fr) 1.75rem;
+}
+
+.publication-histogram-plot {
+  display: flex;
+  min-height: 0;
+  align-items: end;
+}
+
+.publication-histogram-bar {
+  display: block;
+  width: 100%;
+  height: var(--bar-height);
+  background: #8bcf00;
+  transition: background-color 160ms ease;
+}
+
+.publication-histogram-bar.has-publications {
+  min-height: 2px;
+}
+
+.publication-histogram > li:hover .publication-histogram-bar {
+  background: #2c4b4c;
+}
+
+.publication-histogram-year {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+  color: #536162;
+  font-size: 0.58rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.publication-histogram > li[data-year-label="decade"] .publication-histogram-year,
+.publication-histogram > li[data-year-label="end"] .publication-histogram-year {
+  display: block;
+}
+
+.publication-histogram > li:first-child .publication-histogram-year {
+  left: 0;
+  transform: none;
+}
+
+.publication-histogram > li:last-child .publication-histogram-year {
+  right: 0;
+  left: auto;
+  transform: none;
+}
+
 .publication-toolbar label {
   display: block;
   margin-bottom: 0.55rem;
@@ -813,5 +961,19 @@ a.publication-title:hover {
     justify-content: start;
     gap: 0.35rem;
     align-items: baseline;
+  }
+}
+
+@media (min-width: 768px) {
+  .publication-overview {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: 3.5rem;
+    align-items: end;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .publication-histogram > li[data-year-label="five"] .publication-histogram-year {
+    display: block;
   }
 }
