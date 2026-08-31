@@ -152,9 +152,11 @@ Without JavaScript, the complete chronological archive remains visible. Citation
 
 ## People and portrait policy
 
-People remain border-separated records rather than a conventional portrait grid. Consistent 4:5 crops now make the group visible while preserving the evidence-led roster structure.
+People remain border-separated records rather than a conventional portrait grid. A controlled 4:5 studio series makes the group visible while preserving the evidence-led roster structure.
 
-The user directed the researched public portraits to ship in the private preview on 31 August 2026. Every derivative records its source, retrieval date and rights status in `public/assets/provenance.json`; unresolved permissions and low-resolution originals remain editorial follow-ups before a public institutional launch.
+On 31 August 2026 the user directed every sourced portrait to be regenerated through identity-preserving image editing. The final series uses the same deep-petroleum cyclorama, straight-on eye line, head scale, level shoulder line, mid-chest crop, soft studio lighting and plain black crew-neck T-shirt. Face shape, skin tone, age, expression, gaze, hairstyle, facial hair, eyewear and distinctive piercings remain source invariants.
+
+Every final WebP records its source set, generation method, prompt intent, date, transform, checksum and rights status in `public/assets/provenance.json`. Full source images, prior web crops and generated masters remain outside the public asset directory. Source and subject permissions remain mandatory editorial follow-ups before a public institutional launch; generated portraits are presentation assets and never documentary research evidence.
 
 ## Accessibility
 
