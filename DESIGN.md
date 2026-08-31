@@ -190,7 +190,7 @@ The University of Milano-Bicocca relationship must be explicit in the first view
 - Official assets record type, authoritative source, URL, and retrieval date.
 - Generated rasters record generator, prompt summary, date, SHA-256, source path, and shipping status.
 - Composites list every item in `derived_from`, plus purpose and date.
-- `datai-logo.svg` remains authoritative to Figma node `7:187`.
+- `datai-logo.svg` is the transparent vector layer `7:188` extracted from the authoritative Figma logo frame `7:187`; never reintroduce the frame background into the asset.
 - `unimib-institutional-logo.png` remains the official positive mark served by `unimib.it`; its white support, proportions and clear area follow the University Brand Book 2025.
 - Never use an AI-generated visual as documentary research evidence.
 

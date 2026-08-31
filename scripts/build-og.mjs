@@ -15,7 +15,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" v
   <title>DatAI — Data for Artificial Intelligence</title>
   <image href="${baseData}" width="1200" height="630" />
   <rect x="0" y="0" width="570" height="630" fill="#10292B" fill-opacity="0.96" />
-  <image href="${logoData}" x="64" y="48" width="224" height="224" />
+  <image href="${logoData}" x="64" y="130" width="224" height="58" />
   <rect x="64" y="318" width="176" height="5" fill="#8BCF00" />
   <text x="64" y="391" fill="#F4F2E9" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.2">Data for Artificial</text>
   <text x="64" y="444" fill="#F4F2E9" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.2">Intelligence</text>

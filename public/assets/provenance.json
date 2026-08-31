@@ -1,9 +1,11 @@
 {
   "datai-logo.svg": {
     "type": "official_vector_asset",
-    "source": "Figma file DATAI - Logo, node 7:187",
+    "source": "Figma file DATAI - Logo, transparent vector layer 7:188 inside frame 7:187",
     "source_url": "https://www.figma.com/design/9HoGz1UEnENGmhSNXnPnRY/DATAI---Logo?node-id=7-187&m=dev",
-    "retrieved": "2026-08-31"
+    "retrieved": "2026-08-31",
+    "usage": "Official acid-green wordmark with native transparency; no background rectangle",
+    "sha256": "2272be9c7a7a00f40af0512b2a9ae8eb7bc3ad47f4ac588b2cd88205b2b9ac7c"
   },
   "unimib-institutional-logo.png": {
     "type": "official_raster_asset",
@@ -29,7 +31,9 @@
     "type": "composite_raster",
     "derived_from": ["assets/social/datai-og-base.png", "public/assets/datai-logo.svg", "assets/social/og-card.svg"],
     "purpose": "Open Graph and social preview",
-    "generated": "2026-08-31"
+    "generated": "2026-08-31",
+    "logo_treatment": "Transparent Figma vector layer 7:188",
+    "sha256": "9830c3287f9d6889baf2fbf792883c5980eefe11a55d2298258cecd974598861"
   },
   "team/flavio-maria-de-paoli.webp": {
     "type": "ai_edited_identity_preserving_portrait",

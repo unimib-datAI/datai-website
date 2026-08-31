@@ -96,17 +96,16 @@ select {
   color: #b8ed51;
 }
 
-.wordmark-crop {
+.wordmark {
+  display: block;
   width: 7.75rem;
-  height: 2.15rem;
-  overflow: hidden;
   flex: none;
 }
 
-.wordmark-crop img {
-  width: 7.75rem;
-  height: 7.75rem;
-  transform: translateY(-2.79rem);
+.wordmark img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .unimib-mark-field {
@@ -566,14 +565,8 @@ a.publication-title:hover {
     --header-height: 4rem;
   }
 
-  .wordmark-crop {
+  .wordmark {
     width: 5.8rem;
-  }
-
-  .wordmark-crop img {
-    width: 5.8rem;
-    height: 5.8rem;
-    transform: translateY(-2.08rem);
   }
 
   .specimen {
