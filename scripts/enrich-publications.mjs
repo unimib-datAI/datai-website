@@ -422,7 +422,7 @@ function chooseCanonical(publication, crossrefMatch, openalexMatch, dblpMatch, d
 
   const printYear = dateYear(crossref?.["published-print"]);
   const onlineYear = dateYear(crossref?.["published-online"]);
-  const canonicalYear = printYear || openalex?.publication_year || datacite?.publicationYear || Number(dblp?.year) || publication.year || onlineYear || dateYear(crossref?.issued);
+  const canonicalYear = publication.display_year_override || printYear || openalex?.publication_year || datacite?.publicationYear || Number(dblp?.year) || publication.year || onlineYear || dateYear(crossref?.issued);
   const venue = crossref?.["container-title"]?.[0]
     || openalex?.primary_location?.source?.display_name
     || datacite?.container?.title
@@ -582,7 +582,7 @@ const publications = data.publications.map((publication) => {
     title: richest?.title || publication.title,
     authors: richest?.authors || publication.authors,
     publication: richest?.publication || publication.publication,
-    year: richest?.year || publication.year,
+    year: publication.display_year_override || richest?.year || publication.year,
     citations: Math.max(publication.citations || 0, ...rows.map((row) => row.citations || 0)),
   };
 });
@@ -758,7 +758,7 @@ const output = {
     "All 920 rows currently visible across the 12 public Google Scholar profiles of the 11 confirmed affiliates were reloaded on the audit date; the deduplicated archive contains every one of those source rows.",
     "Google Scholar profiles are maintained by their owners, so works missing from a member's public profile cannot be inferred as complete solely from Scholar.",
     "A DOI is included only when a registry or strongly matching bibliographic source supplies it. A null DOI with doi_status 'not_found' means no reliable DOI was found in the checked sources; it does not prove that no DOI was ever assigned.",
-    "Publisher metadata can distinguish online-first and print/fascicle years; both are retained when available and the displayed year prefers the print/fascicle year.",
+    "Publisher metadata can distinguish online-first and print/fascicle years; both are retained when available and the displayed year uses any explicit editorial override before registry dates.",
     "Records identified as indexes, reviewer lists or similar non-authored front matter remain preserved for auditability but are explicitly excluded from the primary archive count.",
     "Abubakari Alidu has two verified public Google Scholar profiles; both are included and merged.",
     "Federica Filippini's public Scholar profile still displays a Politecnico di Milano affiliation; identity was matched by name and publication history, while current DatAI membership was confirmed by the site owner.",

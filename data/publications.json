@@ -44,7 +44,7 @@
     "All 920 rows currently visible across the 12 public Google Scholar profiles of the 11 confirmed affiliates were reloaded on the audit date; the deduplicated archive contains every one of those source rows.",
     "Google Scholar profiles are maintained by their owners, so works missing from a member's public profile cannot be inferred as complete solely from Scholar.",
     "A DOI is included only when a registry or strongly matching bibliographic source supplies it. A null DOI with doi_status 'not_found' means no reliable DOI was found in the checked sources; it does not prove that no DOI was ever assigned.",
-    "Publisher metadata can distinguish online-first and print/fascicle years; both are retained when available and the displayed year prefers the print/fascicle year.",
+    "Publisher metadata can distinguish online-first and print/fascicle years; both are retained when available and the displayed year uses any explicit editorial override before registry dates.",
     "Twenty-five index, reviewer-list, programme-committee, preface or similar non-authored front-matter records are preserved for auditability but excluded from the primary archive.",
     "Fourteen further records are preserved but excluded because complete structured authorship from the external sources names no confirmed DatAI affiliate.",
     "OpenAlex and DBLP public availability limits prevented an independent match for every record; each publication’s web_sources entries state whether a source was actually checked and matched.",
@@ -3386,7 +3386,8 @@
       "title": "Privacy-Aware Semantic Data Preparation for LLM-Powered Urban Health Reporting",
       "authors": "Abubakari Alidu, Flavio De Paoli, Dessislava Petrova-Antonova, Emil Hristov, Kaloyan Karamitov",
       "publication": "IFIP Advances in Information and Communication Technology",
-      "year": 2027,
+      "year": 2026,
+      "display_year_override": 2026,
       "citations": 0,
       "affiliate_ids": [
         "flavio-maria-de-paoli",
