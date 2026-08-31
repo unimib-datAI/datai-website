@@ -7,6 +7,7 @@
     "build:og-source": "node scripts/build-og.mjs",
     "dev": "vite --host 127.0.0.1",
     "build": "vite build && node scripts/build-hosting.mjs",
+    "build:pages": "vite build",
     "preview": "vite preview --host 127.0.0.1"
   },
   "devDependencies": {

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://inside.disco.unimib.it/</loc>
+    <loc>https://cremarco.github.io/</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://inside.disco.unimib.it/research/</loc>
+    <loc>https://cremarco.github.io/research/</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://inside.disco.unimib.it/people/</loc>
+    <loc>https://cremarco.github.io/people/</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://inside.disco.unimib.it/publications/</loc>
+    <loc>https://cremarco.github.io/publications/</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://inside.disco.unimib.it/contact/</loc>
+    <loc>https://cremarco.github.io/contact/</loc>
     <lastmod>2026-08-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>

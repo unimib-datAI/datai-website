@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://inside.disco.unimib.it/sitemap.xml
+Sitemap: https://cremarco.github.io/sitemap.xml
