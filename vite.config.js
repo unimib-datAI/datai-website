@@ -59,6 +59,7 @@ function publicationArchive() {
 
 export default defineConfig({
   appType: "mpa",
+  base: "/datai/",
   plugins: [siteShell(), publicationArchive(), tailwindcss()],
   build: {
     rollupOptions: {
