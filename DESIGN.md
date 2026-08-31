@@ -60,8 +60,16 @@ The visual world combines CRT-black forest fields, the official DatAI green, coo
 | `paper-100` | `#e6e8da` | Evidence and publication section alternation |
 | `ink-950` | `#132019` | Primary text on paper |
 | `ink-700` | `#425449` | Body and secondary copy |
+| `acid-700` | `#527900` | CRT phosphor text and beam details on paper |
+| `copy-deep` | `#354a3d` | Publication author text |
+| `copy-strong` | `#4a5d51` | Publication venue text |
+| `copy-muted` | `#526459` | Publication years, metadata and chart axes |
 | metadata | `#596b60` | Indices and compact labels |
+| metadata warm | `#586a5f` | Route and artifact indices |
 | rule connector | `#849c8b` | Evidence-chain lines |
+| research link | `#16522f` | DOI, Scholar and member links on paper |
+| disabled copy | `#617067` | Missing-DOI and unavailable metadata states |
+| institutional field | `#ffffff` | Protected white support behind the UniMiB mark |
 
 Acid green identifies brand, state, evidence, or action. It is not a general decoration. `#8bcf00` remains the exact green of the authoritative Figma wordmark and reaches a 9.35:1 contrast ratio on `#0a1b12`; it must not be shifted to compensate for the new dark field. Major sections use either CRT-black forest or paper as a coherent field. Small paper text on dark fields must use at least 55% opacity.
 
@@ -144,7 +152,7 @@ Without JavaScript, the complete chronological archive remains visible. Citation
 
 ### Motion
 
-- **Focal moment:** Site entry begins with a `1650ms` phosphor boot in the shared header: the literal `dat.ai` is written as CRT text at the same optical footprint as the final mark, held long enough to read, compressed into a horizontal beam, and replaced from that same beam by the untouched official Figma vector. On Home, `work` performs the same CRT-to-final handoff into its Newsreader italic form while the coordinated evidence scan reveals the thesis, draws the rule left-to-right, and develops the three specimens in order. None of these movements loop.
+- **Focal moment:** The first site entry in a browser session begins with a `1650ms` phosphor boot in the shared header: the literal `dat.ai` is written as CRT text at the same optical footprint as the final mark, held long enough to read, compressed into a horizontal beam, and replaced from that same beam by the untouched official Figma vector. Later page loads in the same session show the official mark immediately. On Home, `work` performs the coordinated CRT-to-final handoff only when that session entry plays; the evidence scan still reveals the thesis, draws the rule left-to-right, and develops the three specimens in order. None of these movements loop.
 - **Continuity:** Research panel changes use a `380ms` top-to-bottom clip transition; the specimen metadata resolves from a brief phosphor beam during the same interval so the selected control and its evidence record read as one state change.
 - **Data chronology:** The total publication count performs a compact `980ms` CRT-to-serif handoff once on entry. Publication bars grow from the baseline over `560ms`; their `12ms` sibling stagger is capped at `360ms` across the full archive range.
 - **Feedback:** Button, border and text-decoration changes use `140–220ms`. Header navigation and the selected research marker retain a bounded `420ms` phosphor afterglow; the publication search uses an acid caret and a single `300ms` retrace across the live result status after filters settle. Specimen lift uses the shared exponential arrival curve `cubic-bezier(0.16, 1, 0.3, 1)`.

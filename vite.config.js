@@ -19,6 +19,7 @@ function publicationArchive() {
     async transformIndexHtml(html) {
       const raw = await readFile(new URL("./data/publications.json", import.meta.url), "utf8");
       const data = JSON.parse(raw);
+      const affiliatesById = new Map(data.affiliates.map((affiliate) => [affiliate.id, affiliate]));
       const publications = data.publications.filter((publication) => publication.record_status === "included").sort((a, b) => {
         if ((b.year || 0) !== (a.year || 0)) return (b.year || 0) - (a.year || 0);
         if ((b.citations || 0) !== (a.citations || 0)) return (b.citations || 0) - (a.citations || 0);
@@ -26,6 +27,8 @@ function publicationArchive() {
       });
 
       const items = publications.map((publication, index) => {
+        const affiliateIds = publication.affiliate_ids || [];
+        const dataiAuthors = affiliateIds.map((id) => affiliatesById.get(id)).filter(Boolean);
         const scholarSource = publication.scholar_sources?.[0]?.citation_url || "";
         const source = publication.doi_url || scholarSource;
         const year = publication.year || "Undated";
@@ -60,13 +63,16 @@ function publicationArchive() {
           : publication.verification?.status === "verified_primary_registry"
             ? "Verified in a primary registry"
             : "Scholar profile record";
-        return `<li class="publication-item" data-publication-item data-year="${escapeHtml(year)}" data-search="${escapeHtml(search)}" data-index="${index}">
+        const dataiAuthorLinks = dataiAuthors.length
+          ? `<span class="publication-datai-authors">DatAI: ${dataiAuthors.map((affiliate) => `<a href="/datai/people/#person-${escapeHtml(affiliate.id)}">${escapeHtml(affiliate.name)}</a>`).join(", ")}</span>`
+          : "";
+        return `<li class="publication-item" data-publication-item data-year="${escapeHtml(year)}" data-affiliates="${escapeHtml(affiliateIds.join(" "))}" data-search="${escapeHtml(search)}" data-index="${index}">
           <div class="publication-year">${escapeHtml(year)}</div>
           <div class="min-w-0">
             <h3>${title}</h3>
             <p class="publication-authors">${escapeHtml(publication.authors)}</p>
             ${publicationDetails ? `<p class="publication-venue">${escapeHtml(publicationDetails)}</p>` : ""}
-            <p class="publication-meta"><span>${escapeHtml(typeLabel)}</span><span>${escapeHtml(verification)}</span>${doi}</p>
+            <p class="publication-meta"><span>${escapeHtml(typeLabel)}</span><span>${escapeHtml(verification)}</span>${doi}${dataiAuthorLinks}</p>
             ${scholarSource ? `<a class="publication-scholar" href="${escapeHtml(scholarSource)}" rel="noreferrer">Google Scholar source</a>` : ""}
           </div>
           <div class="publication-citations"><span>${publication.citations || 0}</span><small>citations</small></div>
@@ -76,6 +82,9 @@ function publicationArchive() {
       const years = [...new Set(publications.map((publication) => publication.year).filter(Boolean))]
         .sort((a, b) => b - a)
         .map((year) => `<option value="${year}">${year}</option>`)
+        .join("");
+      const members = data.affiliates
+        .map((affiliate) => `<option value="${escapeHtml(affiliate.id)}">${escapeHtml(affiliate.name)}</option>`)
         .join("");
 
       const datedPublicationYears = publications
@@ -115,6 +124,7 @@ function publicationArchive() {
         .replace("<!-- PUBLICATION_YEAR_COLUMN_COUNT -->", String(publicationYearHistogram.length))
         .replace("<!-- PUBLICATION_YEAR_HISTOGRAM -->", publicationYearBars)
         .replace("<!-- PUBLICATION_YEARS -->", years)
+        .replace("<!-- PUBLICATION_MEMBERS -->", members)
         .replace("<!-- PUBLICATION_ARCHIVE -->", items)
         .replaceAll("<!-- DATA_UPDATED -->", escapeHtml(data.generated_at));
     },

@@ -100,6 +100,7 @@ if (researchControls.length && researchPanels.length) {
 const publicationItems = Array.from(document.querySelectorAll("[data-publication-item]"));
 const publicationSearch = document.querySelector("[data-publication-search]");
 const publicationYear = document.querySelector("[data-publication-year]");
+const publicationMember = document.querySelector("[data-publication-member]");
 const publicationStatus = document.querySelector("[data-publication-status]");
 const publicationLoadMore = document.querySelector("[data-publication-load-more]");
 const publicationClear = document.querySelector("[data-publication-clear]");
@@ -121,16 +122,35 @@ function normalized(value) {
   return value.trim().toLocaleLowerCase("en");
 }
 
+function syncPublicationUrl() {
+  if (!publicationItems.length) return;
+  const url = new URL(window.location.href);
+  const query = publicationSearch?.value.trim() || "";
+  const year = publicationYear?.value || "all";
+  const member = publicationMember?.value || "all";
+
+  if (query) url.searchParams.set("q", query);
+  else url.searchParams.delete("q");
+  if (year !== "all") url.searchParams.set("year", year);
+  else url.searchParams.delete("year");
+  if (member !== "all") url.searchParams.set("member", member);
+  else url.searchParams.delete("member");
+
+  window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
 function updatePublications({ resetLimit = false } = {}) {
   if (!publicationItems.length) return;
   if (resetLimit) publicationLimit = pageSize;
 
   const query = normalized(publicationSearch?.value || "");
   const year = publicationYear?.value || "all";
+  const member = publicationMember?.value || "all";
   const matching = publicationItems.filter((item) => {
     const matchesQuery = !query || item.dataset.search.includes(query);
     const matchesYear = year === "all" || item.dataset.year === year;
-    return matchesQuery && matchesYear;
+    const matchesMember = member === "all" || item.dataset.affiliates.split(" ").includes(member);
+    return matchesQuery && matchesYear && matchesMember;
   });
 
   publicationItems.forEach((item) => {
@@ -140,20 +160,29 @@ function updatePublications({ resetLimit = false } = {}) {
 
   const visible = Math.min(publicationLimit, matching.length);
   if (publicationStatus) {
+    const selectedMember = member === "all" ? "" : publicationMember?.selectedOptions[0]?.textContent || "the selected member";
+    const context = selectedMember ? ` by ${selectedMember}` : "";
     publicationStatus.textContent = matching.length
-      ? `Showing ${visible} of ${matching.length} matching publications.`
-      : "No publications match these filters.";
+      ? `Showing ${visible} of ${matching.length} matching publications${context}.`
+      : `No publications${context} match these filters.`;
   }
   if (publicationLoadMore) publicationLoadMore.hidden = visible >= matching.length;
-  if (publicationClear) publicationClear.hidden = !query && year === "all";
+  if (publicationClear) publicationClear.hidden = !query && year === "all" && member === "all";
 }
 
 publicationSearch?.addEventListener("input", () => {
   updatePublications({ resetLimit: true });
+  syncPublicationUrl();
   schedulePublicationRetrace();
 });
 publicationYear?.addEventListener("change", () => {
   updatePublications({ resetLimit: true });
+  syncPublicationUrl();
+  schedulePublicationRetrace();
+});
+publicationMember?.addEventListener("change", () => {
+  updatePublications({ resetLimit: true });
+  syncPublicationUrl();
   schedulePublicationRetrace();
 });
 publicationLoadMore?.addEventListener("click", () => {
@@ -163,10 +192,25 @@ publicationLoadMore?.addEventListener("click", () => {
 publicationClear?.addEventListener("click", () => {
   if (publicationSearch) publicationSearch.value = "";
   if (publicationYear) publicationYear.value = "all";
+  if (publicationMember) publicationMember.value = "all";
   updatePublications({ resetLimit: true });
+  syncPublicationUrl();
   schedulePublicationRetrace();
   publicationSearch?.focus();
 });
+
+if (publicationItems.length) {
+  const publicationParams = new URLSearchParams(window.location.search);
+  const requestedYear = publicationParams.get("year");
+  const requestedMember = publicationParams.get("member");
+  if (publicationSearch) publicationSearch.value = publicationParams.get("q") || "";
+  if (publicationYear && Array.from(publicationYear.options).some((option) => option.value === requestedYear)) {
+    publicationYear.value = requestedYear;
+  }
+  if (publicationMember && Array.from(publicationMember.options).some((option) => option.value === requestedMember)) {
+    publicationMember.value = requestedMember;
+  }
+}
 
 updatePublications();
 

@@ -18,7 +18,19 @@ function mobileLink(link, activePage) {
 
 export function siteHeader(activePage) {
   const contactActive = activePage === "contact";
-  return `<a class="skip-link" href="#main">Skip to content</a>
+  return `<script>
+      (() => {
+        const key = "datai-logo-intro-v1";
+        try {
+          const hasPlayed = window.sessionStorage.getItem(key) === "1";
+          document.documentElement.classList.add(hasPlayed ? "logo-intro-skip" : "logo-intro-play");
+          if (!hasPlayed) window.sessionStorage.setItem(key, "1");
+        } catch {
+          document.documentElement.classList.add("logo-intro-play");
+        }
+      })();
+    </script>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header fixed inset-x-0 top-0 z-50 text-paper-50">
       <div class="mx-auto flex h-[var(--header-height)] max-w-[96rem] items-center justify-between px-5 md:px-8 xl:px-12">
         <a class="flex items-center gap-3" href="${SITE_BASE}" aria-label="DatAI home"${activePage === "home" ? ' aria-current="page"' : ""}>
@@ -56,10 +68,9 @@ export function siteFooter() {
           <a class="unimib-mark-field" href="https://www.unimib.it/" aria-label="University of Milano-Bicocca official website"><img src="${SITE_BASE}assets/unimib-institutional-logo.png" alt="University of Milano-Bicocca institutional logo" width="160" height="172" /></a>
           <div><strong class="block text-sm font-extrabold text-paper-50">Institutional affiliation</strong><p class="mt-2 max-w-[44rem] text-sm leading-relaxed text-paper-50/65">DatAI is a research laboratory of the Department of Informatics, Systems and Communication (DISCo), University of Milano-Bicocca.</p></div>
         </div>
-        <div class="grid gap-8 pt-8 text-xs leading-relaxed text-paper-50/60 md:grid-cols-3">
+        <div class="grid gap-8 pt-8 text-xs leading-relaxed text-paper-50/60 md:grid-cols-2">
           <p><strong class="block text-paper-50">Editorial responsibility</strong>DatAI Lab. Last content review: <!-- DATA_UPDATED -->.</p>
           <details><summary class="cursor-pointer font-extrabold text-paper-50">Privacy &amp; accessibility</summary><p class="mt-2">This static site sets no analytics or advertising cookies. It is designed for keyboard use, reduced motion and WCAG 2.2 AA contrast. Accessibility feedback can be sent through the DISCo web editorial contact.</p></details>
-          <details><summary class="cursor-pointer font-extrabold text-paper-50">Sources &amp; data notes</summary><p class="mt-2">Institutional facts: DISCo and UniMiB. Projects: public DatAI GitHub repositories. Publications: a deduplicated Google Scholar snapshot; profile attribution and limitations are preserved in the project data.</p></details>
         </div>
       </div>
     </footer>`;
