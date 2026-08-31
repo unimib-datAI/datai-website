@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import { readFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+import { siteShell } from "./src/site-shell.js";
 
 function escapeHtml(value = "") {
   return String(value)
@@ -56,7 +58,19 @@ function publicationArchive() {
 }
 
 export default defineConfig({
-  plugins: [publicationArchive(), tailwindcss()],
+  appType: "mpa",
+  plugins: [siteShell(), publicationArchive(), tailwindcss()],
+  build: {
+    rollupOptions: {
+      input: {
+        home: fileURLToPath(new URL("./index.html", import.meta.url)),
+        research: fileURLToPath(new URL("./research/index.html", import.meta.url)),
+        people: fileURLToPath(new URL("./people/index.html", import.meta.url)),
+        publications: fileURLToPath(new URL("./publications/index.html", import.meta.url)),
+        contact: fileURLToPath(new URL("./contact/index.html", import.meta.url)),
+      },
+    },
+  },
   server: {
     port: 64123,
     strictPort: true,

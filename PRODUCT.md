@@ -45,17 +45,20 @@ Le fonti interne più recenti precisano il territorio come intersezione tra inte
 - SEO tecnica e contenutistica: titoli e descrizioni unici, URL leggibili, HTML semantico, canonical, Open Graph, dati strutturati appropriati, sitemap XML, robots.txt, immagini ottimizzate e buone prestazioni Core Web Vitals.
 - Nessun dato, numero, membro, partner, progetto, pubblicazione, premio o testimonianza può essere pubblicato senza una fonte verificabile.
 - Il precedente nome INSID&S va usato come informazione storica e come ponte SEO, non come identità principale.
-- Il sito è solo in inglese e vive in una singola pagina. Il dominio istituzionale definitivo e il processo editoriale di aggiornamento restano da confermare. La versione corrente non usa analytics, form o altre funzioni che richiedano cookie.
+- Il sito è solo in inglese e usa cinque pagine con URL leggibili: Home, Research, People, Publications e Contact. Il dominio istituzionale definitivo e il processo editoriale di aggiornamento restano da confermare. La versione corrente non usa analytics, form o altre funzioni che richiedano cookie.
 - Il roster editoriale corrente comprende undici membri confermati e deve essere corredato da data di aggiornamento. Eventuali variazioni future di dottorandi, assegnisti, contrattisti, collaboratori ed ex membri devono essere ricontrollate prima della pubblicazione.
 
 ## Information Architecture Direction
 
-- Navigazione primaria a sezioni: Research; Evidence; People; Projects & Resources; Publications; Contact.
-- About, contatti, affiliazione UniMiB/DISCo, nome storico INSID&S, privacy e accessibilità devono restare facilmente raggiungibili senza sovraccaricare la navigazione principale.
-- La single page procede da tesi scientifica a prove: hero e posizionamento; quattro linee di ricerca; lavori in evidenza; persone; risorse; archivio completo delle pubblicazioni; contatto e informazioni istituzionali.
-- Aree, persone, progetti, risorse e pubblicazioni devono essere entità collegate tramite identificativi stabili, non liste HTML duplicate.
-- Il sito deve essere interamente in inglese su un unico URL, senza selettore di lingua.
-- La ricerca deve essere presentata attraverso output verificabili — paper, software, dataset, demo e documentazione — e ogni pagina di area deve collegare persone, progetti e pubblicazioni pertinenti.
+- Navigazione primaria multipagina: Research; People; Publications; Contact. Il logo riporta sempre alla Home.
+- **Home** presenta identità, tesi del laboratorio, domande guida, gruppo e una selezione di output verificabili.
+- **Research** unisce le quattro linee di ricerca a Evidence e Projects & Resources, perché i progetti sono la prova delle domande scientifiche e non un catalogo separato.
+- **People** mantiene il roster completo di undici membri con ritratti, ruoli, affiliazioni e profili autorevoli.
+- **Publications** ospita esclusivamente l'archivio completo e ricercabile, così le altre pagine restano leggere e focalizzate.
+- **Contact** raccoglie collaborazione, opportunità per studenti, sede, affiliazione UniMiB/DISCo, nome storico INSID&S e fonti istituzionali.
+- Privacy, accessibilità, responsabilità editoriale e note sulle fonti restano nel footer condiviso di tutte le pagine.
+- Aree, persone, progetti, risorse e pubblicazioni devono restare collegate tramite URL e identificativi stabili, evitando liste divergenti.
+- Il sito resta interamente in inglese, senza selettore di lingua.
 
 ## Brand Commitments
 

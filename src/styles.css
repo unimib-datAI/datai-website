@@ -86,6 +86,16 @@ select {
   border-bottom: 1px solid rgba(244, 242, 233, 0.18);
 }
 
+.site-header a[aria-current="page"] {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.4rem;
+}
+
+.mobile-nav[open] summary {
+  border-color: #8bcf00;
+  color: #b8ed51;
+}
+
 .wordmark-crop {
   width: 7.75rem;
   height: 2.15rem;
@@ -101,6 +111,16 @@ select {
 
 .hero-field {
   background: #10292b;
+}
+
+.page-masthead {
+  padding-top: var(--header-height);
+}
+
+.page-title {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
 }
 
 .hero-title {
@@ -147,6 +167,11 @@ select {
   transition: transform 280ms cubic-bezier(0.2, 0.75, 0.25, 1), border-color 180ms ease, background 180ms ease;
 }
 
+a.specimen {
+  color: inherit;
+  text-decoration: none;
+}
+
 .specimen::after {
   content: "";
   position: absolute;
@@ -167,6 +192,81 @@ select {
 
 .specimen-index {
   font-variant-numeric: tabular-nums;
+}
+
+.route-line {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(10rem, 0.7fr) minmax(18rem, 1.3fr) auto;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1.75rem 0;
+  border-top: 1px solid rgba(20, 33, 34, 0.2);
+  color: #142122;
+  text-decoration: none;
+}
+
+.route-line:hover strong,
+.route-line:focus-visible strong,
+.route-line:hover .route-action,
+.route-line:focus-visible .route-action {
+  text-decoration-color: #8bcf00;
+}
+
+.route-index {
+  color: #596768;
+  font-size: 0.68rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.1em;
+}
+
+.route-line strong {
+  color: #10292b;
+  font-family: "Newsreader Variable", ui-serif, Georgia, serif;
+  font-size: clamp(1.5rem, 2.25vw, 2rem);
+  font-weight: 590;
+  line-height: 1;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.18em;
+}
+
+.route-line p {
+  max-width: 42rem;
+  color: #425152;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.route-action {
+  color: #10292b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(139, 207, 0, 0.55);
+  text-underline-offset: 0.25rem;
+  white-space: nowrap;
+}
+
+.people-mosaic {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.55rem;
+  align-items: start;
+  padding-bottom: 1.5rem;
+}
+
+.people-mosaic img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid rgba(184, 237, 81, 0.5);
+  filter: saturate(0.82) contrast(1.04);
+}
+
+.people-mosaic img:nth-child(even) {
+  transform: translateY(1.5rem);
 }
 
 .section-index {
@@ -213,6 +313,47 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   bottom: -1.15rem;
   width: 1px;
   background: #8ca0a0;
+}
+
+.evidence-step {
+  position: absolute;
+  top: 0.125rem;
+  left: 0;
+  display: flex;
+  width: 1.65rem;
+  height: 1.65rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8bcf00;
+  border-radius: 50%;
+  color: #b8ed51;
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.evidence-chain li > strong {
+  display: block;
+  color: #b8ed51;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.evidence-chain li > span:not(.evidence-step),
+.evidence-chain li > a {
+  display: block;
+  margin-top: 0.5rem;
+  color: rgba(244, 242, 233, 0.72);
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+
+.evidence-chain li > a {
+  color: #f4f2e9;
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-color: #8bcf00;
+  text-underline-offset: 0.25rem;
 }
 
 .artifact-row {
@@ -276,6 +417,20 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 
 .resource-line:last-child {
   border-bottom: 1px solid rgba(20, 33, 34, 0.2);
+}
+
+.evidence-link,
+.profile-link {
+  font-size: 0.875rem;
+  font-weight: 800;
+  text-decoration-line: underline;
+  text-decoration-color: #8bcf00;
+  text-underline-offset: 0.25rem;
+}
+
+.profile-link {
+  color: #f4f2e9;
+  font-size: 0.75rem;
 }
 
 .publication-toolbar label {
@@ -408,6 +563,22 @@ a.publication-title:hover {
 
   .specimen {
     min-height: 17rem;
+  }
+
+  .route-line {
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: 0.75rem 1rem;
+    align-items: start;
+    padding: 1.5rem 0;
+  }
+
+  .route-line p,
+  .route-action {
+    grid-column: 2;
+  }
+
+  .people-mosaic {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .artifact-row,

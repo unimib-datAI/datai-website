@@ -38,16 +38,14 @@ The visual world combines deep petroleum fields, the official DatAI green, warm 
 - **Progressive enhancement.** Essential research and publication content remains available without JavaScript.
 - **Flat, precise utility.** Structure comes from type, rules, contrast, and spacing—not decorative elevation.
 
-## Page narrative
+## Page architecture
 
-1. **Hero:** State the laboratory thesis and show three connected questions in the signature tray.
-2. **Research:** Expand four areas into question → people → evidence chains.
-3. **Evidence:** Present selected systems, datasets, methods, languages, and platforms with direct sources.
-4. **People:** Identify the group, roles, affiliations, and authoritative profiles.
-5. **Projects & resources:** Route visitors to public engineering work using evidence-limited descriptions.
-6. **Publications:** Expose the complete deduplicated archive with dated source context and optional filtering.
-7. **Contact:** Offer verified collaboration and institutional routes.
-8. **Footer:** Preserve editorial responsibility, historical naming, accessibility, privacy, and source notes.
+1. **Home:** State the laboratory thesis, show three linked questions in the signature tray, make the group visible, and route visitors to the four task pages.
+2. **Research:** Expand four areas into question → people → evidence chains, followed by selected systems, datasets, methods, languages, and public repositories.
+3. **People:** Identify the current group through portrait-led evidence records with roles, affiliations, and authoritative profiles.
+4. **Publications:** Expose the complete deduplicated archive with dated source context and progressive search/filter controls.
+5. **Contact:** Offer verified collaboration and student routes, physical location, institutional identity, and historical naming.
+6. **Shared shell:** Keep the fixed navigation, active-page state, editorial responsibility, privacy, accessibility, and source notes consistent across every route.
 
 ## Color system
 
@@ -124,13 +122,13 @@ Do not reuse this as a generic marketing card pattern.
 
 ### Research
 
-JavaScript upgrades four stacked panels into an ARIA tab interface. Controls maintain `aria-selected`, use roving `tabindex`, and support click, `ArrowUp`, `ArrowDown`, `Home`, and `End`. Arrow navigation wraps and moves focus.
+On `/research/`, JavaScript upgrades four stacked panels into an ARIA tab interface. Controls maintain `aria-selected`, use roving `tabindex`, support click, `ArrowUp`, `ArrowDown`, `Home`, and `End`, and honor deep links for each research area. Arrow navigation wraps and moves focus.
 
 Without JavaScript, the tablist is hidden and every panel remains visible in document order. Consecutive panels use a `5rem` gap, `3rem` top padding, and a translucent separating rule.
 
 ### Publications
 
-The archive is generated at build time from `data/publications.json`. Publication count, year options, snapshot date, and every list item come from the same source.
+On `/publications/`, the archive is generated at build time from `data/publications.json`. Publication count, year options, snapshot date, and every list item come from the same source. Home may show the same generated count, but the full record ships only on the Publications page.
 
 With JavaScript:
 
@@ -171,8 +169,9 @@ The user directed the researched public portraits to ship in the private preview
 
 ## SEO and evidence rules
 
-- Keep the site English-only, single-page, semantic, and addressable through stable section IDs.
-- Preserve the unique title, description, canonical URL, Open Graph/Twitter metadata, favicon, manifest, sitemap, robots file, and `ResearchOrganization` JSON-LD.
+- Keep the site English-only, multipage, semantic, and addressable through clean trailing-slash URLs and stable section IDs.
+- Give Home, Research, People, Publications, and Contact unique titles, descriptions, canonical URLs, Open Graph/Twitter metadata, and page-specific structured data.
+- Preserve the favicon, manifest, sitemap, robots file, and the Home page’s canonical `ResearchOrganization` JSON-LD.
 - Use INSID&S Lab only as a historical and alternate name.
 - Link institutional facts to DISCo or UniMiB, projects to public DatAI repositories, and publications to research records.
 - Date roster reviews, publication snapshots, and citation counts.
@@ -198,4 +197,4 @@ The user directed the researched public portraits to ship in the private preview
 
 ## Finish verdict
 
-**Independent finish review: PASS.** The implementation fulfills the Evidence Slide Tray direction, preserves the research-to-evidence narrative, provides progressive enhancement and no-JavaScript access, uses consent-safe people treatment, records shipping raster provenance, and meets the final identity, responsive, motion, accessibility, and evidence requirements.
+**Visual direction review: PASS.** The original Evidence Slide Tray implementation passed independent finish review. The multipage extension preserves that approved world and has passed build, HTML, route, metadata, progressive-enhancement and mechanical design checks across all five outputs.

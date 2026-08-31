@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publications | DatAI Lab — University of Milano-Bicocca</title>
+    <meta name="description" content="Search the complete deduplicated publication archive of current DatAI members by title, author, venue and year." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://inside.disco.unimib.it/publications/" />
+    <meta property="og:type" content="website" /><meta property="og:site_name" content="DatAI Lab" /><meta property="og:title" content="Publications | DatAI Lab" /><meta property="og:description" content="A complete, searchable Google Scholar snapshot for the current DatAI group." /><meta property="og:url" content="https://inside.disco.unimib.it/publications/" /><meta property="og:image" content="https://inside.disco.unimib.it/assets/og-card.png" />
+    <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Publications | DatAI Lab" /><meta name="twitter:description" content="Search the DatAI publication archive." /><meta name="twitter:image" content="https://inside.disco.unimib.it/assets/og-card.png" />
+    <link rel="icon" href="/assets/datai-logo.svg" type="image/svg+xml" /><link rel="manifest" href="/site.webmanifest" /><link rel="stylesheet" href="/src/styles.css" /><script type="module" src="/src/script.js"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Publications | DatAI Lab","url":"https://inside.disco.unimib.it/publications/","description":"Searchable publication archive of current DatAI members.","isPartOf":{"@type":"WebSite","name":"DatAI Lab","url":"https://inside.disco.unimib.it/"},"about":{"@id":"https://inside.disco.unimib.it/#organization"}}</script>
+  </head>
+  <body>
+    <!--
+      THESIS: Publications are a complete, searchable evidence record—not a selective marketing carousel.
+      OWN-WORLD: Warm paper, tabular years and citations, serif titles, acid underlines, and rule-separated archive rows.
+      STORY: Understand the dataset and its limits, filter the full record, then open the underlying Scholar citations.
+      FIRST VIEWPORT: A compact publication masthead exposes the archive size, provenance, and search task before the first result.
+      FORM: Evidence Slide Tray, direction 6, seed 57e260a9, resolved as a publication ledger.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+    -->
+    <!-- SITE_HEADER:publications -->
+
+    <main id="main">
+      <section id="top" class="page-masthead border-b border-ink-950/15 bg-paper-100">
+        <div class="mx-auto grid max-w-[90rem] gap-10 px-5 py-20 md:grid-cols-[1.05fr_0.95fr] md:items-end md:px-8 md:py-28 xl:px-12">
+          <div><p class="mb-6 text-xs font-extrabold uppercase tracking-[0.14em] text-petrol-800">DatAI publication record</p><h1 class="page-title max-w-[12ch] font-serif text-petrol-950"><!-- PUBLICATION_COUNT --> works, one searchable archive.</h1></div>
+          <div><p class="max-w-[43rem] text-lg leading-relaxed text-ink-700">A deduplicated catalogue assembled from the confirmed members’ Google Scholar profiles. Citation counts are a dated snapshot, not live metrics.</p><p class="mt-4 text-xs font-bold uppercase tracking-[0.09em] text-ink-700">Snapshot <!-- DATA_UPDATED --> · Sources: Google Scholar</p></div>
+        </div>
+      </section>
+
+      <section class="bg-paper-100 pb-24 md:pb-32" aria-labelledby="archive-heading">
+        <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
+          <h2 id="archive-heading" class="sr-only">Publication archive</h2>
+          <div class="publication-toolbar mb-10 grid gap-4 border-y border-ink-950/20 py-5 md:grid-cols-[1fr_12rem_auto] md:items-end">
+            <div><label for="publication-search">Search title, author or venue</label><input id="publication-search" type="search" inputmode="search" autocomplete="off" placeholder="e.g. knowledge graph, Filippini, ISWC" data-publication-search /></div>
+            <div><label for="publication-year">Year</label><select id="publication-year" data-publication-year><option value="all">All years</option><!-- PUBLICATION_YEARS --></select></div>
+            <button class="min-h-[3.25rem] border border-ink-950 px-5 text-sm font-extrabold hover:bg-petrol-950 hover:text-paper-50" type="button" data-publication-clear hidden>Clear filters</button>
+          </div>
+          <p class="mb-5 text-sm text-ink-700" aria-live="polite" data-publication-status>All publications are listed chronologically.</p>
+          <noscript><p class="mb-5 border-l-4 border-acid-500 pl-4 text-sm text-ink-700">JavaScript is off. The complete archive remains available below in chronological order.</p></noscript>
+          <ol class="publication-list"><!-- PUBLICATION_ARCHIVE --></ol>
+          <button class="mx-auto mt-10 min-h-12 border border-petrol-950 px-6 text-sm font-extrabold text-petrol-950 hover:bg-petrol-950 hover:text-paper-50" type="button" data-publication-load-more>Show 24 more</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- SITE_FOOTER -->
+  </body>
+</html>

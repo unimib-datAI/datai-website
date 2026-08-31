@@ -19,7 +19,11 @@ function selectResearch(id, moveFocus = false) {
 }
 
 researchControls.forEach((control, index) => {
-  control.addEventListener("click", () => selectResearch(control.dataset.researchControl));
+  control.addEventListener("click", () => {
+    const id = control.dataset.researchControl;
+    selectResearch(id);
+    window.history.replaceState(null, "", `#${id}`);
+  });
   control.addEventListener("keydown", (event) => {
     if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
     event.preventDefault();
@@ -32,7 +36,18 @@ researchControls.forEach((control, index) => {
   });
 });
 
-selectResearch("semantic");
+if (researchControls.length && researchPanels.length) {
+  const hashId = window.location.hash.slice(1);
+  const initialResearch = researchControls.some((control) => control.dataset.researchControl === hashId)
+    ? hashId
+    : "semantic";
+  selectResearch(initialResearch);
+
+  window.addEventListener("hashchange", () => {
+    const id = window.location.hash.slice(1);
+    if (researchControls.some((control) => control.dataset.researchControl === id)) selectResearch(id);
+  });
+}
 
 const publicationItems = Array.from(document.querySelectorAll("[data-publication-item]"));
 const publicationSearch = document.querySelector("[data-publication-search]");
