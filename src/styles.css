@@ -305,6 +305,7 @@ a.specimen {
 }
 
 .lab-photo-media {
+  position: relative;
   min-height: 0;
   overflow: hidden;
   aspect-ratio: 595 / 420;
@@ -324,6 +325,34 @@ a.specimen {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.lab-room-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 0.55rem;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.6rem 1rem 0.6rem 1.35rem;
+  color: #10292b;
+  background: #b8ed51;
+  clip-path: polygon(0.75rem 0, 100% 0, 100% 100%, 0 100%, 0.75rem 50%);
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.lab-room-ribbon strong {
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
 }
 
 .lab-photo figcaption {
@@ -374,12 +403,26 @@ a.specimen {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lab-gallery--current .lab-photo:last-child {
+    grid-column: 1 / -1;
+  }
+
   .lab-gallery--current .lab-photo {
     grid-template-rows: auto;
   }
 
   .lab-gallery--current .lab-photo-media {
     aspect-ratio: 16 / 9;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lab-gallery--current {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lab-gallery--current .lab-photo:last-child {
+    grid-column: auto;
   }
 }
 
