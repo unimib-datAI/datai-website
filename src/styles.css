@@ -315,6 +315,10 @@ a.specimen {
   aspect-ratio: 16 / 9;
 }
 
+.lab-gallery--current .lab-photo {
+  grid-template-rows: auto;
+}
+
 .lab-photo img {
   display: block;
   width: 100%;
@@ -371,7 +375,7 @@ a.specimen {
   }
 
   .lab-gallery--current .lab-photo {
-    grid-template-rows: minmax(0, 1fr) auto;
+    grid-template-rows: auto;
   }
 
   .lab-gallery--current .lab-photo-media {
