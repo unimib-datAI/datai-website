@@ -21,7 +21,7 @@ export function siteHeader(activePage) {
       <div class="mx-auto flex h-[var(--header-height)] max-w-[96rem] items-center justify-between px-5 md:px-8 xl:px-12">
         <a class="flex items-center gap-3" href="/" aria-label="DatAI home"${activePage === "home" ? ' aria-current="page"' : ""}>
           <span class="wordmark-crop" aria-hidden="true"><img src="/assets/datai-logo.svg" alt="" width="512" height="512" /></span>
-          <span class="hidden text-[0.62rem] font-bold uppercase leading-tight tracking-[0.11em] text-paper-50/65 lg:block">Data for Artificial Intelligence<br />University of Milano-Bicocca</span>
+          <span class="hidden text-[0.62rem] font-bold uppercase leading-tight tracking-[0.11em] text-paper-50/65 lg:block">Research laboratory<br />University of Milano-Bicocca</span>
         </a>
         <nav class="hidden md:block" aria-label="Primary navigation">
           <ul class="flex items-center gap-4 text-xs uppercase tracking-[0.08em]">
@@ -47,7 +47,7 @@ export function siteFooter() {
   return `<footer class="bg-petrol-950 py-12 text-paper-50">
       <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
         <div class="grid gap-10 border-b border-paper-50/18 pb-10 md:grid-cols-[1fr_auto] md:items-start">
-          <div class="flex items-start gap-5"><span class="wordmark-crop mt-1" aria-hidden="true"><img src="/assets/datai-logo.svg" alt="" width="512" height="512" /></span><p class="max-w-[38rem] text-sm leading-relaxed text-paper-50/65">Data for Artificial Intelligence at DISCo, University of Milano-Bicocca. Institutional details and the current roster are maintained as verifiable public records.</p></div>
+          <div class="flex items-start gap-5"><span class="wordmark-crop mt-1" aria-hidden="true"><img src="/assets/datai-logo.svg" alt="" width="512" height="512" /></span><p class="max-w-[38rem] text-sm leading-relaxed text-paper-50/65">The Data for Artificial Intelligence research laboratory at DISCo, University of Milano-Bicocca. Institutional details and the current roster are maintained as verifiable public records.</p></div>
           <nav aria-label="Footer navigation"><ul class="grid grid-cols-2 gap-x-7 gap-y-3 text-sm font-extrabold md:grid-cols-1 md:text-right"><li><a class="text-acid-300 underline underline-offset-4" href="/research/">Research</a></li><li><a class="text-acid-300 underline underline-offset-4" href="/people/">People</a></li><li><a class="text-acid-300 underline underline-offset-4" href="/publications/">Publications</a></li><li><a class="text-acid-300 underline underline-offset-4" href="/contact/">Contact</a></li></ul></nav>
         </div>
         <div class="grid gap-6 border-b border-paper-50/18 py-8 md:grid-cols-[auto_1fr] md:items-center md:gap-8">

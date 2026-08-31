@@ -160,7 +160,7 @@ Every final WebP records its source set, generation method, prompt intent, date,
 
 ## Institutional endorsement
 
-The University of Milano-Bicocca mark appears once in the shared footer as an institutional endorsement, not as part of the DatAI wordmark. Its official positive black-and-grey artwork remains unmodified and sits on an independent white field inside the petroleum footer. The field padding preserves the Brand Book 2025 clear area, while the department relationship is written outside that protected area. Do not recolor, distort, crop, merge, or visually compete with the mark.
+The University of Milano-Bicocca relationship must be explicit in the first viewport of every route. The shared header identifies DatAI as a University research laboratory, and each masthead names the University in visible text. The University mark appears once in the shared footer as an institutional endorsement, not as part of the DatAI wordmark. Its official positive black-and-grey artwork remains unmodified and sits on an independent white field inside the petroleum footer. The field padding preserves the Brand Book 2025 clear area, while the department relationship is written outside that protected area. Do not recolor, distort, crop, merge, or visually compete with the mark.
 
 ## Accessibility
 
