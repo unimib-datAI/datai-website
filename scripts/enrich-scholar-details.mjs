@@ -103,6 +103,7 @@ const AFFILIATE_AUTHOR_ALIASES = {
   "marco-cremaschi": ["cremaschi"],
   "riccardo-pozzi": ["pozzi"],
   "renzo-arturo-alva-principe": ["alva", "principe"],
+  "carlo-batini": ["batini"],
 };
 
 function hasAffiliateAuthorship(publication) {
@@ -124,7 +125,9 @@ function isNonAuthoredArtifact(publication) {
     || /^heinonen henri tapani /.test(title)
     || (/^20\d{2} .*conference/.test(title) && /978 1 /.test(title))
     || /^sig$/.test(title)
-    || /^ldk \d{4}$/.test(title);
+    || /^ldk \d{4}$/.test(title)
+    || ["michael l brodie", "visual information systems", "modern information retrieval title"].includes(title)
+    || title.startsWith("nell ambito di questo studio e stata dedicata grande attenzione");
 }
 
 function recalculateSummary(data) {
@@ -144,6 +147,11 @@ function recalculateSummary(data) {
     complete_venue_count: publications.filter((publication) => publication.venue).length,
     complete_author_count: publications.filter((publication) => publication.authors).length,
     structured_author_list_count: publications.filter((publication) => publication.author_list?.length).length,
+    excluded_non_affiliate_authorship_count: publications.filter((publication) => publication.record_status === "excluded_non_affiliate_authorship").length,
+    included_complete_year_count: publications.filter((publication) => publication.record_status === "included" && publication.year).length,
+    included_complete_venue_count: publications.filter((publication) => publication.record_status === "included" && publication.venue).length,
+    complete_core_metadata_count: publications.filter((publication) => publication.metadata_completeness.status === "complete_core").length,
+    included_complete_core_metadata_count: publications.filter((publication) => publication.record_status === "included" && publication.metadata_completeness.status === "complete_core").length,
   };
 }
 

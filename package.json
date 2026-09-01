@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "build:og-source": "node scripts/build-og.mjs",
+    "import:carlo-scholar": "node scripts/import-scholar-profile.mjs",
+    "audit:carlo-details": "node scripts/apply-scholar-detail-audit.mjs",
+    "repair:publication-encoding": "node scripts/repair-publication-encoding.mjs",
     "audit:publications": "node scripts/refresh-scholar.mjs && node scripts/enrich-publications.mjs && node scripts/enrich-scholar-details.mjs && node scripts/validate-publications.mjs",
     "validate:publications": "node scripts/validate-publications.mjs",
     "dev": "vite --host 127.0.0.1",

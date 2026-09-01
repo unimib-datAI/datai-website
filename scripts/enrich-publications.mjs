@@ -237,9 +237,14 @@ async function queryOpenAlex(publication) {
   url.searchParams.set("per-page", "5");
   url.searchParams.set("select", OPENALEX_SELECT);
   const cached = await readCachedJson("openalex-search", publication.title);
-  const json = cached || (process.env.OPENALEX_SEARCH === "1"
-    ? await fetchJson(url, { provider: "openalex-search", key: publication.title })
-    : null);
+  let json = cached;
+  if (!json && process.env.OPENALEX_SEARCH === "1") {
+    try {
+      json = await fetchJson(url, { provider: "openalex-search", key: publication.title });
+    } catch {
+      return { checked: false, skipped: "temporarily_unavailable", item: null, match: { accepted: false, score: 0, title_score: 0, authors_score: 0, year_distance: null } };
+    }
+  }
   if (!json) return { checked: false, skipped: "daily_search_budget", item: null, match: { accepted: false, score: 0, title_score: 0, authors_score: 0, year_distance: null } };
   const best = bestOpenAlex(publication, json.results || []);
   return best
@@ -283,25 +288,50 @@ function textValue(value) {
   return "";
 }
 
+function dblpCandidate(publication, info) {
+  const authorsValue = info.authors?.author;
+  const authors = (Array.isArray(authorsValue) ? authorsValue : authorsValue ? [authorsValue] : []).map((author) => ({ name: textValue(author) }));
+  const match = scoreCandidate(publication, textValue(info.title), authors, info.year ? [Number(info.year)] : []);
+  return { item: info, title: textValue(info.title), authors, match };
+}
+
+async function queryDblpAuthorProfile() {
+  const items = [];
+  for (const offset of [0, 100]) {
+    const url = new URL("https://dblp.org/search/publ/api");
+    url.searchParams.set("q", "author:Carlo_Batini:");
+    url.searchParams.set("format", "json");
+    url.searchParams.set("h", "100");
+    url.searchParams.set("f", String(offset));
+    try {
+      const json = await fetchJson(url, { provider: "dblp-author", key: `carlo-batini-${offset}` });
+      const hits = json.result?.hits?.hit;
+      items.push(...(Array.isArray(hits) ? hits : hits ? [hits] : []).map((hit) => hit.info || {}));
+    } catch {
+      break;
+    }
+  }
+  return items;
+}
+
 async function queryDblp(publication) {
   const url = new URL("https://dblp.org/search/publ/api");
   url.searchParams.set("q", publication.title.slice(0, 300));
   url.searchParams.set("format", "json");
   url.searchParams.set("h", "5");
   const cached = await readCachedJson("dblp-search", publication.title);
-  const json = cached || (process.env.DBLP_SEARCH === "1"
-    ? await fetchJson(url, { provider: "dblp-search", key: publication.title })
-    : null);
+  let json = cached;
+  if (!json && process.env.DBLP_SEARCH === "1") {
+    try {
+      json = await fetchJson(url, { provider: "dblp-search", key: publication.title });
+    } catch {
+      return { checked: false, skipped: "temporarily_unavailable", item: null, match: { accepted: false, score: 0, title_score: 0, authors_score: 0, year_distance: null } };
+    }
+  }
   if (!json) return { checked: false, skipped: "temporarily_unavailable", item: null, match: { accepted: false, score: 0, title_score: 0, authors_score: 0, year_distance: null } };
   const hits = json.result?.hits?.hit;
   const items = Array.isArray(hits) ? hits : hits ? [hits] : [];
-  const candidates = items.map((hit) => {
-    const info = hit.info || {};
-    const authorsValue = info.authors?.author;
-    const authors = (Array.isArray(authorsValue) ? authorsValue : authorsValue ? [authorsValue] : []).map((author) => ({ name: textValue(author) }));
-    const match = scoreCandidate(publication, textValue(info.title), authors, info.year ? [Number(info.year)] : []);
-    return { item: info, title: textValue(info.title), authors, match };
-  }).sort((a, b) => b.match.score - a.match.score);
+  const candidates = items.map((hit) => dblpCandidate(publication, hit.info || {})).sort((a, b) => b.match.score - a.match.score);
   return candidates[0] ? { ...candidates[0], checked: true } : { checked: true, item: null, match: { accepted: false, score: 0, title_score: 0, authors_score: 0, year_distance: null } };
 }
 
@@ -309,7 +339,12 @@ async function queryDataCite(publication) {
   const url = new URL("https://api.datacite.org/dois");
   url.searchParams.set("query", `titles.title:\"${publication.title.replaceAll('"', "")}\"`);
   url.searchParams.set("page[size]", "5");
-  const json = await fetchJson(url, { provider: "datacite-search", key: publication.title });
+  let json;
+  try {
+    json = await fetchJson(url, { provider: "datacite-search", key: publication.title });
+  } catch {
+    return null;
+  }
   const candidates = (json.data || []).map((entry) => {
     const item = entry.attributes || {};
     const title = item.titles?.[0]?.title || "";
@@ -375,7 +410,9 @@ function isLikelyNonAuthoredArtifact(publication) {
     || /^heinonen henri tapani /.test(title)
     || (/^20\d{2} .*conference/.test(title) && /978 1 /.test(title))
     || /^sig$/.test(title)
-    || /^ldk \d{4}$/.test(title);
+    || /^ldk \d{4}$/.test(title)
+    || ["michael l brodie", "visual information systems", "modern information retrieval title"].includes(title)
+    || title.startsWith("nell ambito di questo studio e stata dedicata grande attenzione");
 }
 
 const AFFILIATE_AUTHOR_ALIASES = {
@@ -390,6 +427,7 @@ const AFFILIATE_AUTHOR_ALIASES = {
   "marco-cremaschi": ["cremaschi"],
   "riccardo-pozzi": ["pozzi"],
   "renzo-arturo-alva-principe": ["alva", "principe"],
+  "carlo-batini": ["batini"],
 };
 
 function hasAffiliateAuthorship(publication, authorList) {
@@ -418,7 +456,13 @@ function chooseCanonical(publication, crossrefMatch, openalexMatch, dblpMatch, d
     name: author.name || [author.givenName, author.familyName].filter(Boolean).join(" ") || null,
     orcid: author.nameIdentifiers?.find((identifier) => identifier.nameIdentifierScheme === "ORCID")?.nameIdentifier || null,
   })).filter((author) => author.name) : [];
-  const authorList = crossrefAuthorList.length ? crossrefAuthorList : openalexAuthorList.length ? openalexAuthorList : dataciteAuthorList;
+  const authorList = crossrefAuthorList.length
+    ? crossrefAuthorList
+    : openalexAuthorList.length
+      ? openalexAuthorList
+      : dataciteAuthorList.length
+        ? dataciteAuthorList
+        : publication.author_list || [];
 
   const printYear = dateYear(crossref?.["published-print"]);
   const onlineYear = dateYear(crossref?.["published-online"]);
@@ -427,6 +471,7 @@ function chooseCanonical(publication, crossrefMatch, openalexMatch, dblpMatch, d
     || openalex?.primary_location?.source?.display_name
     || datacite?.container?.title
     || dblp?.venue
+    || publication.venue
     || publication.publication
     || null;
   const articleNumber = crossref?.["article-number"] || openalex?.biblio?.article_number || null;
@@ -580,8 +625,8 @@ const publications = data.publications.map((publication) => {
   return {
     ...publication,
     title: richest?.title || publication.title,
-    authors: richest?.authors || publication.authors,
-    publication: richest?.publication || publication.publication,
+    authors: publication.scholar_details?.checked ? publication.authors : richest?.authors || publication.authors,
+    publication: publication.scholar_details?.checked ? publication.venue || publication.publication : richest?.publication || publication.publication,
     year: publication.display_year_override || richest?.year || publication.year,
     citations: Math.max(publication.citations || 0, ...rows.map((row) => row.citations || 0)),
   };
@@ -644,14 +689,24 @@ const searchedOpenAlex = await mapLimit(needsOpenAlexSearch, 3, async (index, po
 });
 for (const { index, match } of searchedOpenAlex) openAlexMatches[index] = match;
 
+const dblpMatches = new Array(publications.length).fill(null);
+process.stdout.write("DBLP: loading Carlo Batini's author bibliography\n");
+const carloDblpItems = await queryDblpAuthorProfile();
+for (let index = 0; index < publications.length; index += 1) {
+  if (!publications[index].affiliate_ids.includes("carlo-batini")) continue;
+  const best = carloDblpItems.map((item) => dblpCandidate(publications[index], item)).sort((a, b) => b.match.score - a.match.score)[0];
+  if (best?.match.accepted) dblpMatches[index] = { ...best, checked: true };
+}
+process.stdout.write(`DBLP: ${carloDblpItems.length} Batini records loaded; ${dblpMatches.filter((match) => match?.match.accepted).length} profile matches\n`);
+
 const unresolvedIndexes = publications.map((_, index) => index).filter((index) => {
   const crossref = crossrefMatches[index]?.match.accepted;
   const openalex = openAlexMatches[index]?.match.accepted;
-  return !crossref && !openalex;
+  const dblp = dblpMatches[index]?.match.accepted;
+  return !crossref && !openalex && !dblp;
 });
 
 process.stdout.write(`DBLP: checking ${unresolvedIndexes.length} records unresolved by Crossref/OpenAlex\n`);
-const dblpMatches = new Array(publications.length).fill(null);
 const searchedDblp = await mapLimit(unresolvedIndexes, 1, async (index, position) => {
   const match = await queryDblp(publications[index]);
   if ((position + 1) % 50 === 0) process.stdout.write(`DBLP: ${position + 1}/${unresolvedIndexes.length}\n`);
@@ -730,6 +785,13 @@ const summary = {
   complete_year_count: enriched.filter((publication) => publication.year).length,
   complete_venue_count: enriched.filter((publication) => publication.venue).length,
   complete_author_count: enriched.filter((publication) => publication.authors).length,
+  included_doi_count: enriched.filter((publication) => publication.record_status === "included" && publication.doi).length,
+  structured_author_list_count: enriched.filter((publication) => publication.author_list?.length).length,
+  excluded_non_affiliate_authorship_count: enriched.filter((publication) => publication.record_status === "excluded_non_affiliate_authorship").length,
+  included_complete_year_count: enriched.filter((publication) => publication.record_status === "included" && publication.year).length,
+  included_complete_venue_count: enriched.filter((publication) => publication.record_status === "included" && publication.venue).length,
+  complete_core_metadata_count: enriched.filter((publication) => publication.metadata_completeness.status === "complete_core").length,
+  included_complete_core_metadata_count: enriched.filter((publication) => publication.record_status === "included" && publication.metadata_completeness.status === "complete_core").length,
 };
 
 const output = {
@@ -755,7 +817,7 @@ const output = {
   },
   verification_summary: summary,
   limitations: [
-    "All 920 rows currently visible across the 12 public Google Scholar profiles of the 11 confirmed affiliates were reloaded on the audit date; the deduplicated archive contains every one of those source rows.",
+    "The audit includes every row publicly visible in Carlo Batini's Google Scholar profile on 1 September 2026; exact duplicates and non-authored front matter are retained for auditability but excluded or merged in the primary archive where the evidence supports doing so.",
     "Google Scholar profiles are maintained by their owners, so works missing from a member's public profile cannot be inferred as complete solely from Scholar.",
     "A DOI is included only when a registry or strongly matching bibliographic source supplies it. A null DOI with doi_status 'not_found' means no reliable DOI was found in the checked sources; it does not prove that no DOI was ever assigned.",
     "Publisher metadata can distinguish online-first and print/fascicle years; both are retained when available and the displayed year uses any explicit editorial override before registry dates.",

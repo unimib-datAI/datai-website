@@ -311,5 +311,21 @@
     "rights_status": "permission_and_original_required_before_public_launch",
     "shipping": true,
     "sha256": "64ebcae529037eb91a7576b6e02d71262c9b3aaa31637932a3715809accc5e68"
+  },
+  "team/carlo-batini.webp": {
+    "type": "ai_edited_identity_preserving_portrait",
+    "subject": "Carlo Batini",
+    "generator": "OpenAI built-in image generation",
+    "use_case": "identity-preserve",
+    "source_page_urls": ["https://www.researchgate.net/profile/Carlo-Batini", "https://scholar.google.com/citations?user=rv5jMvMAAAAJ&hl=en"],
+    "source_urls": ["https://i1.rgstatic.net/ii/profile.image/610122430701568-1522475931635_Q512/Carlo-Batini.jpg"],
+    "derived_from": ["assets/team-sources/originals/carlo-batini-researchgate.jpg", "public/assets/team/flavio-maria-de-paoli.webp", "assets/team-sources/generated/carlo-batini.png"],
+    "retrieved": "2026-09-01",
+    "generated": "2026-09-01",
+    "prompt_summary": "Use the ResearchGate portrait as the sole identity authority; preserve age, face shape, short dark-grey hair, thin round metal eyeglasses, natural asymmetry and gentle smile while changing only background, wardrobe, crop, pose alignment and studio lighting to match the shared 4:5 petroleum series.",
+    "transform": "identity-preserving studio edit; 480 × 600 WebP, quality 88",
+    "rights_status": "permission_and_original_required_before_public_launch",
+    "shipping": true,
+    "sha256": "24d2b331d8f7165f8ebad5706bf93888c5128c31e0da64d2637f2248ec43cf3e"
   }
 }

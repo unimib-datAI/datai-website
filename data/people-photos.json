@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31",
+  "generated_at": "2026-09-01",
   "purpose": "Source portraits and supporting identity references for the DatAI website studio series",
   "selection_policy": {
     "source_priority": [
@@ -184,6 +184,26 @@
         "quality": "provisional_low_resolution",
         "crop": "Use only as a temporary small placeholder; the existing crop includes another person's arm.",
         "notes": "Correct identity and friendly expression, but resolution and framing are below production standard. Request a new original portrait directly."
+      },
+      "rights_status": "permission_and_original_required"
+    },
+    {
+      "id": "carlo-batini",
+      "name": "Carlo Batini",
+      "recommended": {
+        "source_page_url": "https://www.researchgate.net/profile/Carlo-Batini",
+        "image_url": "https://i1.rgstatic.net/ii/profile.image/610122430701568-1522475931635_Q512/Carlo-Batini.jpg",
+        "source_type": "self_managed_academic_profile",
+        "width": 512,
+        "height": 512,
+        "quality": "acceptable_for_identity_reference",
+        "crop": "Primary identity reference for the final identity-preserving studio edit.",
+        "notes": "The portrait is explicitly associated with Carlo Batini's research profile. Google Images supplied a 447 × 447 cached derivative because the origin blocks direct automated retrieval; request the original before public launch."
+      },
+      "identity_reference": {
+        "source_page_url": "https://scholar.google.com/citations?user=rv5jMvMAAAAJ&hl=en",
+        "source_type": "verified_self_managed_academic_profile",
+        "usage": "Identity and affiliation cross-check; the Scholar image endpoint was not used as the production source."
       },
       "rights_status": "permission_and_original_required"
     }
