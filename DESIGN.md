@@ -41,8 +41,8 @@ The visual world combines CRT-black forest fields, the official DatAI green, coo
 ## Page architecture
 
 1. **Home:** State the laboratory thesis, show three linked questions in the signature tray, make the group visible, and route visitors to the four task pages.
-2. **Research:** Expand four areas into question → people → evidence chains, followed by selected systems, datasets, methods, languages, and public repositories.
-3. **People:** Identify the current group through portrait-led evidence records with roles, affiliations, and authoritative profiles.
+2. **Research:** Expand four areas into question → methods → evidence chains, followed by a dated active/completed project ledger, selected peer-reviewed results, and public software and datasets.
+3. **People:** Identify the current group through portrait-led evidence records with roles, affiliations, and authoritative profiles, then route every member to one of twelve stable personal profiles generated from the same canonical people data.
 4. **Publications:** Expose the complete deduplicated archive with dated source context and progressive search/filter controls.
 5. **Contact:** Offer verified collaboration and student routes, all four physical laboratory spaces, institutional identity, and historical naming.
 6. **Shared shell:** Keep the fixed navigation, active-page state, editorial responsibility, privacy, accessibility, and source notes consistent across every route.
@@ -163,9 +163,15 @@ Without JavaScript, the complete chronological archive remains visible. Citation
 
 People remain border-separated records rather than a conventional portrait grid. A controlled 4:5 studio series makes the group visible while preserving the evidence-led roster structure.
 
+The twelve personal routes use stable `/people/{person-id}/` addresses. `data/people.json` is the canonical source for the directory and generated profiles; keep IDs stable and never maintain parallel person facts directly in the HTML outputs.
+
+The profile form is the **Evidence Profile Dossier**. Its content order is fixed: a dark identity hero with breadcrumb, portrait, name, current role, affiliation, concise research statement, and two authoritative actions; a warm-paper research profile with biography, profile records, and research-focus terms; a selected-evidence ledger containing projects or programmes when available, research outputs, review date, and the pointer to the complete record; then an acid continuation field linking back to all people and to the previous and next members. It is a concise, sourced research profile rather than an exhaustive CV.
+
+At `768px` and above, the hero, reading section, research focus, evidence groups, and adjacent-member navigation use paired columns. Below `768px`, each becomes a single sequence: the portrait reduces to a compact 4:5 lead image, focus terms and evidence groups stack, and previous/next links become vertically divided rows. Evidence rows use record language rather than promotional copy: compact uppercase type or period metadata, a linked serif title, a year or relationship line, and an explicit `Open project record` or `Open source` action. On narrow screens the action moves beneath the title in the content column.
+
 On 31 August 2026 the user directed every sourced portrait to be regenerated through identity-preserving image editing. The final series uses the same deep-petroleum cyclorama, straight-on eye line, head scale, level shoulder line, mid-chest crop, soft studio lighting and plain black crew-neck T-shirt. Face shape, skin tone, age, expression, gaze, hairstyle, facial hair, eyewear and distinctive piercings remain source invariants.
 
-Every final WebP records its source set, generation method, prompt intent, date, transform, checksum and rights status in `public/assets/provenance.json`. Full source images, prior web crops and generated masters remain outside the public asset directory. Source and subject permissions remain mandatory editorial follow-ups before a public institutional launch; generated portraits are presentation assets and never documentary research evidence.
+Every final WebP records its source set, generation method, prompt intent, date, transform, checksum and rights status in `public/assets/provenance.json`. Full source images, prior web crops and generated masters remain outside the public asset directory. Public institutional launch is gated on confirming each portrait source and recording subject permission; generated portraits are presentation assets and never documentary research evidence.
 
 Archival laboratory photography is treated as documentary evidence, not as a current-team portrait source. The Home gallery uses an asymmetric lead-and-supporting-image composition, labels the INSID&S context and Drive file date, and never identifies pictured people unless a verified caption is available.
 
@@ -178,7 +184,7 @@ The University of Milano-Bicocca relationship must be explicit in the first view
 - Preserve semantic sections, headings, lists, buttons, links, labels, `<details>`, and ARIA tab relationships.
 - Keep the skip link and visible keyboard focus.
 - Default focus on paper: `3px` forest `#27513c` outline with `4px` offset (`8.06:1`).
-- Focus on CRT-black and forest fields uses acid `#8bcf00`; on the acid contact field it changes to CRT black.
+- Focus on CRT-black and forest fields uses a `3px` acid `#8bcf00` outline with `4px` offset; this explicitly includes every interactive element in the dark profile hero. On the acid contact field it changes to CRT black.
 - Maintain WCAG 2.2 AA contrast; publication venue text uses `#4a5d51` on paper (`6.28:1`).
 - Acid focus on CRT black and CRT-black focus on acid both exceed AA (`9.35:1`).
 - Selection uses marker fill, border, text, and `aria-selected`, not color alone.

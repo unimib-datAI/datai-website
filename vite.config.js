@@ -1,8 +1,11 @@
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
+import { readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { siteShell } from "./src/site-shell.js";
+
+const peopleData = JSON.parse(readFileSync(new URL("./data/people.json", import.meta.url), "utf8"));
 
 function escapeHtml(value = "") {
   return String(value)
@@ -11,6 +14,25 @@ function escapeHtml(value = "") {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
+}
+
+function peopleDirectory() {
+  const rows = peopleData.people.map((person) => {
+    const profileLinks = person.links.map((link) => `<a class="profile-link" href="${escapeHtml(link.url)}" rel="noreferrer">${escapeHtml(link.short_label)}</a>`).join("");
+    return `<article id="person-${escapeHtml(person.id)}" class="person-row">
+      <a class="person-portrait" href="/datai/people/${escapeHtml(person.id)}/" aria-label="View the profile of ${escapeHtml(person.name)}"><img src="${escapeHtml(person.portrait)}" alt="" width="480" height="600" loading="lazy" decoding="async" /></a>
+      <div><h3><a class="person-name-link" href="/datai/people/${escapeHtml(person.id)}/">${escapeHtml(person.name)}</a></h3><p class="person-role">${escapeHtml(person.role)}</p><div class="person-row-actions"><a href="/datai/people/${escapeHtml(person.id)}/">View profile</a><a href="/datai/publications/?member=${escapeHtml(person.id)}#archive">Publications</a></div></div>
+      <p class="person-membership">${escapeHtml(person.membership)}</p>
+      <div class="person-record-links">${profileLinks}</div>
+    </article>`;
+  }).join("\n");
+
+  return {
+    name: "datai-people-directory",
+    transformIndexHtml(html) {
+      return html.replace(/<!-- PEOPLE_ROSTER_START -->[\s\S]*?<!-- PEOPLE_ROSTER_END -->/, `<!-- PEOPLE_ROSTER_START -->\n${rows}\n<!-- PEOPLE_ROSTER_END -->`);
+    },
+  };
 }
 
 function publicationArchive() {
@@ -64,7 +86,7 @@ function publicationArchive() {
             ? "Verified in a primary registry"
             : "Scholar profile record";
         const dataiAuthorLinks = dataiAuthors.length
-          ? `<span class="publication-datai-authors">DatAI: ${dataiAuthors.map((affiliate) => `<a href="/datai/people/#person-${escapeHtml(affiliate.id)}">${escapeHtml(affiliate.name)}</a>`).join(", ")}</span>`
+          ? `<span class="publication-datai-authors">DatAI: ${dataiAuthors.map((affiliate) => `<a href="/datai/people/${escapeHtml(affiliate.id)}/">${escapeHtml(affiliate.name)}</a>`).join(", ")}</span>`
           : "";
         return `<li class="publication-item" data-publication-item data-year="${escapeHtml(year)}" data-affiliates="${escapeHtml(affiliateIds.join(" "))}" data-search="${escapeHtml(search)}" data-index="${index}">
           <div class="publication-year">${escapeHtml(year)}</div>
@@ -134,7 +156,7 @@ function publicationArchive() {
 export default defineConfig({
   appType: "mpa",
   base: "/datai/",
-  plugins: [siteShell(), publicationArchive(), tailwindcss()],
+  plugins: [siteShell(), peopleDirectory(), publicationArchive(), tailwindcss()],
   build: {
     rollupOptions: {
       input: {
@@ -143,6 +165,10 @@ export default defineConfig({
         people: fileURLToPath(new URL("./people/index.html", import.meta.url)),
         publications: fileURLToPath(new URL("./publications/index.html", import.meta.url)),
         contact: fileURLToPath(new URL("./contact/index.html", import.meta.url)),
+        ...Object.fromEntries(peopleData.people.map((person) => [
+          `person-${person.id}`,
+          fileURLToPath(new URL(`./people/${person.id}/index.html`, import.meta.url)),
+        ])),
       },
     },
   },

@@ -6351,8 +6351,8 @@
       "id": "gs-9fa1a2c5b1c3df49",
       "title": "DAVE: A Framework for Assisted Analysis of Document Collections in Knowledge-Intensive Domains",
       "authors": "Ruben Agazzi, Renzo Alva Principe, Riccardo Pozzi, Marco Ripamonti, Matteo Palmonari",
-      "publication": "Proceedings of the Thirty-ThirdInternational Joint Conference on Artificial Intelligence",
-      "year": 2024,
+      "publication": "Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence",
+      "year": 2025,
       "citations": 3,
       "affiliate_ids": [
         "matteo-luigi-palmonari",
@@ -6409,24 +6409,24 @@
         }
       ],
       "scholar_authors": "R Agazzi, R Alva Principe, R Pozzi, M Ripamonti, M Palmonari",
-      "venue": "Proceedings of the Thirty-ThirdInternational Joint Conference on Artificial Intelligence",
+      "venue": "Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence",
       "publisher": "International Joint Conferences on Artificial Intelligence Organization",
-      "published_print_year": 2024,
+      "published_print_year": 2025,
       "published_online_year": null,
-      "publication_date": "2024-08-01",
+      "publication_date": "2025-08-01",
       "type": "conference-paper",
       "volume": null,
       "issue": null,
       "pages": "10984-10988",
       "article_number": null,
-      "doi": "10.24963/ijcai.2024/1246",
-      "doi_url": "https://doi.org/10.24963/ijcai.2024/1246",
+      "doi": "10.24963/ijcai.2025/1246",
+      "doi_url": "https://doi.org/10.24963/ijcai.2025/1246",
       "doi_status": "verified",
       "record_status": "included",
       "identifiers": {
-        "crossref_doi": "10.24963/ijcai.2024/1246",
-        "openalex_id": "https://openalex.org/W4414360867",
-        "dblp_key": null,
+        "crossref_doi": "10.24963/ijcai.2025/1246",
+        "openalex_id": null,
+        "dblp_key": "conf/ijcai/AgazziPPRP25",
         "datacite_doi": null,
         "isbn": [],
         "issn": []
@@ -6445,20 +6445,20 @@
           "name": "Crossref",
           "checked": true,
           "matched": true,
-          "url": "https://api.crossref.org/works/10.24963%2Fijcai.2024%2F1246"
+          "url": "https://api.crossref.org/works/10.24963%2Fijcai.2025%2F1246"
         },
         {
           "name": "OpenAlex",
           "checked": true,
-          "matched": true,
-          "url": "https://openalex.org/W4414360867",
-          "note": null
+          "matched": false,
+          "url": null,
+          "note": "Not relied on after verification against the primary IJCAI proceedings record"
         },
         {
           "name": "DBLP",
-          "checked": false,
-          "matched": false,
-          "url": null,
+          "checked": true,
+          "matched": true,
+          "url": "https://dblp.org/rec/conf/ijcai/AgazziPPRP25.html",
           "note": null
         },
         {
@@ -6474,12 +6474,12 @@
         "matched_sources": [
           "google_scholar",
           "crossref",
-          "openalex"
+          "dblp"
         ],
-        "confidence": 0.9825,
-        "crossref_score": 0.97,
-        "openalex_score": 0.9825,
-        "dblp_score": null,
+        "confidence": 1,
+        "crossref_score": 1,
+        "openalex_score": null,
+        "dblp_score": 1,
         "datacite_score": null
       },
       "duplicate_record_ids": [],

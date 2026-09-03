@@ -1,0 +1,272 @@
+{
+  "reviewed_at": "2 September 2026",
+  "people": [
+    {
+      "id": "flavio-maria-de-paoli",
+      "name": "Flavio Maria De Paoli",
+      "role": "Lab head · Associate professor",
+      "membership": "Primary affiliation",
+      "portrait": "/assets/team/flavio-maria-de-paoli.webp",
+      "statement": "Turns heterogeneous data and cloud services into reusable, inspectable data and AI pipelines.",
+      "bio": "Associate Professor at DISCo and public contact for the DatAI laboratory. His documented research includes service-oriented and cloud computing, distributed systems, semantic data enrichment and data/AI pipeline engineering. Recent public outputs connect his work to enRichMyData, DataPACT, SemT, SemTUI, LamAPI and Prompt2DAG.",
+      "areas": ["Service-oriented computing", "Data enrichment", "Distributed systems", "Data and AI pipelines"],
+      "projects": [
+        {"name": "DataPACT", "period": "2025–2027 · Active", "relation": "Data and AI pipeline compliance", "url": "https://cordis.europa.eu/project/id/101189771"},
+        {"name": "enRichMyData", "period": "2022–2025 · Completed", "relation": "Scalable data-enrichment pipelines", "url": "https://cordis.europa.eu/project/id/101070284"}
+      ],
+      "outputs": [
+        {"name": "Prompt2DAG", "type": "Method", "year": "2025", "url": "https://doi.org/10.1109/SSE67621.2025.00010"},
+        {"name": "SemT", "type": "Framework", "year": "2025", "url": "https://doi.org/10.1007/978-3-031-84617-5_3"},
+        {"name": "SemTUI", "type": "Framework", "year": "2024", "url": "https://www.boa.unimib.it/handle/10281/548625"},
+        {"name": "LamAPI", "type": "Software", "year": "Public repository", "url": "https://github.com/unimib-datAI/lamAPI"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/flavio-de-paoli"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=bEA7qmUAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "andrea-maurino",
+      "name": "Andrea Maurino",
+      "role": "Full professor",
+      "membership": "Primary affiliation",
+      "portrait": "/assets/team/andrea-maurino.webp",
+      "statement": "Studies how data quality and large-scale data management shape dependable information systems.",
+      "bio": "Full Professor at DISCo. His public research record covers databases, data quality, large-scale data management and semantic technologies. Institutional and European records document scientific responsibilities in APM, DIPPS, COMSODE and SMART, alongside contributions to euBusinessGraph on company-data modelling and knowledge-graph quality.",
+      "areas": ["Databases", "Data quality", "Data integration", "Large-scale data management"],
+      "projects": [
+        {"name": "APM", "period": "2025–2028 · Active", "relation": "Scientific lead", "url": "https://www.unimib.it/ricerca/ricerca-bicocca/progetti-ricerca?cognome=MAURINO&nome=ANDREA"},
+        {"name": "DIPPS", "period": "2023–2026 · Active", "relation": "University research responsibility", "url": "https://www.unimib.it/ricerca/ricerca-bicocca/progetti-ricerca?cognome=MAURINO&nome=ANDREA"},
+        {"name": "COMSODE", "period": "2013–2015 · Completed", "relation": "Project coordination", "url": "https://cordis.europa.eu/project/id/611358"},
+        {"name": "SMART", "period": "2011–2014 · Completed", "relation": "User-value-oriented e-government services", "url": "https://www.ponrec.it/open-data/progetti?LocalitaID=26"}
+      ],
+      "outputs": [
+        {"name": "Decoding the mind: A RAG-LLM on ICD-11 for decision support in psychology", "type": "Journal article", "year": "2025", "url": "https://doi.org/10.1016/j.eswa.2025.127191"},
+        {"name": "Sustainable Quality in Data Preparation", "type": "Research article", "year": "2025", "url": "https://doi.org/10.1145/3769120"},
+        {"name": "Semantic Data Integration for Investigations", "type": "Conference paper", "year": "2021", "url": "https://doi.org/10.1109/SMDS53860.2021.00031"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/andrea-maurino"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=pdov_QQAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "michele-ciavotta",
+      "name": "Michele Ciavotta",
+      "role": "Associate professor",
+      "membership": "Primary affiliation",
+      "portrait": "/assets/team/michele-ciavotta.webp",
+      "statement": "Designs service and edge–cloud architectures for adaptive data and AI pipelines.",
+      "bio": "Associate Professor at DISCo. His publications span service and cloud computing, semantic data enrichment, data pipelines and federated edge systems. Public evidence connects his work to enRichMyData and DataPACT-related results, as well as SemT, Prompt2DAG and the DFaaS architecture and prototype.",
+      "areas": ["Cloud and service computing", "Data pipelines", "Edge computing", "Function-as-a-Service"],
+      "projects": [
+        {"name": "enRichMyData", "period": "2022–2025 · Completed", "relation": "Data-enrichment pipeline research", "url": "https://cordis.europa.eu/project/id/101070284"},
+        {"name": "DataPACT", "period": "2025–2027 · Active", "relation": "Connected research outputs", "url": "https://cordis.europa.eu/project/id/101189771"}
+      ],
+      "outputs": [
+        {"name": "Prompt2DAG", "type": "Method", "year": "2025", "url": "https://doi.org/10.1109/SSE67621.2025.00010"},
+        {"name": "SemT", "type": "Framework", "year": "2025", "url": "https://doi.org/10.1007/978-3-031-84617-5_3"},
+        {"name": "DFaaS", "type": "Platform", "year": "2021", "url": "https://doi.org/10.1109/CloudNet53349.2021.9657141"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/michele-ciavotta"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=726XWk0AAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "matteo-luigi-palmonari",
+      "name": "Matteo Luigi Palmonari",
+      "role": "Associate professor",
+      "membership": "Primary affiliation",
+      "portrait": "/assets/team/matteo-luigi-palmonari.webp",
+      "statement": "Builds knowledge-graph and document-analysis methods that make data easier to interpret and reuse.",
+      "bio": "Associate Professor at DISCo and UniMiB responsible for DataPACT and enRichMyData. His public work focuses on knowledge graphs, semantic data enrichment, entity linking, knowledge-intensive document analysis and data quality. Institutional and CORDIS sources also document his coordination of EW-Shopp and the UniMiB contribution to euBusinessGraph.",
+      "areas": ["Knowledge graphs", "Semantic enrichment", "Entity linking", "Document analysis"],
+      "projects": [
+        {"name": "DataPACT", "period": "2025–2027 · Active", "relation": "UniMiB responsibility", "url": "https://cordis.europa.eu/project/id/101189771"},
+        {"name": "enRichMyData", "period": "2022–2025 · Completed", "relation": "UniMiB responsibility", "url": "https://cordis.europa.eu/project/id/101070284"},
+        {"name": "EW-Shopp", "period": "2017–2019 · Completed", "relation": "Project coordination", "url": "https://cordis.europa.eu/project/id/732590"},
+        {"name": "euBusinessGraph", "period": "2017–2019 · Completed", "relation": "UniMiB contribution coordination", "url": "https://cordis.europa.eu/project/id/732003"}
+      ],
+      "outputs": [
+        {"name": "DAVE", "type": "Framework", "year": "2025", "url": "https://doi.org/10.24963/ijcai.2025/1246"},
+        {"name": "MammoTab25", "type": "Dataset", "year": "2025", "url": "https://doi.org/10.1007/978-3-032-09530-5_8"},
+        {"name": "ReFactX", "type": "Method", "year": "2025", "url": "https://doi.org/10.1007/978-3-032-09527-5_16"},
+        {"name": "ABSTAT", "type": "Framework", "year": "2024", "url": "https://www.boa.unimib.it/handle/10281/440278"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/matteo-palmonari"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=QmrLvqYAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "blerina-spahiu",
+      "name": "Blerina Spahiu",
+      "role": "Researcher",
+      "membership": "Primary affiliation",
+      "portrait": "/assets/team/blerina-spahiu.webp",
+      "statement": "Studies how knowledge-graph structure and quality can be made measurable and useful to people.",
+      "bio": "Researcher at DISCo. Her public publications focus on knowledge graphs, semantic data quality, profiling and summarisation. ABSTAT is the clearest documented result: a pattern-based knowledge-graph profiling approach evaluated through published studies and user-centred analysis.",
+      "areas": ["Knowledge graphs", "Knowledge-graph profiling", "Semantic data quality", "Linked data"],
+      "projects": [
+        {"name": "euBusinessGraph", "period": "2017–2019 · Completed", "relation": "Knowledge-graph quality research", "url": "https://cordis.europa.eu/project/id/732003"}
+      ],
+      "outputs": [
+        {"name": "ABSTAT", "type": "Framework", "year": "2024", "url": "https://www.boa.unimib.it/handle/10281/440278"},
+        {"name": "Eventour", "type": "Dataset", "year": "2025", "url": "https://doi.org/10.5281/zenodo.20076141"},
+        {"name": "User perceptions of knowledge graph quality dimensions in cultural heritage", "type": "Research output", "year": "2026", "url": "https://scholar.google.com/citations?user=bzWWMXAAAAAJ&hl=en"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/blerina-spahiu"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=bzWWMXAAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "carlo-batini",
+      "name": "Carlo Batini",
+      "role": "Senior member · Professor (retired)",
+      "membership": "Confirmed member",
+      "portrait": "/assets/team/carlo-batini.webp",
+      "statement": "Connects data quality, conceptual modelling and service design across information systems.",
+      "bio": "Retired Full Professor at the University of Milano-Bicocca and senior member of DatAI. His documented research spans databases, conceptual modelling, data quality, information systems and service science. Institutional records connect his work to the SMART programme on user-value-oriented e-government services.",
+      "areas": ["Data quality", "Conceptual modelling", "Information systems", "Databases"],
+      "projects": [
+        {"name": "SMART", "period": "2011–2014 · Completed", "relation": "Methodology for user-value-oriented services", "url": "https://www.ponrec.it/open-data/progetti?LocalitaID=26"}
+      ],
+      "outputs": [
+        {"name": "VCL: Bridging Natural Language and Structured Control for Domain-Specific Document Analysis", "type": "Research article", "year": "2026", "url": "https://doi.org/10.1145/3814940.3815330"},
+        {"name": "Semantic Data Integration for Investigations", "type": "Conference paper", "year": "2021", "url": "https://doi.org/10.1109/SMDS53860.2021.00031"}
+      ],
+      "links": [
+        {"label": "BOA research profile", "short_label": "BOA", "url": "https://www.boa.unimib.it/cris/rp/rp01161"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=rv5jMvMAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "abubakari-alidu",
+      "name": "Abubakari Alidu",
+      "role": "Doctoral researcher",
+      "membership": "Primary affiliation",
+      "portrait": "/assets/team/abubakari-alidu.webp",
+      "statement": "Explores service-based tabular enrichment and LLM-assisted generation of data pipelines.",
+      "bio": "Doctoral researcher at DISCo. His public research outputs address tabular data enrichment and AI-assisted pipeline generation. SemT defines an enrichment-as-a-service framework, while Prompt2DAG studies modular prompting for generating data-pipeline DAGs.",
+      "areas": ["Tabular enrichment", "Data pipelines", "Service models", "LLM-assisted workflow generation"],
+      "projects": [
+        {"name": "DataPACT", "period": "2025–2027 · Active", "relation": "Connected research outputs", "url": "https://cordis.europa.eu/project/id/101189771"}
+      ],
+      "outputs": [
+        {"name": "Prompt2DAG", "type": "Method", "year": "2025", "url": "https://doi.org/10.1109/SSE67621.2025.00010"},
+        {"name": "SemT", "type": "Framework", "year": "2025", "url": "https://doi.org/10.1007/978-3-031-84617-5_3"},
+        {"name": "LLM-Based DAG Creation for Data Enrichment Pipelines", "type": "Research article", "year": "2026", "url": "https://doi.org/10.1007/978-981-96-7238-7_11"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/abubakari-alidu"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=thpWhEkAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "emanuele-petriglia",
+      "name": "Emanuele Petriglia",
+      "role": "Doctoral researcher",
+      "membership": "Secondary affiliation",
+      "portrait": "/assets/team/emanuele-petriglia.webp",
+      "statement": "Studies how cloud–edge workloads can be distributed and scheduled under changing demand.",
+      "bio": "Doctoral researcher at DISCo. Public profiles and publications connect his work to cloud and edge computing, resource allocation, scheduling and distributed systems. His recent studies compare decentralized load-management strategies and reinforcement-learning approaches for workload distribution in Function-as-a-Service edge environments.",
+      "areas": ["Cloud–edge computing", "Scheduling", "Resource allocation", "Distributed systems"],
+      "projects": [],
+      "outputs": [
+        {"name": "Multi-Agent Reinforcement Learning for Workload Distribution in FaaS-Edge Computing Systems", "type": "Conference paper", "year": "2025", "url": "https://doi.org/10.1109/IPDPSW66978.2025.00176"},
+        {"name": "Comparing Actor-Critic and Neuroevolution Approaches for Traffic Offloading", "type": "Conference paper", "year": "2024", "url": "https://doi.org/10.1145/3660319.3660331"},
+        {"name": "Analysis and Evaluation of Load Management Strategies in a Decentralized FaaS Environment", "type": "Conference paper", "year": "2024", "url": "https://doi.org/10.1145/3660319.3660329"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/emanuele-petriglia"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=Ip-LZCoAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "federica-filippini",
+      "name": "Federica Filippini",
+      "role": "Research fellow",
+      "membership": "Confirmed member",
+      "portrait": "/assets/team/federica-filippini.webp",
+      "statement": "Designs adaptive resource-allocation methods across the computing continuum.",
+      "bio": "Research Fellow at DISCo. Her institutional profile and publications document research on cloud computing, resource allocation, scheduling and the computing continuum. Recent work studies reinforcement learning, performance modelling and decentralized forecasting for adaptive edge and cloud systems.",
+      "areas": ["Cloud computing", "Computing continuum", "Scheduling", "Resource allocation"],
+      "projects": [],
+      "outputs": [
+        {"name": "Tabular Reinforcement Learning Methods for AI Tasks Offloading in Smart Eye-Wears", "type": "Journal article", "year": "2026", "url": "https://doi.org/10.1145/3771092"},
+        {"name": "Performance Modeling in FaaS Workloads at the Edge Using Machine Learning", "type": "Journal article", "year": "2026", "url": "https://doi.org/10.1007/s10586-026-06233-3"},
+        {"name": "Decentralized Edge Workload Forecasting With Gossip Learning", "type": "Journal article", "year": "2025", "url": "https://doi.org/10.1109/TNSM.2025.3570450"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/federica-filippini"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=F63c78AAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "marco-cremaschi",
+      "name": "Marco Cremaschi",
+      "role": "Research contractor",
+      "membership": "Confirmed member",
+      "portrait": "/assets/team/marco-cremaschi.webp",
+      "statement": "Develops semantic-table and entity-linking methods for turning heterogeneous data into structured knowledge.",
+      "bio": "Research contractor at DISCo, with public records documenting earlier fixed-term research activity. His publications focus on semantic table interpretation, entity linking and data enrichment. Public DataPACT results and the MammoTab25 paper directly document recent work on large-scale semantic table interpretation datasets.",
+      "areas": ["Semantic table interpretation", "Entity linking", "Data enrichment", "Tabular data"],
+      "projects": [
+        {"name": "DataPACT", "period": "2025–2027 · Active", "relation": "Semantic table interpretation research", "url": "https://cordis.europa.eu/project/id/101189771"}
+      ],
+      "outputs": [
+        {"name": "MammoTab25", "type": "Dataset", "year": "2025", "url": "https://doi.org/10.1007/978-3-032-09530-5_8"},
+        {"name": "stEELlm: An LLM for Generating Semantic Annotations of Tabular Data", "type": "Research article", "year": "2026", "url": "https://doi.org/10.1145/3719206"},
+        {"name": "How good are LLMs in disambiguating entities in tabular data?", "type": "Journal article", "year": "2026", "url": "https://doi.org/10.1016/j.datak.2026.102596"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/marco-cremaschi"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=tleqpQkAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "riccardo-pozzi",
+      "name": "Riccardo Pozzi",
+      "role": "Research contractor",
+      "membership": "Confirmed member",
+      "portrait": "/assets/team/riccardo-pozzi.webp",
+      "statement": "Designs entity-centred methods for analysing complex document collections with verifiable evidence.",
+      "bio": "Research contractor at DISCo. His public work includes knowledge-intensive document analysis, knowledge-graph and NLP methods, and factuality-oriented generation. DAVE and ReFactX are recent peer-reviewed outputs that directly connect his work to the laboratory's document-analysis line.",
+      "areas": ["Document analysis", "Knowledge graphs", "Natural language processing", "Factuality"],
+      "projects": [
+        {"name": "DataPACT", "period": "2025–2027 · Active", "relation": "Connected research outputs", "url": "https://cordis.europa.eu/project/id/101189771"}
+      ],
+      "outputs": [
+        {"name": "DAVE", "type": "Framework", "year": "2025", "url": "https://doi.org/10.24963/ijcai.2025/1246"},
+        {"name": "ReFactX", "type": "Method", "year": "2025", "url": "https://doi.org/10.1007/978-3-032-09527-5_16"},
+        {"name": "An entity-centric approach to manage court judgments based on Natural Language Processing", "type": "Journal article", "year": "2024", "url": "https://doi.org/10.1016/j.clsr.2023.105904"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/riccardo-pozzi"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=P1KsTkwAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "renzo-arturo-alva-principe",
+      "name": "Renzo Arturo Alva Principe",
+      "role": "Research fellow",
+      "membership": "Confirmed member",
+      "portrait": "/assets/team/renzo-arturo-alva-principe.webp",
+      "statement": "Studies how long documents can be represented, classified and explored with knowledge-aware language technologies.",
+      "bio": "Research Fellow at DISCo. His doctoral thesis examined representation and processing of long documents in the transformer era. Public outputs include DAVE, ABSTAT-related research and knowledge-graph and NLP methods for document and investigation analysis.",
+      "areas": ["Long documents", "Document analysis", "Knowledge graphs", "Natural language processing"],
+      "projects": [],
+      "outputs": [
+        {"name": "Long Document Classification in the Transformer Era", "type": "Survey", "year": "2025", "url": "https://doi.org/10.1002/widm.70019"},
+        {"name": "DAVE", "type": "Framework", "year": "2025", "url": "https://doi.org/10.24963/ijcai.2025/1246"},
+        {"name": "Understanding the structure of knowledge graphs with ABSTAT profiles", "type": "Journal article", "year": "2024", "url": "https://doi.org/10.3233/SW-223181"}
+      ],
+      "links": [
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/renzo-arturo-alva-principe"},
+        {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=c_C-5OsAAAAJ&hl=en"}
+      ]
+    }
+  ]
+}
