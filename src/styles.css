@@ -431,16 +431,41 @@ a.specimen {
   padding-bottom: 1.5rem;
 }
 
+.people-mosaic-person {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border: 1px solid rgba(184, 237, 81, 0.5);
+  transition: border-color var(--motion-immediate) ease;
+}
+
 .people-mosaic img {
   display: block;
   width: 100%;
+  height: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  border: 1px solid rgba(184, 237, 81, 0.5);
 }
 
-.people-mosaic img:nth-child(even) {
+.people-mosaic-person:nth-child(even) {
   transform: translateY(1.5rem);
+}
+
+.people-mosaic-person:hover,
+.people-mosaic-person:focus-visible {
+  border-color: #b8ed51;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .people-mosaic-person img {
+    transition: transform var(--motion-routine) var(--ease-arrive);
+  }
+
+  .people-mosaic-person:hover img,
+  .people-mosaic-person:focus-visible img {
+    transform: scale(1.035);
+  }
 }
 
 .lab-gallery,
