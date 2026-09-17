@@ -3,6 +3,13 @@ dist/
 .tmp/
 .DS_Store
 .codex/
+.codex-google-docs/
 .agents/
 .impeccable/config.local.json
 .impeccable/questions/
+.impeccable/critique/
+.impeccable/review/
+
+# Local document-processing and QA artifacts
+bridge/
+tmp/
