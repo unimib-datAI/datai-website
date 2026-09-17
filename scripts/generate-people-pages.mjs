@@ -20,6 +20,15 @@ function externalLinkAttributes(url) {
   return url.startsWith("http") ? ' rel="noreferrer"' : "";
 }
 
+function bioParagraphs(value = "") {
+  return String(value)
+    .split(/\n\s*\n/)
+    .map((paragraph) => escapeHtml(paragraph.trim()).replace(/\*([^*]+)\*/g, "<em>$1</em>"))
+    .filter(Boolean)
+    .map((paragraph) => `<p class="profile-bio">${paragraph}</p>`)
+    .join("");
+}
+
 function evidenceRows(items, kind) {
   return items.map((item) => `<li class="profile-evidence-row">
     <p class="profile-evidence-meta">${escapeHtml(item.type || item.period)}</p>
@@ -65,7 +74,7 @@ function profileContent(person, index) {
         <div class="mx-auto max-w-[90rem] px-5 py-20 md:px-8 md:py-28 xl:px-12">
           <div class="profile-reading-grid">
             <h2 id="research-profile-${escapeHtml(person.id)}">Research profile.</h2>
-            <div><p class="profile-bio">${escapeHtml(person.bio)}</p><div class="profile-authority-links" aria-label="Authoritative profile records">${profileLinks}</div></div>
+            <div>${bioParagraphs(person.bio)}<div class="profile-authority-links" aria-label="Authoritative profile records">${profileLinks}</div></div>
           </div>
           <div class="profile-focus">
             <h3>Research focus</h3>

@@ -1015,6 +1015,10 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   line-height: 1.72;
 }
 
+.profile-bio + .profile-bio {
+  margin-top: 1.25rem;
+}
+
 .profile-authority-links {
   display: flex;
   flex-wrap: wrap;
