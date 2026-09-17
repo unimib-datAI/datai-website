@@ -21,7 +21,7 @@
         {"name": "LamAPI", "type": "Software", "year": "Public repository", "url": "https://github.com/unimib-datAI/lamAPI"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/flavio-de-paoli"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/flavio-maria-de-paoli"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=bEA7qmUAAAAJ&hl=en"}
       ]
     },
@@ -46,7 +46,7 @@
         {"name": "Semantic Data Integration for Investigations", "type": "Conference paper", "year": "2021", "url": "https://doi.org/10.1109/SMDS53860.2021.00031"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/andrea-maurino"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/andrea-maurino"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=pdov_QQAAAAJ&hl=en"}
       ]
     },
@@ -69,7 +69,7 @@
         {"name": "DFaaS", "type": "Platform", "year": "2021", "url": "https://doi.org/10.1109/CloudNet53349.2021.9657141"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/michele-ciavotta"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/michele-ciavotta"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=726XWk0AAAAJ&hl=en"}
       ]
     },
@@ -95,7 +95,7 @@
         {"name": "ABSTAT", "type": "Framework", "year": "2024", "url": "https://www.boa.unimib.it/handle/10281/440278"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/matteo-palmonari"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/matteo-luigi-palmonari"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=QmrLvqYAAAAJ&hl=en"}
       ]
     },
@@ -117,7 +117,7 @@
         {"name": "User perceptions of knowledge graph quality dimensions in cultural heritage", "type": "Research output", "year": "2026", "url": "https://scholar.google.com/citations?user=bzWWMXAAAAAJ&hl=en"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/blerina-spahiu"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/blerina-spahiu"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=bzWWMXAAAAAJ&hl=en"}
       ]
     },
@@ -160,7 +160,7 @@
         {"name": "LLM-Based DAG Creation for Data Enrichment Pipelines", "type": "Research article", "year": "2026", "url": "https://doi.org/10.1007/978-981-96-7238-7_11"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/abubakari-alidu"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/abubakari-alidu"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=thpWhEkAAAAJ&hl=en"}
       ]
     },
@@ -180,7 +180,7 @@
         {"name": "Analysis and Evaluation of Load Management Strategies in a Decentralized FaaS Environment", "type": "Conference paper", "year": "2024", "url": "https://doi.org/10.1145/3660319.3660329"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/emanuele-petriglia"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/emanuele-petriglia"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=Ip-LZCoAAAAJ&hl=en"}
       ]
     },
@@ -191,7 +191,7 @@
       "membership": "Confirmed member",
       "portrait": "/assets/team/federica-filippini.webp",
       "statement": "Designs adaptive resource-allocation methods across the computing continuum.",
-      "bio": "Research Fellow at DISCo. Her institutional profile and publications document research on cloud computing, resource allocation, scheduling and the computing continuum. Recent work studies reinforcement learning, performance modelling and decentralized forecasting for adaptive edge and cloud systems.",
+      "bio": "Federica Filippini is a post-doctoral researcher at the Department of Informatics, Systems and Communication of the University of Milano-Bicocca. She received her M.Sc. degree in Mathematical Engineering and her Ph.D. degree cum laude in Information Technology from Politecnico di Milano.\n\nHer research interests focus on optimization and resource management in Cloud, Edge, and distributed computing environments. Her work addresses resource selection, allocation, and scheduling problems for heterogeneous and dynamic computing infrastructures, including Function-as-a-Service (FaaS) and the Edge-Cloud Computing Continuum. She is also interested in performance modeling and workload management, as well as in the application of Machine Learning and Reinforcement Learning techniques to resource orchestration, workload distribution, and task offloading for Artificial Intelligence and Agentic AI applications. More recently, her research has explored imitation learning and reward design for Reinforcement Learning approaches applied to decentralized routing in satellite constellations, as well as to general constrained optimization problems. Her research aims at developing adaptive and efficient optimization and learning-based approaches for the dynamic management of resources and decision-making in complex distributed systems.",
       "areas": ["Cloud computing", "Computing continuum", "Scheduling", "Resource allocation"],
       "projects": [],
       "outputs": [
@@ -200,7 +200,7 @@
         {"name": "Decentralized Edge Workload Forecasting With Gossip Learning", "type": "Journal article", "year": "2025", "url": "https://doi.org/10.1109/TNSM.2025.3570450"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/federica-filippini"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/federica-filippini"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=F63c78AAAAAJ&hl=en"}
       ]
     },
@@ -222,7 +222,7 @@
         {"name": "How good are LLMs in disambiguating entities in tabular data?", "type": "Journal article", "year": "2026", "url": "https://doi.org/10.1016/j.datak.2026.102596"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/marco-cremaschi"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/marco-cremaschi"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=tleqpQkAAAAJ&hl=en"}
       ]
     },
@@ -244,7 +244,7 @@
         {"name": "An entity-centric approach to manage court judgments based on Natural Language Processing", "type": "Journal article", "year": "2024", "url": "https://doi.org/10.1016/j.clsr.2023.105904"}
       ],
       "links": [
-        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://www.unimib.it/riccardo-pozzi"},
+        {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/riccardo-pozzi"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=P1KsTkwAAAAJ&hl=en"}
       ]
     },
