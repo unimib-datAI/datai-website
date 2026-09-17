@@ -29,8 +29,11 @@ function peopleDirectory() {
 
   return {
     name: "datai-people-directory",
-    transformIndexHtml(html) {
-      return html.replace(/<!-- PEOPLE_ROSTER_START -->[\s\S]*?<!-- PEOPLE_ROSTER_END -->/, `<!-- PEOPLE_ROSTER_START -->\n${rows}\n<!-- PEOPLE_ROSTER_END -->`);
+    transformIndexHtml: {
+      order: "pre",
+      handler(html) {
+        return html.replace(/<!-- PEOPLE_ROSTER_START -->[\s\S]*?<!-- PEOPLE_ROSTER_END -->/, `<!-- PEOPLE_ROSTER_START -->\n${rows}\n<!-- PEOPLE_ROSTER_END -->`);
+      },
     },
   };
 }
