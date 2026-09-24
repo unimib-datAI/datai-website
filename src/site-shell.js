@@ -1,4 +1,4 @@
-const SITE_BASE = "/datai/";
+const SITE_BASE = "/datai-website/";
 
 const links = [
   { id: "research", label: "Research", href: `${SITE_BASE}research/` },

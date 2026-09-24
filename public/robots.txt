@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cremarco.github.io/datai/sitemap.xml
+Sitemap: https://unimib-datai.github.io/datai-website/sitemap.xml

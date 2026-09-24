@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const data = JSON.parse(await readFile(resolve(root, "data/people.json"), "utf8"));
 const template = await readFile(resolve(root, "people/profile.html"), "utf8");
-const siteOrigin = "https://cremarco.github.io/datai";
+const siteOrigin = "https://unimib-datai.github.io/datai-website";
 
 function escapeHtml(value = "") {
   return String(value)
@@ -56,7 +56,7 @@ function profileContent(person, index) {
   return `<main id="main" class="profile-page">
       <section id="top" class="profile-hero">
         <div class="mx-auto max-w-[90rem] px-5 pb-20 pt-[calc(var(--header-height)+2rem)] md:px-8 md:pb-28 md:pt-[calc(var(--header-height)+3rem)] xl:px-12">
-          <nav class="profile-breadcrumb" aria-label="Breadcrumb"><a href="/datai/people/">People</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(person.name)}</span></nav>
+          <nav class="profile-breadcrumb" aria-label="Breadcrumb"><a href="/datai-website/people/">People</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(person.name)}</span></nav>
           <div class="profile-hero-grid">
             <figure class="profile-hero-portrait"><img src="${escapeHtml(person.portrait)}" alt="Portrait of ${escapeHtml(person.name)}" width="480" height="600" decoding="async" /></figure>
             <div class="profile-hero-copy">
@@ -64,7 +64,7 @@ function profileContent(person, index) {
               <p class="profile-role">${escapeHtml(person.role)}</p>
               <p class="profile-affiliation">${escapeHtml(person.membership)} · DatAI Lab<br />Department of Informatics, Systems and Communication<br />University of Milano-Bicocca</p>
               <p class="profile-statement">${escapeHtml(person.statement)}</p>
-              <div class="profile-hero-actions"><a class="profile-action-primary" href="/datai/publications/?member=${escapeHtml(person.id)}#archive">Browse publications</a><a class="profile-action-secondary" href="${escapeHtml(primaryProfile.url)}" rel="noreferrer">${escapeHtml(primaryProfile.label)}</a></div>
+              <div class="profile-hero-actions"><a class="profile-action-primary" href="/datai-website/publications/?member=${escapeHtml(person.id)}#archive">Browse publications</a><a class="profile-action-secondary" href="${escapeHtml(primaryProfile.url)}" rel="noreferrer">${escapeHtml(primaryProfile.label)}</a></div>
             </div>
           </div>
         </div>
@@ -99,8 +99,8 @@ function profileContent(person, index) {
 
       <section class="profile-continuation" aria-labelledby="continue-${escapeHtml(person.id)}">
         <div class="mx-auto max-w-[90rem] px-5 py-16 md:px-8 md:py-20 xl:px-12">
-          <div class="profile-continuation-heading"><h2 id="continue-${escapeHtml(person.id)}">Continue through the group.</h2><a href="/datai/people/">All people</a></div>
-          <nav class="profile-neighbours" aria-label="Adjacent member profiles"><a href="/datai/people/${escapeHtml(previous.id)}/"><span>Previous member</span><strong>${escapeHtml(previous.name)}</strong></a><a href="/datai/people/${escapeHtml(next.id)}/"><span>Next member</span><strong>${escapeHtml(next.name)}</strong></a></nav>
+          <div class="profile-continuation-heading"><h2 id="continue-${escapeHtml(person.id)}">Continue through the group.</h2><a href="/datai-website/people/">All people</a></div>
+          <nav class="profile-neighbours" aria-label="Adjacent member profiles"><a href="/datai-website/people/${escapeHtml(previous.id)}/"><span>Previous member</span><strong>${escapeHtml(previous.name)}</strong></a><a href="/datai-website/people/${escapeHtml(next.id)}/"><span>Next member</span><strong>${escapeHtml(next.name)}</strong></a></nav>
         </div>
       </section>
     </main>`;

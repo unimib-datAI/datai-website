@@ -20,8 +20,8 @@ function peopleDirectory() {
   const rows = peopleData.people.map((person) => {
     const profileLinks = person.links.map((link) => `<a class="profile-link" href="${escapeHtml(link.url)}" rel="noreferrer">${escapeHtml(link.short_label)}</a>`).join("");
     return `<article id="person-${escapeHtml(person.id)}" class="person-row">
-      <a class="person-portrait" href="/datai/people/${escapeHtml(person.id)}/" aria-label="View the profile of ${escapeHtml(person.name)}"><img src="${escapeHtml(person.portrait)}" alt="" width="480" height="600" loading="lazy" decoding="async" /></a>
-      <div><h3><a class="person-name-link" href="/datai/people/${escapeHtml(person.id)}/">${escapeHtml(person.name)}</a></h3><p class="person-role">${escapeHtml(person.role)}</p><div class="person-row-actions"><a href="/datai/people/${escapeHtml(person.id)}/">View profile</a><a href="/datai/publications/?member=${escapeHtml(person.id)}#archive">Publications</a></div></div>
+      <a class="person-portrait" href="/datai-website/people/${escapeHtml(person.id)}/" aria-label="View the profile of ${escapeHtml(person.name)}"><img src="${escapeHtml(person.portrait)}" alt="" width="480" height="600" loading="lazy" decoding="async" /></a>
+      <div><h3><a class="person-name-link" href="/datai-website/people/${escapeHtml(person.id)}/">${escapeHtml(person.name)}</a></h3><p class="person-role">${escapeHtml(person.role)}</p><div class="person-row-actions"><a href="/datai-website/people/${escapeHtml(person.id)}/">View profile</a><a href="/datai-website/publications/?member=${escapeHtml(person.id)}#archive">Publications</a></div></div>
       <p class="person-membership">${escapeHtml(person.membership)}</p>
       <div class="person-record-links">${profileLinks}</div>
     </article>`;
@@ -89,7 +89,7 @@ function publicationArchive() {
             ? "Verified in a primary registry"
             : "Scholar profile record";
         const dataiAuthorLinks = dataiAuthors.length
-          ? `<span class="publication-datai-authors">DatAI: ${dataiAuthors.map((affiliate) => `<a href="/datai/people/${escapeHtml(affiliate.id)}/">${escapeHtml(affiliate.name)}</a>`).join(", ")}</span>`
+          ? `<span class="publication-datai-authors">DatAI: ${dataiAuthors.map((affiliate) => `<a href="/datai-website/people/${escapeHtml(affiliate.id)}/">${escapeHtml(affiliate.name)}</a>`).join(", ")}</span>`
           : "";
         return `<li class="publication-item" data-publication-item data-year="${escapeHtml(year)}" data-affiliates="${escapeHtml(affiliateIds.join(" "))}" data-search="${escapeHtml(search)}" data-index="${index}">
           <div class="publication-year">${escapeHtml(year)}</div>
@@ -158,7 +158,7 @@ function publicationArchive() {
 
 export default defineConfig({
   appType: "mpa",
-  base: "/datai/",
+  base: "/datai-website/",
   plugins: [siteShell(), peopleDirectory(), publicationArchive(), tailwindcss()],
   build: {
     rollupOptions: {

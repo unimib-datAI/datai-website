@@ -2,13 +2,13 @@
   "name": "DatAI — Data for Artificial Intelligence",
   "short_name": "DatAI",
   "description": "Data for Artificial Intelligence research lab at the University of Milano-Bicocca.",
-  "start_url": "/datai/",
+  "start_url": "/datai-website/",
   "display": "standalone",
   "background_color": "#0a1b12",
   "theme_color": "#0a1b12",
   "icons": [
     {
-      "src": "/datai/assets/datai-logo.svg",
+      "src": "/datai-website/assets/datai-logo.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
