@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { siteShell } from "./src/site-shell.js";
+import { toolsDirectory } from "./src/tools-directory.js";
 
 const peopleData = JSON.parse(readFileSync(new URL("./data/people.json", import.meta.url), "utf8"));
 
@@ -159,12 +160,13 @@ function publicationArchive() {
 export default defineConfig({
   appType: "mpa",
   base: "/datai-website/",
-  plugins: [siteShell(), peopleDirectory(), publicationArchive(), tailwindcss()],
+  plugins: [siteShell(), peopleDirectory(), publicationArchive(), toolsDirectory(), tailwindcss()],
   build: {
     rollupOptions: {
       input: {
         home: fileURLToPath(new URL("./index.html", import.meta.url)),
         research: fileURLToPath(new URL("./research/index.html", import.meta.url)),
+        tools: fileURLToPath(new URL("./tools/index.html", import.meta.url)),
         people: fileURLToPath(new URL("./people/index.html", import.meta.url)),
         publications: fileURLToPath(new URL("./publications/index.html", import.meta.url)),
         contact: fileURLToPath(new URL("./contact/index.html", import.meta.url)),

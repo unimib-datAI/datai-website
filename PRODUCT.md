@@ -45,14 +45,15 @@ Le fonti interne più recenti precisano il territorio come intersezione tra inte
 - SEO tecnica e contenutistica: titoli e descrizioni unici, URL leggibili, HTML semantico, canonical, Open Graph, dati strutturati appropriati, sitemap XML, robots.txt, immagini ottimizzate e buone prestazioni Core Web Vitals.
 - Nessun dato, numero, membro, partner, progetto, pubblicazione, premio o testimonianza può essere pubblicato senza una fonte verificabile.
 - Il precedente nome INSID&S va usato come informazione storica e come ponte SEO, non come identità principale.
-- Il sito è solo in inglese e usa cinque pagine con URL leggibili: Home, Research, People, Publications e Contact. Il dominio istituzionale definitivo e il processo editoriale di aggiornamento restano da confermare. La versione corrente non usa analytics, form o altre funzioni che richiedano cookie.
+- Il sito è solo in inglese e usa sei pagine con URL leggibili: Home, Research, Tools, People, Publications e Contact. Il dominio istituzionale definitivo e il processo editoriale di aggiornamento restano da confermare. La versione corrente non usa analytics, form o altre funzioni che richiedano cookie.
 - Il roster editoriale corrente comprende dodici membri confermati e deve essere corredato da data di aggiornamento. Eventuali variazioni future di dottorandi, assegnisti, contrattisti, collaboratori ed ex membri devono essere ricontrollate prima della pubblicazione.
 
 ## Information Architecture Direction
 
-- Navigazione primaria multipagina: Research; People; Publications; Contact. Il logo riporta sempre alla Home.
+- Navigazione primaria multipagina: Research; Tools; People; Publications; Contact. Il logo riporta sempre alla Home.
 - **Home** presenta identità, tesi del laboratorio, domande guida, gruppo e una selezione di output verificabili.
-- **Research** unisce le quattro linee di ricerca a Evidence e Projects & Resources, perché i progetti sono la prova delle domande scientifiche e non un catalogo separato.
+- **Research** unisce le quattro linee di ricerca ai progetti e ai risultati scientifici, collegandoli al catalogo Tools.
+- **Tools** raccoglie software, framework, librerie e risorse riutilizzabili; ogni voce presenta il sito web quando disponibile e i repository Git verificati.
 - **People** mantiene il roster completo di dodici membri con ritratti, ruoli, affiliazioni e profili autorevoli.
 - **Publications** ospita esclusivamente l'archivio completo e ricercabile, così le altre pagine restano leggere e focalizzate.
 - **Contact** raccoglie collaborazione, opportunità per studenti, sede, affiliazione UniMiB/DISCo, nome storico INSID&S e fonti istituzionali.

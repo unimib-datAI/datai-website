@@ -2,6 +2,12 @@
 @import "@fontsource-variable/newsreader";
 @import "tailwindcss";
 
+@plugin "daisyui" {
+  themes: false;
+  include: link;
+  logs: false;
+}
+
 @theme {
   --font-sans: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Newsreader Variable", ui-serif, Georgia, serif;
@@ -1279,6 +1285,33 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
 
 .resource-line:last-child {
   border-bottom: 1px solid rgba(19, 32, 25, 0.2);
+}
+
+.tools-group + .tools-group {
+  margin-top: 5rem;
+}
+
+.tool-row {
+  display: grid;
+  gap: 1rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid rgba(19, 32, 25, 0.2);
+  scroll-margin-top: calc(var(--header-height) + 1.5rem);
+}
+
+.tool-row:last-child {
+  border-bottom: 1px solid rgba(19, 32, 25, 0.2);
+}
+
+.tool-row:target {
+  background-color: var(--color-paper-100);
+}
+
+@media (min-width: 768px) {
+  .tool-row {
+    grid-template-columns: minmax(9rem, 0.8fr) minmax(0, 1.4fr) minmax(10rem, 0.8fr);
+    gap: 2rem;
+  }
 }
 
 .evidence-link,

@@ -2,6 +2,7 @@ const SITE_BASE = "/datai-website/";
 
 const links = [
   { id: "research", label: "Research", href: `${SITE_BASE}research/` },
+  { id: "tools", label: "Tools", href: `${SITE_BASE}tools/` },
   { id: "people", label: "People", href: `${SITE_BASE}people/` },
   { id: "publications", label: "Publications", href: `${SITE_BASE}publications/` },
 ];
@@ -62,7 +63,7 @@ export function siteFooter() {
       <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
         <div class="grid gap-10 border-b border-paper-50/18 pb-10 md:grid-cols-[1fr_auto] md:items-start">
           <div class="flex items-start"><span class="wordmark mt-1" aria-hidden="true"><img src="${SITE_BASE}assets/datai-logo.svg" alt="" width="512" height="132" /></span></div>
-          <nav aria-label="Footer navigation"><ul class="grid grid-cols-2 gap-x-7 gap-y-3 text-sm font-extrabold md:grid-cols-1 md:text-right"><li><a class="text-acid-300 underline underline-offset-4" href="${SITE_BASE}research/">Research</a></li><li><a class="text-acid-300 underline underline-offset-4" href="${SITE_BASE}people/">People</a></li><li><a class="text-acid-300 underline underline-offset-4" href="${SITE_BASE}publications/">Publications</a></li><li><a class="text-acid-300 underline underline-offset-4" href="${SITE_BASE}contact/">Contact</a></li></ul></nav>
+          <nav aria-label="Footer navigation"><ul class="grid grid-cols-2 gap-x-7 gap-y-3 text-sm font-extrabold md:grid-cols-1 md:text-right"><li><a class="text-acid-300 underline underline-offset-4" href="${SITE_BASE}research/">Research</a></li><li><a class="text-acid-300 underline underline-offset-4" href="${SITE_BASE}tools/">Tools</a></li><li><a class="text-acid-300 underline underline-offset-4" href="${SITE_BASE}people/">People</a></li><li><a class="text-acid-300 underline underline-offset-4" href="${SITE_BASE}publications/">Publications</a></li><li><a class="text-acid-300 underline underline-offset-4" href="${SITE_BASE}contact/">Contact</a></li></ul></nav>
         </div>
         <div class="grid gap-6 border-b border-paper-50/18 py-8 md:grid-cols-[auto_1fr] md:items-center md:gap-8">
           <a class="unimib-mark-field" href="https://www.unimib.it/" aria-label="University of Milano-Bicocca official website"><img src="${SITE_BASE}assets/unimib-institutional-logo.png" alt="University of Milano-Bicocca institutional logo" width="160" height="172" /></a>

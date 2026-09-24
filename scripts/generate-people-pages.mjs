@@ -143,6 +143,7 @@ for (const [index, person] of data.people.entries()) {
 const coreRoutes = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/research/", changefreq: "monthly", priority: "0.9" },
+  { path: "/tools/", changefreq: "monthly", priority: "0.9", lastmod: "2026-09-24" },
   { path: "/people/", changefreq: "monthly", priority: "0.9" },
   { path: "/publications/", changefreq: "weekly", priority: "0.9" },
   { path: "/contact/", changefreq: "yearly", priority: "0.7" },
@@ -150,7 +151,7 @@ const coreRoutes = [
 const profileRoutes = data.people.map((person) => ({ path: `/people/${person.id}/`, changefreq: "monthly", priority: "0.7" }));
 const sitemapItems = [...coreRoutes, ...profileRoutes].map((route) => `  <url>
     <loc>${siteOrigin}${route.path}</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>${route.lastmod || "2026-09-03"}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
   </url>`).join("\n");

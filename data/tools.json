@@ -1,0 +1,110 @@
+{
+  "reviewed_at": "2026-09-24",
+  "categories": [
+    { "id": "semantic-data", "name": "Semantic data & knowledge graphs", "description": "Enrich tables, link entities and explore the structure of knowledge graphs." },
+    { "id": "document-analysis", "name": "Document analysis & reasoning", "description": "Explore document collections, express analytical tasks and reason over factual knowledge." },
+    { "id": "pipelines-systems", "name": "Data pipelines & distributed systems", "description": "Build enrichment workflows and coordinate computation across distributed infrastructure." },
+    { "id": "applied-prototypes", "name": "Applied research prototypes", "description": "Explore software developed for specific research and application settings." }
+  ],
+  "tools": [
+    {
+      "id": "semt-x", "name": "SemT-X", "category": "semantic-data", "type": "Framework",
+      "description": "A framework for semantic enrichment of tabular data, linking cells and columns to external knowledge sources through an interactive workspace.",
+      "website": "https://i2tunimib.github.io/I2T-docs/",
+      "repositories": [
+        { "label": "Git repository · frontend", "url": "https://github.com/I2Tunimib/I2T-frontend" },
+        { "label": "Git repository · backend", "url": "https://github.com/I2Tunimib/I2T-backend" }
+      ]
+    },
+    {
+      "id": "mantistable", "name": "MantisTable UI", "category": "semantic-data", "type": "Interface",
+      "description": "A web interface for managing semantic table interpretation workflows and interacting with annotated tabular data.",
+      "website": "https://unimib-datai.github.io/mantistable-ui-docs/",
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/mantistable-ui" }]
+    },
+    {
+      "id": "lamapi", "name": "LamAPI", "category": "semantic-data", "type": "Service",
+      "description": "Knowledge-graph indexing and entity retrieval with string matching, relations and type-based filtering.",
+      "website": "https://unimib-datai.github.io/lamapi-docs/",
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/lamAPI" }]
+    },
+    {
+      "id": "alligator", "name": "Alligator", "category": "semantic-data", "type": "Library",
+      "description": "A Python library for entity linking over tabular data, with multiple annotation strategies and optional caching.",
+      "website": "https://unimib-datai.github.io/alligator-emd/",
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/alligator-emd" }]
+    },
+    {
+      "id": "s-elbat", "name": "s-elBat", "category": "semantic-data", "type": "Tool",
+      "description": "Entity retrieval and disambiguation for semantic table interpretation, supporting supervised and unsupervised workflows.",
+      "website": "https://unimib-datai.github.io/s-elbat-docs/",
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/s-elbat" }]
+    },
+    {
+      "id": "steellm", "name": "stEELlm", "category": "semantic-data", "type": "Model",
+      "description": "An approach to cell entity annotation that uses a fine-tuned language model to generate semantic annotations of tabular data.",
+      "website": "https://unimib-datai.github.io/steellm-docs/",
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/steellm" }]
+    },
+    {
+      "id": "abstat", "name": "ABSTAT", "category": "semantic-data", "type": "Framework",
+      "description": "Knowledge-graph profiling through compact patterns and statistics for understanding, exploration and data-quality assessment.",
+      "website": null,
+      "repositories": [{ "label": "Git repository", "url": "https://bitbucket.org/disco_unimib/abstat" }]
+    },
+    {
+      "id": "mammotab", "name": "MammoTab25", "category": "semantic-data", "type": "Dataset & code",
+      "description": "A semantic table interpretation dataset and supporting code for extracting, cleaning and annotating Wikipedia tables.",
+      "website": "https://unimib-datai.github.io/mammotab-docs/",
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/mammotab" }]
+    },
+    {
+      "id": "dave", "name": "DAVE", "category": "document-analysis", "type": "Framework",
+      "description": "A human-in-the-loop workspace for entity-centred exploration, faceted search, conversational querying and knowledge refinement in document collections.",
+      "website": null,
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/DAVE" }]
+    },
+    {
+      "id": "vcl", "name": "VCL", "category": "document-analysis", "type": "Language & tool",
+      "description": "Verbal Command Language translates document-analysis requests into structured operations, execution plans and tasks over a document corpus.",
+      "website": null,
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/VCL" }]
+    },
+    {
+      "id": "refactx", "name": "ReFactX", "category": "document-analysis", "type": "Method & code",
+      "description": "A method for reasoning with factual knowledge through constrained generation and an index of verbalised knowledge-graph facts.",
+      "website": null,
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/rpo19/ReFactX" }]
+    },
+    {
+      "id": "prompt2dag", "name": "Prompt2DAG", "category": "pipelines-systems", "type": "Method & code",
+      "description": "A modular prompting approach for generating data-orchestration DAGs from natural-language pipeline descriptions.",
+      "website": null,
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/I2Tunimib/prompt2dag" }]
+    },
+    {
+      "id": "semt-py", "name": "SemT-py", "category": "pipelines-systems", "type": "Library",
+      "description": "The Python library in the SemT enrichment ecosystem for transforming tables, reconciling values and extending datasets with external information.",
+      "website": null,
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/Semtui-python" }]
+    },
+    {
+      "id": "dfaas", "name": "DFaaS", "category": "pipelines-systems", "type": "Platform",
+      "description": "A decentralised Function-as-a-Service platform that uses peer-to-peer coordination to distribute workloads across federated edge nodes.",
+      "website": null,
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/dfaas" }]
+    },
+    {
+      "id": "llmind", "name": "LLMind Chat", "category": "applied-prototypes", "type": "Prototype",
+      "description": "A clinician-facing research prototype for exploring psychiatric case analysis with retrieval-augmented language models and expert evaluation.",
+      "website": null,
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-whattadata/llmind-chat" }]
+    },
+    {
+      "id": "eventour", "name": "Eventour", "category": "applied-prototypes", "type": "Framework",
+      "description": "A research framework combining enriched urban knowledge graphs, language models and personalised walking itineraries for large-scale events.",
+      "website": null,
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/unimib-datAI/eventure" }]
+    }
+  ]
+}
