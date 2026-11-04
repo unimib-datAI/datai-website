@@ -4,7 +4,7 @@
 
 @plugin "daisyui" {
   themes: false;
-  include: link;
+  include: link, hero;
   logs: false;
 }
 
