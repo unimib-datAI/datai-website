@@ -71,7 +71,7 @@ export function siteFooter() {
         </div>
         <div class="grid gap-8 pt-8 text-xs leading-relaxed text-paper-50/60 md:grid-cols-2">
           <p><strong class="block text-paper-50">Editorial responsibility</strong>DatAI Lab. Last content review: <!-- DATA_UPDATED -->.</p>
-          <details><summary class="cursor-pointer font-extrabold text-paper-50">Privacy &amp; accessibility</summary><p class="mt-2">This static site sets no analytics or advertising cookies. It is designed for keyboard use, reduced motion and WCAG 2.2 AA contrast. Accessibility feedback can be sent through the DISCo web editorial contact.</p></details>
+          <details><summary class="cursor-pointer font-extrabold text-paper-50">Privacy &amp; accessibility</summary><p class="mt-2">This site uses Umami, hosted at umami.whattadata.it, to measure page visits without cookies. Statistics include visited pages, referrers, browser and device information. URL query parameters and fragments are excluded from page URLs sent to Umami. Tracking respects the browser’s Do Not Track signal when available. Technical requests to the analytics server may still be processed by its infrastructure. The site sets no advertising cookies. It is designed for keyboard use, reduced motion and WCAG 2.2 AA contrast. Accessibility feedback can be sent through the DISCo web editorial contact.</p></details>
         </div>
       </div>
     </footer>`;
@@ -85,7 +85,17 @@ export function siteShell() {
       const activePage = match?.[1] || "home";
       return html
         .replace(/<!-- SITE_HEADER:[a-z-]+ -->/, siteHeader(activePage))
-        .replace("<!-- SITE_FOOTER -->", siteFooter());
+        .replace("<!-- SITE_FOOTER -->", siteFooter())
+        .replace("</head>", `    <script
+      defer
+      src="https://umami.whattadata.it/script.js"
+      data-website-id="f6429af3-af21-4eee-8b3a-85c196500d04"
+      data-domains="datai.disco.unimib.it"
+      data-exclude-search="true"
+      data-exclude-hash="true"
+      data-do-not-track="true"
+    ></script>
+  </head>`);
     },
   };
 }
