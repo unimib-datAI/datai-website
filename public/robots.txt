@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://unimib-datai.github.io/datai-website/sitemap.xml
+Sitemap: https://datai.disco.unimib.it/sitemap.xml
