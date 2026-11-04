@@ -165,6 +165,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: fileURLToPath(new URL("./index.html", import.meta.url)),
+        fullHome: fileURLToPath(new URL("./home/index.html", import.meta.url)),
         research: fileURLToPath(new URL("./research/index.html", import.meta.url)),
         tools: fileURLToPath(new URL("./tools/index.html", import.meta.url)),
         people: fileURLToPath(new URL("./people/index.html", import.meta.url)),
