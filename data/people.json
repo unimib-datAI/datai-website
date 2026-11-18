@@ -1,5 +1,5 @@
 {
-  "reviewed_at": "2 September 2026",
+  "reviewed_at": "18 November 2026",
   "people": [
     {
       "id": "flavio-maria-de-paoli",
@@ -266,6 +266,33 @@
       "links": [
         {"label": "UniMiB profile", "short_label": "UniMiB", "url": "https://en.unimib.it/renzo-arturo-alva-principe"},
         {"label": "Google Scholar", "short_label": "Scholar", "url": "https://scholar.google.com/citations?user=c_C-5OsAAAAJ&hl=en"}
+      ]
+    },
+    {
+      "id": "mirko-tritella",
+      "name": "Mirko Tritella",
+      "role": "Collaborator",
+      "membership": "Collaborator",
+      "portrait": "/assets/team/mirko-tritella.webp",
+      "statement": "Designed ParliamentRAG, an AI interface that answers on parliamentary debate only through quotations traced to the official record.",
+      "bio": "Mirko Tritella designed and developed ParliamentRAG as his master's thesis in Data Science at the University of Milano-Bicocca, with Matteo Palmonari and Riccardo Pozzi. He studied Computer Science at the University of Bologna before moving to Milano-Bicocca.\n\nHis work focuses on AI interfaces to official records and open government data, built so that every answer can be traced back to its source. ParliamentRAG is online at parliamentrag.it, was presented at ISWC 2026 in the In-Use track and the Posters & Demos track, and is supported by the DataPACT project (Horizon Europe, GA 101189771). Earlier open-data work includes machine-readable election results for his home town of Roseto degli Abruzzi and a site tracking local COVID-19 figures.",
+      "areas": [
+        "Retrieval-augmented generation",
+        "Knowledge graphs",
+        "Open government data",
+        "Evaluation of LLM systems"
+      ],
+      "projects": [
+        {"name": "ParliamentRAG", "period": "2026– · Active", "relation": "Project design and system development", "url": "https://www.parliamentrag.it/"},
+        {"name": "DataPACT", "period": "2025–2027 · Active", "relation": "Connected research outputs", "url": "https://cordis.europa.eu/project/id/101189771"}
+      ],
+      "outputs": [
+        {"name": "Who Speaks Matters: Authority-Aware Multi-View RAG over Italian Parliamentary Proceedings", "type": "Conference paper", "year": "2026", "url": "https://doi.org/10.1007/978-3-032-42029-9_24"},
+        {"name": "ParliamentRAG: An Authority-Aware Multi-View RAG System for Italian Parliamentary Proceedings", "type": "Conference paper", "year": "2026", "url": "https://emeierkeio.github.io/papers/parliamentrag-demo-iswc2026.pdf"}
+      ],
+      "links": [
+        {"label": "ORCID", "short_label": "ORCID", "url": "https://orcid.org/0009-0000-8611-8189"},
+        {"label": "Personal site", "short_label": "Website", "url": "https://emeierkeio.github.io/"}
       ]
     }
   ]

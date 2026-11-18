@@ -327,5 +327,21 @@
     "rights_status": "permission_and_original_required_before_public_launch",
     "shipping": true,
     "sha256": "24d2b331d8f7165f8ebad5706bf93888c5128c31e0da64d2637f2248ec43cf3e"
+  },
+  "team/mirko-tritella.webp": {
+    "type": "ai_edited_identity_preserving_portrait",
+    "subject": "Mirko Tritella",
+    "use_case": "identity-preserve",
+    "generator": "edited portrait supplied by the site owner; generating tool not recorded with the file",
+    "source_page_urls": ["https://emeierkeio.github.io/"],
+    "source_urls": ["https://emeierkeio.github.io/assets/mirko-tritella.jpg"],
+    "derived_from": ["assets/team-sources/originals/mirko-tritella.jpg", "assets/team-sources/generated/mirko-tritella.png"],
+    "retrieved": "2026-11-18",
+    "generated": "2026-11-19",
+    "note": "Delivered already edited to the shared petroleum cyclorama and plain black crew-neck T-shirt; no prompt record accompanied the file.",
+    "transform": "4:5 crop (x 5–1121 of 1127) of the delivered 1127 × 1396 edit, resized to 480 × 600 WebP, quality 88",
+    "rights_status": "permission_required_before_public_launch",
+    "shipping": true,
+    "sha256": "c394c1e54848eaf651ba2b3470bae89819b854310b81f2d241562b848e9679c2"
   }
 }

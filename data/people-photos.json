@@ -206,6 +206,21 @@
         "usage": "Identity and affiliation cross-check; the Scholar image endpoint was not used as the production source."
       },
       "rights_status": "permission_and_original_required"
+    },
+    {
+      "id": "mirko-tritella",
+      "name": "Mirko Tritella",
+      "recommended": {
+        "source_page_url": "https://emeierkeio.github.io/",
+        "image_url": "https://emeierkeio.github.io/assets/mirko-tritella.jpg",
+        "source_type": "self_published_personal_site",
+        "width": 1127,
+        "height": 1396,
+        "quality": "good",
+        "crop": "Delivered research-group edit in the shared 4:5 petroleum studio series; cropped to 480 × 600 for the site.",
+        "notes": "The 320 × 320 photograph on the personal site remains the only verifiable source; the uniformed 1127 × 1396 edit is the production asset."
+      },
+      "rights_status": "permission_required"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "generated_at": "2026-09-01",
+  "generated_at": "2026-11-18",
   "source": {
     "name": "DatAI multi-source publication audit",
     "collection_method": "All public Google Scholar profile rows were reloaded and reconciled by normalized title, author overlap and publication year against Crossref and OpenAlex; unresolved records were additionally checked in DBLP and DataCite.",
@@ -33,10 +33,10 @@
     ]
   },
   "scope": {
-    "description": "Publications associated with the twelve confirmed DatAI members. Google Scholar public author profiles provide the source inventory; registry and bibliographic services are used to verify metadata and identifiers.",
-    "affiliate_count": 12,
+    "description": "Publications associated with the twelve confirmed DatAI members and one collaborator. Google Scholar public author profiles provide the source inventory; registry and bibliographic services are used to verify metadata and identifiers.",
+    "affiliate_count": 13,
     "google_scholar_profile_count": 13,
-    "source_row_count": 1240,
+    "source_row_count": 1242,
     "unique_publication_count": 947,
     "included_record_count": 904
   },
@@ -47,7 +47,9 @@
     "Publisher metadata can distinguish online-first and print/fascicle years; both are retained when available and the displayed year uses any explicit editorial override before registry dates.",
     "Records identified as indexes, reviewer lists or similar non-authored front matter remain preserved for auditability but are explicitly excluded from the primary archive count.",
     "Abubakari Alidu has two verified public Google Scholar profiles; both are included and merged.",
-    "Federica Filippini's public Scholar profile still displays a Politecnico di Milano affiliation; identity was matched by name and publication history, while current DatAI membership was confirmed by the site owner."
+    "Federica Filippini's public Scholar profile still displays a Politecnico di Milano affiliation; identity was matched by name and publication history, while current DatAI membership was confirmed by the site owner.",
+    "The two ParliamentRAG records (ISWC 2026 In-Use and Demo tracks) were added on 18 November 2026 from the authors' public Google Scholar profiles and the Crossref, OpenAlex and arXiv records; the rest of the archive reflects the 1 September 2026 snapshot.",
+    "Mirko Tritella has no public Google Scholar profile; his affiliation with the two ParliamentRAG records is taken from their author lists, ORCID record and the University of Milano-Bicocca news record of 28 October 2026."
   ],
   "affiliates": [
     {
@@ -783,7 +785,7 @@
         "gs-5a08435342ee84ab",
         "gs-14c6f5a040b52151",
         "gs-ee4d8abe06ea8857",
-        "gs-ce6e0105bef994ae"
+        "gs-66dac5c09914eaee"
       ]
     },
     {
@@ -1084,7 +1086,7 @@
         "gs-e39e3554b9ea5a62",
         "gs-9d9cdca54427a2da",
         "gs-6942aa0104f05856",
-        "gs-ce6e0105bef994ae"
+        "gs-66dac5c09914eaee"
       ]
     },
     {
@@ -1435,6 +1437,17 @@
         "gs-e5b2453bb835152a",
         "gs-901f922f80d3ae2a",
         "gs-78050781ac0ddfb6"
+      ]
+    },
+    {
+      "id": "mirko-tritella",
+      "name": "Mirko Tritella",
+      "affiliation": "collaborator",
+      "category": "research_contract",
+      "scholar_profiles": [],
+      "publication_ids": [
+        "gs-5ae0e4c94e8c08c3",
+        "gs-66dac5c09914eaee"
       ]
     }
   ],
@@ -4143,11 +4156,12 @@
       "id": "gs-5ae0e4c94e8c08c3",
       "title": "Who Speaks Matters: Authority-Aware Multi-View RAG over Italian Parliamentary Proceedings",
       "authors": "Mirko Tritella, Riccardo Pozzi, Matteo Palmonari",
-      "publication": "arXiv (Cornell University)",
+      "publication": "Lecture Notes in Computer Science",
       "year": 2026,
-      "citations": 0,
+      "citations": 1,
       "affiliate_ids": [
         "matteo-luigi-palmonari",
+        "mirko-tritella",
         "riccardo-pozzi"
       ],
       "scholar_sources": [
@@ -4160,53 +4174,69 @@
           "affiliate_id": "riccardo-pozzi",
           "profile_user_id": "P1KsTkwAAAAJ",
           "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P1KsTkwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=P1KsTkwAAAAJ:LkGwnXOMwfcC"
+        },
+        {
+          "affiliate_id": "matteo-luigi-palmonari",
+          "profile_user_id": "QmrLvqYAAAAJ",
+          "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QmrLvqYAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=QmrLvqYAAAAJ:xtoqd-5pKcoC"
+        },
+        {
+          "affiliate_id": "riccardo-pozzi",
+          "profile_user_id": "P1KsTkwAAAAJ",
+          "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P1KsTkwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=P1KsTkwAAAAJ:roLk4NBRz8UC"
         }
       ],
       "author_list": [
         {
-          "given": null,
-          "family": null,
+          "given": "Mirko",
+          "family": "Tritella",
           "name": "Mirko Tritella",
-          "orcid": null,
+          "orcid": "https://orcid.org/0009-0000-8611-8189",
           "openalex_id": "https://openalex.org/A5147226878"
         },
         {
-          "given": null,
-          "family": null,
+          "given": "Riccardo",
+          "family": "Pozzi",
           "name": "Riccardo Pozzi",
           "orcid": "https://orcid.org/0000-0002-4954-3837",
           "openalex_id": "https://openalex.org/A5055496184"
         },
         {
-          "given": null,
-          "family": null,
+          "given": "Matteo",
+          "family": "Palmonari",
           "name": "Matteo Palmonari",
           "orcid": "https://orcid.org/0000-0002-1801-5118",
           "openalex_id": "https://openalex.org/A5065845420"
         }
       ],
       "scholar_authors": "M Tritella, R Pozzi, M Palmonari",
-      "venue": "arXiv (Cornell University)",
-      "publisher": "arXiv",
-      "published_print_year": null,
-      "published_online_year": null,
-      "publication_date": "2026-08-13",
-      "type": "preprint",
+      "venue": "Lecture Notes in Computer Science",
+      "publisher": "Springer Nature Switzerland",
+      "published_print_year": 2027,
+      "published_online_year": 2026,
+      "publication_date": "2026-10-23",
+      "type": "book-chapter",
       "volume": null,
       "issue": null,
-      "pages": null,
+      "pages": "463-482",
       "article_number": null,
-      "doi": "10.48550/arxiv.2608.13410",
-      "doi_url": "https://doi.org/10.48550/arxiv.2608.13410",
+      "doi": "10.1007/978-3-032-42029-9_24",
+      "doi_url": "https://doi.org/10.1007/978-3-032-42029-9_24",
       "doi_status": "verified",
       "record_status": "included",
       "identifiers": {
-        "crossref_doi": null,
+        "crossref_doi": "10.1007/978-3-032-42029-9_24",
         "openalex_id": "https://openalex.org/W7203447615",
         "dblp_key": null,
         "datacite_doi": "10.48550/arxiv.2608.13410",
-        "isbn": [],
-        "issn": []
+        "isbn": [
+          "9783032420282",
+          "9783032420299"
+        ],
+        "issn": [
+          "0302-9743",
+          "1611-3349"
+        ]
       },
       "web_sources": [
         {
@@ -4214,14 +4244,16 @@
           "matched": true,
           "urls": [
             "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QmrLvqYAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=QmrLvqYAAAAJ:Dip1O2bNi0gC",
-            "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P1KsTkwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=P1KsTkwAAAAJ:LkGwnXOMwfcC"
+            "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P1KsTkwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=P1KsTkwAAAAJ:LkGwnXOMwfcC",
+            "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QmrLvqYAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=QmrLvqYAAAAJ:xtoqd-5pKcoC",
+            "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P1KsTkwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=P1KsTkwAAAAJ:roLk4NBRz8UC"
           ]
         },
         {
           "name": "Crossref",
           "checked": true,
-          "matched": false,
-          "url": null
+          "matched": true,
+          "url": "https://api.crossref.org/works/10.1007%2F978-3-032-42029-9_24"
         },
         {
           "name": "OpenAlex",
@@ -4246,17 +4278,123 @@
       ],
       "verification": {
         "status": "verified_multiple_sources",
-        "checked_at": "2026-09-01",
+        "checked_at": "2026-11-18",
         "matched_sources": [
           "google_scholar",
+          "crossref",
           "openalex",
           "datacite"
         ],
         "confidence": 1,
-        "crossref_score": null,
+        "crossref_score": 1,
         "openalex_score": 1,
         "dblp_score": null,
         "datacite_score": 0.85
+      },
+      "duplicate_record_ids": [
+        "gs-ce6e0105bef994ae"
+      ],
+      "scholar_details": null,
+      "metadata_completeness": {
+        "status": "complete_core",
+        "missing_core_fields": []
+      }
+    },
+    {
+      "id": "gs-66dac5c09914eaee",
+      "title": "ParliamentRAG: An Authority-Aware Multi-View RAG System for Italian Parliamentary Proceedings",
+      "authors": "Mirko Tritella, Riccardo Pozzi, Matteo Palmonari",
+      "publication": "ISWC 2026 Companion Volume",
+      "year": 2026,
+      "citations": 0,
+      "affiliate_ids": [
+        "matteo-luigi-palmonari",
+        "mirko-tritella",
+        "riccardo-pozzi"
+      ],
+      "scholar_sources": [
+        {
+          "affiliate_id": "matteo-luigi-palmonari",
+          "profile_user_id": "QmrLvqYAAAAJ",
+          "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QmrLvqYAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=QmrLvqYAAAAJ:HbR8gkJAVGIC"
+        },
+        {
+          "affiliate_id": "riccardo-pozzi",
+          "profile_user_id": "P1KsTkwAAAAJ",
+          "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P1KsTkwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=P1KsTkwAAAAJ:Se3iqnhoufwC"
+        }
+      ],
+      "author_list": null,
+      "scholar_authors": "M Tritella, R Pozzi, M Palmonari",
+      "venue": "ISWC 2026 Companion Volume",
+      "publisher": null,
+      "published_print_year": null,
+      "published_online_year": null,
+      "publication_date": null,
+      "type": "conference-paper",
+      "volume": null,
+      "issue": null,
+      "pages": null,
+      "article_number": null,
+      "doi": null,
+      "doi_url": null,
+      "doi_status": "not_found",
+      "record_status": "included",
+      "identifiers": {
+        "crossref_doi": null,
+        "openalex_id": null,
+        "dblp_key": null,
+        "datacite_doi": null,
+        "isbn": [],
+        "issn": []
+      },
+      "web_sources": [
+        {
+          "name": "Google Scholar",
+          "matched": true,
+          "urls": [
+            "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QmrLvqYAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=QmrLvqYAAAAJ:HbR8gkJAVGIC",
+            "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P1KsTkwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=P1KsTkwAAAAJ:Se3iqnhoufwC"
+          ]
+        },
+        {
+          "name": "Crossref",
+          "checked": true,
+          "matched": false,
+          "url": null
+        },
+        {
+          "name": "OpenAlex",
+          "checked": true,
+          "matched": false,
+          "url": null,
+          "note": null
+        },
+        {
+          "name": "DBLP",
+          "checked": false,
+          "matched": false,
+          "url": null,
+          "note": null
+        },
+        {
+          "name": "DataCite",
+          "checked": false,
+          "matched": false,
+          "url": null
+        }
+      ],
+      "verification": {
+        "status": "scholar_only",
+        "checked_at": "2026-11-18",
+        "matched_sources": [
+          "google_scholar"
+        ],
+        "confidence": 0,
+        "crossref_score": 0,
+        "openalex_score": 0,
+        "dblp_score": null,
+        "datacite_score": null
       },
       "duplicate_record_ids": [],
       "scholar_details": null,
@@ -83465,112 +83603,6 @@
       }
     },
     {
-      "id": "gs-ce6e0105bef994ae",
-      "title": "Who Speaks Matters: Authority-Aware Multi-View RAG over Italian Parliamentary",
-      "authors": "M Tritella, R Pozzi, M Palmonari",
-      "publication": null,
-      "year": null,
-      "citations": 0,
-      "affiliate_ids": [
-        "matteo-luigi-palmonari",
-        "riccardo-pozzi"
-      ],
-      "scholar_sources": [
-        {
-          "affiliate_id": "matteo-luigi-palmonari",
-          "profile_user_id": "QmrLvqYAAAAJ",
-          "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QmrLvqYAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=QmrLvqYAAAAJ:xtoqd-5pKcoC"
-        },
-        {
-          "affiliate_id": "riccardo-pozzi",
-          "profile_user_id": "P1KsTkwAAAAJ",
-          "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P1KsTkwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=P1KsTkwAAAAJ:roLk4NBRz8UC"
-        }
-      ],
-      "author_list": null,
-      "scholar_authors": "M Tritella, R Pozzi, M Palmonari",
-      "venue": null,
-      "publisher": null,
-      "published_print_year": null,
-      "published_online_year": null,
-      "publication_date": null,
-      "type": "other",
-      "volume": null,
-      "issue": null,
-      "pages": null,
-      "article_number": null,
-      "doi": null,
-      "doi_url": null,
-      "doi_status": "not_found",
-      "record_status": "included",
-      "identifiers": {
-        "crossref_doi": null,
-        "openalex_id": null,
-        "dblp_key": null,
-        "datacite_doi": null,
-        "isbn": [],
-        "issn": []
-      },
-      "web_sources": [
-        {
-          "name": "Google Scholar",
-          "matched": true,
-          "urls": [
-            "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QmrLvqYAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=QmrLvqYAAAAJ:xtoqd-5pKcoC",
-            "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=P1KsTkwAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=P1KsTkwAAAAJ:roLk4NBRz8UC"
-          ]
-        },
-        {
-          "name": "Crossref",
-          "checked": true,
-          "matched": false,
-          "url": null
-        },
-        {
-          "name": "OpenAlex",
-          "checked": false,
-          "matched": false,
-          "url": null,
-          "note": "daily_search_budget"
-        },
-        {
-          "name": "DBLP",
-          "checked": false,
-          "matched": false,
-          "url": null,
-          "note": "temporarily_unavailable"
-        },
-        {
-          "name": "DataCite",
-          "checked": true,
-          "matched": false,
-          "url": null
-        }
-      ],
-      "verification": {
-        "status": "scholar_only",
-        "checked_at": "2026-09-01",
-        "matched_sources": [
-          "google_scholar"
-        ],
-        "confidence": 0,
-        "crossref_score": null,
-        "openalex_score": 0,
-        "dblp_score": 0,
-        "datacite_score": 0.7811
-      },
-      "duplicate_record_ids": [],
-      "scholar_details": null,
-      "metadata_completeness": {
-        "status": "partial_source_metadata",
-        "missing_core_fields": [
-          "year",
-          "venue",
-          "type"
-        ]
-      }
-    },
-    {
       "id": "gs-5ba336924af1e96d",
       "title": "WOA 2006",
       "authors": "F De Paoli, A Di Stefano, A Omicini, C Santoro, D Session",
@@ -112429,7 +112461,7 @@
     }
   ],
   "verification_summary": {
-    "source_row_count": 1240,
+    "source_row_count": 1242,
     "unique_publication_count": 947,
     "included_record_count": 904,
     "excluded_artifact_count": 30,
@@ -112438,15 +112470,15 @@
     "multiple_source_verified_count": 451,
     "primary_registry_verified_count": 77,
     "scholar_only_count": 376,
-    "complete_year_count": 857,
-    "complete_venue_count": 832,
+    "complete_year_count": 858,
+    "complete_venue_count": 833,
     "complete_author_count": 947,
     "included_doi_count": 466,
     "structured_author_list_count": 515,
     "excluded_non_affiliate_authorship_count": 13,
-    "included_complete_year_count": 836,
-    "included_complete_venue_count": 814,
-    "complete_core_metadata_count": 620,
-    "included_complete_core_metadata_count": 605
+    "included_complete_year_count": 837,
+    "included_complete_venue_count": 815,
+    "complete_core_metadata_count": 621,
+    "included_complete_core_metadata_count": 606
   }
 }

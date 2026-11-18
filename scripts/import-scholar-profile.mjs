@@ -157,7 +157,7 @@ profile.publication_count = extracted.rows.length;
 affiliate.publication_ids = unique(data.publications.filter((publication) => publication.affiliate_ids.includes(affiliate.id)).map((publication) => publication.id));
 data.scope.source_row_count = snapshot.source_row_count;
 data.scope.unique_publication_count = data.publications.length;
-data.scope.description = "Publications associated with the twelve confirmed DatAI members. Google Scholar public author profiles provide the source inventory; registry and bibliographic services are used to verify metadata and identifiers.";
+data.scope.description = "Publications associated with the twelve confirmed DatAI members and one collaborator. Google Scholar public author profiles provide the source inventory; registry and bibliographic services are used to verify metadata and identifiers.";
 
 await writeFile(SNAPSHOT_PATH, `${JSON.stringify(snapshot, null, 2)}\n`);
 await writeFile(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`);

@@ -1,12 +1,18 @@
 {
-  "reviewed_at": "2026-09-24",
+  "reviewed_at": "2026-11-18",
   "categories": [
     { "id": "semantic-data", "name": "Semantic data & knowledge graphs", "description": "Enrich tables, link entities and explore the structure of knowledge graphs." },
-    { "id": "document-analysis", "name": "Document analysis & reasoning", "description": "Explore document collections, express analytical tasks and reason over factual knowledge." },
+    { "id": "document-analysis", "name": "Document analysis, reasoning & Question Answering", "description": "Explore document collections, express analytical tasks, reason over factual knowledge and answer questions from retrieved evidence." },
     { "id": "pipelines-systems", "name": "Data pipelines & distributed systems", "description": "Build enrichment workflows and coordinate computation across distributed infrastructure." },
     { "id": "applied-prototypes", "name": "Applied research prototypes", "description": "Explore software developed for specific research and application settings." }
   ],
   "tools": [
+    {
+      "id": "parliamentrag", "name": "ParliamentRAG", "category": "applied-prototypes", "type": "Prototype",
+      "description": "A public AI interface to the Italian Parliament that answers on plenary debates and roll-call votes, selecting an authoritative speaker per parliamentary group, covering every group with a position and providing verified quotations.",
+      "website": "https://www.parliamentrag.it/",
+      "repositories": [{ "label": "Git repository", "url": "https://github.com/Emeierkeio/ParliamentRAG" }]
+    },
     {
       "id": "semt-x", "name": "SemT-X", "category": "semantic-data", "type": "Framework",
       "description": "A framework for semantic enrichment of tabular data, linking cells and columns to external knowledge sources through an interactive workspace.",
