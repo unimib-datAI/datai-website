@@ -2,6 +2,12 @@
 
 Read the visual system and the editorial rules before editing the site. Check the surface brief when one exists. [Design](DESIGN.md) · [Product](PRODUCT.md) · [Surface briefs](.impeccable/surfaces)
 
+## DatAI skills
+
+- Use [datai-ui-update](.agents/skills/datai-ui-update/SKILL.md) for layout, typography, shared components, responsive interaction, accessibility, and Impeccable findings.
+- Use [datai-people-update](.agents/skills/datai-people-update/SKILL.md) for roster changes, member roles and bios, profile links, selected research outputs, and portraits.
+- Use [datai-publications-update](.agents/skills/datai-publications-update/SKILL.md) for Scholar refreshes, bibliographic corrections, DOI checks, deduplication, and archive totals or author attribution driven by the dataset.
+
 ## Design and content
 
 - Write public content in English. Use the established palette and typography from the `@theme` block in `src/styles.css` and reuse the shared navigation, evidence rows, links and focus styles.
