@@ -83,7 +83,7 @@ Acid green identifies brand, state, evidence, or action. It is not a general dec
 
 ### Hierarchy
 
-- Hero: Manrope ExtraBold, `clamp(3.4rem, 9.6vw, 8.8rem)`, line-height `0.82`, tracking `-0.04em`, maximum `10ch`.
+- Hero: Manrope ExtraBold, `clamp(3.4rem, 9.6vw, 8.8rem)` in the stacked layout and `clamp(6rem, 8vw, 8.8rem)` in the split layout, line-height `0.82`, tracking `-0.04em`, maximum `10ch`.
 - Hero editorial turn: Newsreader italic, weight `430`, tracking `-0.025em`; reserve for one meaningful word.
 - Section heading: Newsreader, `3rem` mobile / `4.5rem` from `768px`, line-height `0.94–0.95`, tracking `-0.035em`.
 - Research heading: Newsreader, `2.25rem` mobile / `3.75rem` from `768px`, line-height `1`.
@@ -91,6 +91,7 @@ Acid green identifies brand, state, evidence, or action. It is not a general dec
 - Publication title: Newsreader weight `590`, `clamp(1.15rem, 1.7vw, 1.45rem)`, line-height `1.18`.
 - Body: Manrope, `1rem`, line-height `1.625`; introductory copy may rise to `1.125–1.25rem`.
 - Labels: Manrope, `0.65–0.72rem`, weight `700–800`, uppercase, tracking `0.10–0.16em`.
+- Set the shared header affiliation, Home research and project metadata, room ribbons, and Home and Contact route indices to `0.75rem` for legibility.
 - Use tabular numerals for indices, years, and citations.
 
 ## Layout and rhythm
@@ -110,8 +111,8 @@ Acid green identifies brand, state, evidence, or action. It is not a general dec
 
 - **320–767px:** single column; native `<details>` mobile navigation; rows collapse to two columns and secondary fields move below the main content.
 - **768px:** desktop navigation, three-column tray, larger section spacing, two-column introductions, and three-column evidence chains.
-- **1024px:** split hero (`0.92fr / 1.08fr`) and split research (`20rem / 1fr`).
-- **1280px:** outer padding increases to `3rem`.
+- **1024px:** split research (`20rem / 1fr`). The Home thesis still sits above the three-column tray.
+- **1280px:** outer padding increases to `3rem`. The Home hero splits (`0.92fr / 1.08fr`).
 
 The hero tray is staggered only from `768px`; mobile uses a flat vertical stack with a `17rem` minimum specimen height.
 
@@ -120,7 +121,7 @@ The hero tray is staggered only from `768px`; mobile uses a flat vertical stack 
 Each specimen represents a real research question and connects to evidence.
 
 - Minimum height: `20.5rem` desktop, `17rem` mobile.
-- Padding: `1.25rem`.
+- Padding: `1.25rem` in the stacked hero and `1rem` in the split hero.
 - Header: tabular specimen index plus domain label.
 - Question: Newsreader `2rem`, approximately `11ch`.
 - Geometry: a `9rem` circular rule clipped `2.5rem` beyond the lower-right edge.

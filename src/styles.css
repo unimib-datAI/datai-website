@@ -219,7 +219,8 @@ footer a {
 }
 
 .hero-field {
-  background: #0a1b12;
+  background: var(--color-petrol-950);
+  color: var(--color-paper-50);
 }
 
 .page-masthead {
@@ -237,6 +238,12 @@ footer a {
   font-size: clamp(3.4rem, 9.6vw, 8.8rem);
   letter-spacing: -0.04em;
   line-height: 0.82;
+}
+
+@media (min-width: 1280px) {
+  .hero-title {
+    font-size: clamp(6rem, 8vw, 8.8rem);
+  }
 }
 
 .hero-title .serif-turn {
@@ -344,7 +351,7 @@ a.specimen {
   bottom: -2.5rem;
   width: 9rem;
   height: 9rem;
-  border: 1px solid rgba(139, 207, 0, 0.5);
+  border: 1px solid color-mix(in srgb, var(--color-acid-500) 18%, transparent);
   border-radius: 50%;
 }
 
@@ -361,7 +368,7 @@ a.specimen {
 
 .route-line {
   display: grid;
-  grid-template-columns: 4.5rem minmax(10rem, 0.7fr) minmax(18rem, 1.3fr) auto;
+  grid-template-columns: 4.5rem minmax(10rem, 0.7fr) minmax(0, 1.3fr) auto;
   gap: 1.5rem;
   align-items: baseline;
   padding: 1.75rem 0;
@@ -384,7 +391,7 @@ a.specimen {
 
 .route-index {
   color: var(--color-meta-warm);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.1em;
@@ -427,6 +434,10 @@ a.specimen {
 
 .contact-route:focus-within strong {
   text-decoration-color: #8bcf00;
+}
+
+.contact-route .route-action {
+  white-space: normal;
 }
 
 .people-mosaic {
@@ -531,7 +542,7 @@ a.specimen {
   color: #0a1b12;
   background: #b8ed51;
   clip-path: polygon(0.75rem 0, 100% 0, 100% 100%, 0 100%, 0.75rem 50%);
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   line-height: 1;
@@ -784,6 +795,10 @@ html:not(.js-enhanced) [data-research-panel] + [data-research-panel] {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.home-projects .artifact-type {
+  font-size: 0.75rem;
 }
 
 .person-row {
