@@ -40,12 +40,15 @@ The visual world combines CRT-black forest fields, the official DatAI green, coo
 
 ## Page architecture
 
-1. **Home:** State the laboratory thesis, show three linked questions in the signature tray, make the group visible, and route visitors to the four task pages.
-2. **Research:** Expand four areas into question → methods → evidence chains, followed by a dated active/completed project ledger, selected peer-reviewed results, and public software and datasets.
-3. **People:** Identify the current group through portrait-led evidence records with roles, affiliations, and authoritative profiles, then route every member to one of twelve stable personal profiles generated from the same canonical people data.
-4. **Publications:** Expose the complete deduplicated archive with dated source context and progressive search/filter controls.
-5. **Contact:** Offer verified collaboration and student routes, all four physical laboratory spaces, institutional identity, and historical naming.
-6. **Shared shell:** Keep the fixed navigation, active-page state, editorial responsibility, privacy, accessibility, and source notes consistent across every route.
+1. **Temporary landing (`/`).** Center the official DatAI wordmark and the short English “Under construction” status on a full-height CRT-black field. This page has a standalone layout.
+2. **Full Home (`/home/`).** State the laboratory thesis, show three linked questions in the signature tray, make the group visible, and route visitors to Research, Tools, People, Publications, and Contact.
+3. **Research.** Expand four areas into question → methods → evidence chains, followed by a dated project ledger and selected results. Link reusable software and resources to their Tools entries.
+4. **Tools.** Group verified reusable resources by research area. Use ruled rows with a Newsreader title, compact resource type, a short description and direct links. Stack the fields in reading order on mobile and align them in three columns from `768px`. Give each tool a stable anchor and use the paper-100 field to highlight the direct-link target.
+5. **People.** Identify the current group through portrait-led evidence records with roles, affiliations, and authoritative links. Link each member to a stable profile generated from the same canonical people data.
+6. **Publications.** Expose the complete deduplicated archive with dated source context and progressively enhanced search and filters.
+7. **Contact.** Offer verified collaboration and student routes, physical laboratory spaces, institutional identity, and historical naming.
+
+On full content pages, use the shared fixed header and footer. Keep Tools immediately after Research in desktop and mobile navigation. Preserve the skip link, current-page indicator, editorial responsibility, and privacy and accessibility disclosures.
 
 ## Color system
 
@@ -141,18 +144,19 @@ On `/publications/`, the archive is generated at build time from `data/publicati
 With JavaScript:
 
 - show 24 records initially;
-- search normalized title, author, and venue text;
-- filter by exact year;
+- search normalized publication metadata, including title, authors, venue details, and DOI where present;
+- filter by exact year and member;
+- preserve `q`, `year`, and `member` in the URL when filters are active. Member profiles link to `?member={person-id}#archive`;
 - reset the limit when filters change;
 - load 24 more at a time;
-- clear both controls and return focus to search;
+- clear all filters and return focus to search;
 - announce counts through the polite live region.
 
 Without JavaScript, the complete chronological archive remains visible. Citation counts are always labeled as a dated snapshot, never live metrics.
 
 ### Motion
 
-- **Focal moment:** The first site entry in a browser session begins with a `1650ms` phosphor boot in the shared header: the literal `dat.ai` is written as CRT text at the same optical footprint as the final mark, held long enough to read, compressed into a horizontal beam, and replaced from that same beam by the untouched official Figma vector. Later page loads in the same session show the official mark immediately. On Home, `work` performs the coordinated CRT-to-final handoff only when that session entry plays; the evidence scan still reveals the thesis, draws the rule left-to-right, and develops the three specimens in order. None of these movements loop.
+- **Focal moment.** The first page with the shared header in a browser session begins with a `1650ms` phosphor boot. The literal `dat.ai` uses the final wordmark’s optical footprint, holds long enough to read, compresses into a horizontal beam, then reveals the official Figma vector. Later page loads show the official mark immediately. On the full Home, `work` plays the coordinated CRT-to-final handoff when that session intro runs. The evidence scan reveals the thesis, draws the rule left to right, and develops the three specimens in order. These movements play once. The temporary landing shows the official wordmark immediately.
 - **Continuity:** Research panel changes use a `380ms` top-to-bottom clip transition; the specimen metadata resolves from a brief phosphor beam during the same interval so the selected control and its evidence record read as one state change.
 - **Data chronology:** The total publication count performs a compact `980ms` CRT-to-serif handoff once on entry. Publication bars grow from the baseline over `560ms`; their `12ms` sibling stagger is capped at `360ms` across the full archive range.
 - **Feedback:** Button, border and text-decoration changes use `140–220ms`. Header navigation and the selected research marker retain a bounded `420ms` phosphor afterglow; the publication search uses an acid caret and a single `300ms` retrace across the live result status after filters settle. Specimen lift uses the shared exponential arrival curve `cubic-bezier(0.16, 1, 0.3, 1)`.
@@ -173,11 +177,11 @@ On 31 August 2026 the user directed every sourced portrait to be regenerated thr
 
 Every final WebP records its source set, generation method, prompt intent, date, transform, checksum and rights status in `public/assets/provenance.json`. Full source images, prior web crops and generated masters remain outside the public asset directory. Public institutional launch is gated on confirming each portrait source and recording subject permission; generated portraits are presentation assets and never documentary research evidence.
 
-Archival laboratory photography is treated as documentary evidence, not as a current-team portrait source. The Home gallery uses an asymmetric lead-and-supporting-image composition, labels the INSID&S context and Drive file date, and never identifies pictured people unless a verified caption is available.
+The full Home uses a gallery of AI-assisted workspace illustrations based on sourced lab photographs. Treat the illustrations as editorial and describe their AI-assisted treatment in the alternative text. Use original INSID&S archive photographs as historical documentation with their confirmed context and date. Identify pictured people only when a verified caption is available.
 
 ## Institutional endorsement
 
-The University of Milano-Bicocca relationship must be explicit in the first viewport of every route. The shared header identifies DatAI as a University research laboratory, and each masthead names the University in visible text. The University mark appears once in the shared footer as an institutional endorsement, not as part of the DatAI wordmark. Its official positive black-and-grey artwork remains unmodified and sits on an independent white field inside the CRT-black footer. The field padding preserves the Brand Book 2025 clear area, while the department relationship is written outside that protected area. Do not recolor, distort, crop, merge, or visually compete with the mark.
+On full content pages, make the University of Milano-Bicocca relationship explicit in the first viewport. The masthead carries the affiliation even at widths where the shared header’s affiliation label is hidden. The University mark appears once in the shared footer as an independent endorsement. Its official positive black-and-grey artwork remains unmodified and sits on an independent white field inside the CRT-black footer. The field padding preserves the Brand Book 2025 clear area, while the department relationship is written outside that protected area. The temporary landing carries the affiliation in its metadata and structured data.
 
 ## Accessibility
 
@@ -193,8 +197,8 @@ The University of Milano-Bicocca relationship must be explicit in the first view
 ## SEO and evidence rules
 
 - Keep the site English-only, multipage, semantic, and addressable through clean trailing-slash URLs and stable section IDs.
-- Give Home, Research, People, Publications, and Contact unique titles, descriptions, canonical URLs, Open Graph/Twitter metadata, and page-specific structured data.
-- Preserve the favicon, manifest, sitemap, robots file, and the Home page’s canonical `ResearchOrganization` JSON-LD.
+- Give each content route, including Tools and individual profiles, route-appropriate titles, descriptions, canonical URLs, Open Graph/Twitter metadata, and structured data.
+- Preserve the favicon, manifest, sitemap and robots file. During the construction phase, `/` and `/home/` declare their own canonical URLs and share the stable `ResearchOrganization` identity at `https://datai.disco.unimib.it/#organization`.
 - Use INSID&S Lab only as a historical and alternate name.
 - Link institutional facts to DISCo or UniMiB, projects to public DatAI repositories, and publications to research records.
 - Date roster reviews, publication snapshots, and citation counts.
@@ -208,13 +212,13 @@ The University of Milano-Bicocca relationship must be explicit in the first view
 - Generated rasters record generator, prompt summary, date, SHA-256, source path, and shipping status.
 - Composites list every item in `derived_from`, plus purpose and date.
 - `datai-logo.svg` is the transparent vector layer `7:188` extracted from the authoritative Figma logo frame `7:187`; never reintroduce the frame background into the asset.
-- Lab photographs remain exact user-owned Google Drive JPEGs from the INSID&S archive; keep their source IDs, dates, dimensions, checksums and historical-context label in provenance.
+- Keep original INSID&S archive photographs with source IDs, dates, dimensions, checksums and historical context in provenance. Record source, room, modifications and disclosure for every AI-assisted derivative.
 - `unimib-institutional-logo.png` remains the official positive mark served by `unimib.it`; its white support, proportions and clear area follow the University Brand Book 2025.
 - Never use an AI-generated visual as documentary research evidence.
 
 ## Maintenance
 
-- Keep palette and font primitives in the CSS theme block.
+- Keep palette and font primitives in the `@theme` block in `src/styles.css`. Reuse the configured daisyUI `hero` and `link` components where appropriate and apply the DatAI tokens.
 - Preserve `data-*` hooks, ARIA relationships, section IDs, and build placeholders.
 - Keep content entities linked rather than copying facts into divergent lists.
 - Review external links, member status, repositories, publication data, canonical domain, and structured data together.
@@ -222,4 +226,4 @@ The University of Milano-Bicocca relationship must be explicit in the first view
 
 ## Finish verdict
 
-**Visual direction review: PASS.** The original Evidence Slide Tray implementation passed independent finish review. The multipage extension preserves that approved world and has passed build, HTML, route, metadata, progressive-enhancement and mechanical design checks across all five outputs.
+**Original visual direction review: PASS.** The original Evidence Slide Tray implementation passed independent finish review. Use the checks above for subsequent changes.

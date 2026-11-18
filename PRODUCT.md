@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Sito statico in HTML semantico, Tailwind CSS, JavaScript vanilla e CSS. Il workflow confermato è code-first. La pipeline usa Vite e Tailwind v4; il dominio istituzionale definitivo resta da confermare.
+Sito statico in HTML semantico, Tailwind CSS v4, daisyUI e JavaScript vanilla, compilato con Vite. Il sito istituzionale usa `https://datai.disco.unimib.it` e GitHub Pages. Il workflow GitHub Actions compila con Node.js 22 e pubblica `dist/` dai push su `main`.
 
 ## Users
 
@@ -44,20 +44,22 @@ Le fonti interne più recenti precisano il territorio come intersezione tra inte
 - Architettura statica, responsive e progressivamente migliorata: il contenuto essenziale deve restare fruibile senza JavaScript.
 - SEO tecnica e contenutistica: titoli e descrizioni unici, URL leggibili, HTML semantico, canonical, Open Graph, dati strutturati appropriati, sitemap XML, robots.txt, immagini ottimizzate e buone prestazioni Core Web Vitals.
 - Nessun dato, numero, membro, partner, progetto, pubblicazione, premio o testimonianza può essere pubblicato senza una fonte verificabile.
-- Il precedente nome INSID&S va usato come informazione storica e come ponte SEO, non come identità principale.
-- Il sito è solo in inglese e usa sei pagine con URL leggibili: Home, Research, Tools, People, Publications e Contact. Il dominio istituzionale definitivo e il processo editoriale di aggiornamento restano da confermare. La versione corrente non usa analytics, form o altre funzioni che richiedano cookie.
+- Il precedente nome INSID&S va usato come informazione storica e come ponte SEO. DatAI resta l'identità principale.
+- Durante la fase di costruzione, `/` mostra la schermata provvisoria e `/home/` ospita la Home completa. Le due pagine sono raggiungibili direttamente.
+- Umami misura le visite senza cookie sul solo dominio istituzionale. L'integrazione rispetta Do Not Track ed esclude parametri di query e frammenti dall'URL inviato. Il footer delle pagine di contenuto descrive il servizio e il trattamento delle richieste tecniche.
 - Il roster editoriale corrente comprende dodici membri confermati e deve essere corredato da data di aggiornamento. Eventuali variazioni future di dottorandi, assegnisti, contrattisti, collaboratori ed ex membri devono essere ricontrollate prima della pubblicazione.
 
 ## Information Architecture Direction
 
-- Navigazione primaria multipagina: Research; Tools; People; Publications; Contact. Il logo riporta sempre alla Home.
-- **Home** presenta identità, tesi del laboratorio, domande guida, gruppo e una selezione di output verificabili.
+- Le pagine di contenuto condividono la navigazione nell'ordine Research, Tools, People, Publications e Contact. Il logo e il link mobile Home puntano attualmente a `/`.
+- **Schermata provvisoria (`/`)** mostra il marchio DatAI e il messaggio “Under construction”.
+- **Home (`/home/`)** presenta identità, tesi del laboratorio, domande guida, gruppo e una selezione di output verificabili.
 - **Research** unisce le quattro linee di ricerca ai progetti e ai risultati scientifici, collegandoli al catalogo Tools.
-- **Tools** raccoglie software, framework, librerie e risorse riutilizzabili; ogni voce presenta il sito web quando disponibile e i repository Git verificati.
+- **Tools** raccoglie software, framework, librerie e risorse riutilizzabili. Ogni voce presenta il sito web quando disponibile e i repository Git verificati.
 - **People** mantiene il roster completo di dodici membri con ritratti, ruoli, affiliazioni e profili autorevoli.
 - **Publications** ospita esclusivamente l'archivio completo e ricercabile, così le altre pagine restano leggere e focalizzate.
 - **Contact** raccoglie collaborazione, opportunità per studenti, sede, affiliazione UniMiB/DISCo, nome storico INSID&S e fonti istituzionali.
-- Privacy, accessibilità, responsabilità editoriale e note sulle fonti restano nel footer condiviso di tutte le pagine.
+- Il footer condiviso delle pagine di contenuto ospita privacy, accessibilità e responsabilità editoriale.
 - Aree, persone, progetti, risorse e pubblicazioni devono restare collegate tramite URL e identificativi stabili, evitando liste divergenti.
 - Il sito resta interamente in inglese, senza selettore di lingua.
 
@@ -76,7 +78,7 @@ Le fonti interne più recenti precisano il territorio come intersezione tra inte
 - Organizzazione GitHub pubblica: `https://github.com/unimib-datAI` — repository e prototipi software del gruppo; i singoli repository devono essere selezionati e descritti solo dopo verifica.
 - Gmail, 4 giugno 2026, “A report for DatAI from SIGMOD 2026” — descrive il gruppo come attivo all'intersezione tra AI e data management e rimanda al report interno.
 - Google Drive, “SIGMOD/PODS 2026 - DatAI Relevance Report” — articola il posizionamento su data management per sistemi LLM/agentici affidabili e cita DAVE, DQL/VCL, SemT-X e RefactX/KG.
-- Google Drive, cartella `Lavoro UNIMIB / Materiale per tesisti / Matteo Brunati / lab` — quattro fotografie archivistiche dello spazio di lavoro INSID&S (`inside2.jpg`, `inside3.jpg`, `inside3-2.jpg`, `miss.jpg`), tutte registrate su Drive nel novembre 2019. La Home le presenta esplicitamente come documentazione storica e non come roster corrente.
+- Google Drive, cartella `Lavoro UNIMIB / Materiale per tesisti / Matteo Brunati / lab` — quattro fotografie archivistiche dello spazio di lavoro INSID&S (`inside2.jpg`, `inside3.jpg`, `inside3-2.jpg`, `miss.jpg`), tutte registrate su Drive nel novembre 2019. Gli originali documentano il contesto storico. La galleria della Home completa usa illustrazioni assistite da IA derivate da foto degli spazi, con fonti e trasformazioni in `public/assets/provenance.json`.
 - Gmail, 11 maggio 2026, allegato “PresentsazioneNode.pptx” — materiale del nodo Bicocca del Laboratorio CINI Data Science; utile come contesto dipartimentale, ma non è prova che tutti i temi, membri e progetti elencati appartengano a DatAI.
 - File Figma `DATAI - Logo`, nodo `7:187`: fonte confermata dall'utente per il logo ufficiale e disponibile come vettoriale esportabile; sostituisce come autorità l'immagine derivata presente sulla pagina DISCo.
 - Google Drive, foglio `Afferenze Personale DISCO 2025` (modificato il 25 marzo 2026): registra come afferenti strutturati primari a Data for Artificial Intelligence (DatAI) Andrea Maurino, Michele Ciavotta, Flavio Maria De Paoli, Matteo Luigi Palmonari e Blerina Spahiu. I rispettivi ruoli DISCo correnti sono confermati dalle pagine istituzionali UniMiB; Flavio De Paoli è indicato come responsabile del laboratorio dalla pagina ufficiale DISCo.
