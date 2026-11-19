@@ -51,7 +51,7 @@
       <section id="archive" class="bg-paper-100 pb-24 md:pb-32" aria-labelledby="archive-heading">
         <div class="mx-auto max-w-[90rem] px-5 md:px-8 xl:px-12">
           <h2 id="archive-heading" class="sr-only">Publication archive</h2>
-          <div class="publication-toolbar mb-10 grid gap-4 border-y border-ink-950/20 py-5 md:grid-cols-[minmax(16rem,1fr)_10rem_14rem_auto] md:items-end">
+          <div class="publication-toolbar mb-10 gap-4 border-y border-ink-950/20 py-5 md:grid-cols-2 md:items-end lg:grid-cols-[minmax(16rem,1fr)_10rem_14rem_auto]">
             <div><label for="publication-search">Search title, author or venue</label><input id="publication-search" type="search" inputmode="search" autocomplete="off" placeholder="e.g. knowledge graph, Filippini, ISWC" data-publication-search /></div>
             <div><label for="publication-year">Year</label><select id="publication-year" data-publication-year><option value="all">All years</option><!-- PUBLICATION_YEARS --></select></div>
             <div><label for="publication-member">DatAI member</label><select id="publication-member" data-publication-member><option value="all">All members</option><!-- PUBLICATION_MEMBERS --></select></div>
@@ -59,8 +59,8 @@
           </div>
           <p class="publication-status mb-5 text-sm text-ink-700" aria-live="polite" data-publication-status>All publications are listed chronologically.</p>
           <noscript><p class="mb-5 border-l-4 border-acid-500 pl-4 text-sm text-ink-700">JavaScript is off. The complete archive remains available below in chronological order.</p></noscript>
-          <ol class="publication-list"><!-- PUBLICATION_ARCHIVE --></ol>
-          <button class="mx-auto mt-10 min-h-12 border border-petrol-950 px-6 text-sm font-extrabold text-petrol-950 hover:bg-petrol-950 hover:text-paper-50" type="button" data-publication-load-more>Show 24 more</button>
+          <ol class="publication-list" data-publication-list><!-- PUBLICATION_ARCHIVE --></ol>
+          <button class="mx-auto mt-10 min-h-12 border border-petrol-950 px-6 text-sm font-extrabold text-petrol-950 hover:bg-petrol-950 hover:text-paper-50" type="button" data-publication-load-more hidden>Show 24 more</button>
         </div>
       </section>
     </main>

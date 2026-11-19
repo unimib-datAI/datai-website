@@ -66,11 +66,24 @@ function selectResearch(id, moveFocus = false, animatePanel = false) {
   if (animatePanel && activePanel !== previousPanel) animateResearchPanel(activePanel);
 }
 
+function activateResearch(id, moveFocus = false) {
+  selectResearch(id, moveFocus, true);
+  window.history.replaceState(null, "", `#${id}`);
+}
+
+function selectResearchFromHash(animatePanel = false) {
+  const anchor = document.getElementById(window.location.hash.slice(1));
+  const panel = anchor?.closest("[data-research-panel]");
+  if (!panel) return false;
+
+  selectResearch(panel.dataset.researchPanel, false, animatePanel);
+  anchor.scrollIntoView();
+  return true;
+}
+
 researchControls.forEach((control, index) => {
   control.addEventListener("click", () => {
-    const id = control.dataset.researchControl;
-    selectResearch(id, false, true);
-    window.history.replaceState(null, "", `#${id}`);
+    activateResearch(control.dataset.researchControl);
   });
   control.addEventListener("keydown", (event) => {
     if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
@@ -80,24 +93,29 @@ researchControls.forEach((control, index) => {
     if (event.key === "ArrowUp") nextIndex = (index - 1 + researchControls.length) % researchControls.length;
     if (event.key === "Home") nextIndex = 0;
     if (event.key === "End") nextIndex = researchControls.length - 1;
-    selectResearch(researchControls[nextIndex].dataset.researchControl, true, true);
+    activateResearch(researchControls[nextIndex].dataset.researchControl, true);
   });
 });
 
 if (researchControls.length && researchPanels.length) {
-  const hashId = window.location.hash.slice(1);
-  const initialResearch = researchControls.some((control) => control.dataset.researchControl === hashId)
-    ? hashId
-    : "semantic";
-  selectResearch(initialResearch);
-
-  window.addEventListener("hashchange", () => {
-    const id = window.location.hash.slice(1);
-    if (researchControls.some((control) => control.dataset.researchControl === id)) selectResearch(id, false, true);
-  });
+  if (!selectResearchFromHash()) selectResearch("semantic");
+  window.addEventListener("hashchange", () => selectResearchFromHash(true));
 }
 
-const publicationItems = Array.from(document.querySelectorAll("[data-publication-item]"));
+const publicationList = document.querySelector("[data-publication-list]");
+const publicationRecords = Array.from(publicationList?.children ?? [], (item) => ({
+  item,
+  year: item.dataset.year,
+  affiliates: item.dataset.affiliates.split(" "),
+  search: normalized([
+    item.querySelector(".publication-title").firstChild.textContent.trimEnd(),
+    item.querySelector(".publication-authors").textContent,
+    item.querySelector(".publication-venue")?.textContent,
+    item.querySelector("a.publication-doi")?.getAttribute("href").slice("https://doi.org/".length),
+    item.querySelector(".publication-meta > span").textContent,
+    item.dataset.year,
+  ].join(" ")),
+}));
 const publicationSearch = document.querySelector("[data-publication-search]");
 const publicationYear = document.querySelector("[data-publication-year]");
 const publicationMember = document.querySelector("[data-publication-member]");
@@ -123,7 +141,7 @@ function normalized(value) {
 }
 
 function syncPublicationUrl() {
-  if (!publicationItems.length) return;
+  if (!publicationRecords.length) return;
   const url = new URL(window.location.href);
   const query = publicationSearch?.value.trim() || "";
   const year = publicationYear?.value || "all";
@@ -140,25 +158,23 @@ function syncPublicationUrl() {
 }
 
 function updatePublications({ resetLimit = false } = {}) {
-  if (!publicationItems.length) return;
+  if (!publicationRecords.length) return;
   if (resetLimit) publicationLimit = pageSize;
 
   const query = normalized(publicationSearch?.value || "");
   const year = publicationYear?.value || "all";
   const member = publicationMember?.value || "all";
-  const matching = publicationItems.filter((item) => {
-    const matchesQuery = !query || item.dataset.search.includes(query);
-    const matchesYear = year === "all" || item.dataset.year === year;
-    const matchesMember = member === "all" || item.dataset.affiliates.split(" ").includes(member);
+  const matching = publicationRecords.filter((record) => {
+    const matchesQuery = !query || record.search.includes(query);
+    const matchesYear = year === "all" || record.year === year;
+    const matchesMember = member === "all" || record.affiliates.includes(member);
     return matchesQuery && matchesYear && matchesMember;
   });
 
-  publicationItems.forEach((item) => {
-    const matchIndex = matching.indexOf(item);
-    item.hidden = matchIndex < 0 || matchIndex >= publicationLimit;
-  });
+  const visibleItems = matching.slice(0, publicationLimit).map(({ item }) => item);
+  publicationList.replaceChildren(...visibleItems);
 
-  const visible = Math.min(publicationLimit, matching.length);
+  const visible = visibleItems.length;
   if (publicationStatus) {
     const selectedMember = member === "all" ? "" : publicationMember?.selectedOptions[0]?.textContent || "the selected member";
     const context = selectedMember ? ` by ${selectedMember}` : "";
@@ -199,7 +215,7 @@ publicationClear?.addEventListener("click", () => {
   publicationSearch?.focus();
 });
 
-if (publicationItems.length) {
+if (publicationRecords.length) {
   const publicationParams = new URLSearchParams(window.location.search);
   const requestedYear = publicationParams.get("year");
   const requestedMember = publicationParams.get("member");

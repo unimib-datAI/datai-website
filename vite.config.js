@@ -52,7 +52,7 @@ function publicationArchive() {
         return a.title.localeCompare(b.title);
       });
 
-      const items = publications.map((publication, index) => {
+      const items = publications.map((publication) => {
         const affiliateIds = publication.affiliate_ids || [];
         const dataiAuthors = affiliateIds.map((id) => affiliatesById.get(id)).filter(Boolean);
         const scholarSource = publication.scholar_sources?.[0]?.citation_url || "";
@@ -77,7 +77,6 @@ function publicationArchive() {
           publication.issue ? `no. ${publication.issue}` : "",
           publication.pages ? `pp. ${publication.pages}` : publication.article_number ? `article ${publication.article_number}` : "",
         ].filter(Boolean).join(" · ");
-        const search = `${publication.title} ${publication.authors} ${publicationDetails} ${publication.doi || ""} ${typeLabel} ${year}`.toLowerCase();
         const title = source
           ? `<a class="publication-title" href="${escapeHtml(source)}" rel="noreferrer">${escapeHtml(publication.title)} <span aria-hidden="true">↗</span></a>`
           : `<span class="publication-title">${escapeHtml(publication.title)}</span>`;
@@ -92,7 +91,7 @@ function publicationArchive() {
         const dataiAuthorLinks = dataiAuthors.length
           ? `<span class="publication-datai-authors">DatAI: ${dataiAuthors.map((affiliate) => `<a href="/people/${escapeHtml(affiliate.id)}/">${escapeHtml(affiliate.name)}</a>`).join(", ")}</span>`
           : "";
-        return `<li class="publication-item" data-publication-item data-year="${escapeHtml(year)}" data-affiliates="${escapeHtml(affiliateIds.join(" "))}" data-search="${escapeHtml(search)}" data-index="${index}">
+        return `<li class="publication-item" data-publication-item data-year="${escapeHtml(year)}" data-affiliates="${escapeHtml(affiliateIds.join(" "))}">
           <div class="publication-year">${escapeHtml(year)}</div>
           <div class="min-w-0">
             <h3>${title}</h3>

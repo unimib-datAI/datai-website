@@ -65,12 +65,11 @@ On full content pages, use the shared fixed header and footer. Keep Tools immedi
 | `acid-700` | `#527900` | CRT phosphor text and beam details on paper |
 | `copy-deep` | `#354a3d` | Publication author text |
 | `copy-strong` | `#4a5d51` | Publication venue text |
-| `copy-muted` | `#526459` | Publication years, metadata and chart axes |
+| `copy-muted` | `#526459` | Publication years, metadata, chart axes, search placeholder and unavailable DOI message |
 | metadata | `#596b60` | Indices and compact labels |
 | metadata warm | `#586a5f` | Route and artifact indices |
 | rule connector | `#849c8b` | Evidence-chain lines |
 | research link | `#16522f` | DOI, Scholar and member links on paper |
-| disabled copy | `#617067` | Missing-DOI and unavailable metadata states |
 | institutional field | `#ffffff` | Protected white support behind the UniMiB mark |
 
 Acid green identifies brand, state, evidence, or action. It is not a general decoration. `#8bcf00` remains the exact green of the authoritative Figma wordmark and reaches a 9.35:1 contrast ratio on `#0a1b12`; it must not be shifted to compensate for the new dark field. Major sections use either CRT-black forest or paper as a coherent field. Small paper text on dark fields must use at least 55% opacity.
@@ -90,7 +89,7 @@ Acid green identifies brand, state, evidence, or action. It is not a general dec
 - Publication title: Newsreader weight `590`, `clamp(1.15rem, 1.7vw, 1.45rem)`, line-height `1.18`.
 - Body: Manrope, `1rem`, line-height `1.625`; introductory copy may rise to `1.125–1.25rem`.
 - Labels: Manrope, `0.65–0.72rem`, weight `700–800`, uppercase, tracking `0.10–0.16em`.
-- Set the shared header affiliation, Home research and project metadata, room ribbons, and Home and Contact route indices to `0.75rem` for legibility.
+- Use `0.75rem` for the shared header affiliation, evidence and archive labels, room ribbons, and Home and Contact route indices. Use `0.875rem` for profile affiliations, profile evidence notes, and publication venues.
 - Use tabular numerals for indices, years, and citations.
 
 ## Layout and rhythm
