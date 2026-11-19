@@ -16,7 +16,7 @@ Read the visual system and the editorial rules before editing the site. Check th
 
 ## Routes and build sources
 
-- `/` (`index.html`) is the temporary construction screen. `/home/` (`home/index.html`) is the full Home. The shared logo, mobile Home link, sitemap homepage entry and manifest start URL currently use `/`. When restoring the full Home at `/`, review these references, both Vite entries, and canonical and social metadata together.
+- Edit the Home at `/` in `index.html`. Keep `/home/` (`home/index.html`) as a redirect for existing links. The shared logo, mobile Home link, sitemap homepage entry, manifest start URL and canonical metadata use `/`.
 - Edit the shared header, footer and Umami integration in `src/site-shell.js`. Keep tracking cookie-free and limited to `datai.disco.unimib.it`. Respect Do Not Track, exclude query strings and fragments from tracked page URLs, and keep the footer disclosure in sync with the implementation.
 - Edit people in `data/people.json` and the profile template and rendering in `people/profile.html` and `scripts/generate-people-pages.mjs`. Run `npm run generate:people` to regenerate the tracked profile pages and `public/sitemap.xml`. When the roster changes, review the full Home mosaic and roster copy as well.
 - Edit the Tools catalog in `data/tools.json` and its rendering in `src/tools-directory.js`. Preserve category and tool IDs used by Research links. The publication archive uses `data/publications.json` and the build transform in `vite.config.js`.

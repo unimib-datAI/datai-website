@@ -5,7 +5,7 @@ description: Update or repair the DatAI website interface. Use for layout, respo
 
 # Update the DatAI interface
 
-Read the [repository instructions](../../../AGENTS.md), the [DatAI design system](../../../DESIGN.md), and the affected page's [surface brief](../../../.impeccable/surfaces) when available. Resolve the requested URL to its source before editing. During construction, `/` is `index.html` and `/home/` is `home/index.html`.
+Read the [repository instructions](../../../AGENTS.md), the [DatAI design system](../../../DESIGN.md), and the affected page's [surface brief](../../../.impeccable/surfaces) when available. Resolve the requested URL to its source before editing. Edit the Home at `/` in `index.html`. The `/home/` route redirects to `/`.
 
 ## Edit the source that owns the change
 

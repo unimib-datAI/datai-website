@@ -5,6 +5,8 @@ primary_target: "index.html"
 related_targets: []
 ---
 
-- **Scope and mode.** Read. The temporary landing at `/` identifies DatAI and communicates the construction status in English. The complete Home is available at `/home/` and has its own brief.
-- **First viewport.** Center the official, unmodified DatAI wordmark and the “Under construction” heading within a full-height petroleum field. Use acid green for the short status and keep both elements legible at narrow widths.
-- **Behavior.** Keep the standalone composition static and readable as HTML. Institutional identity is present in the page metadata and `ResearchOrganization` structured data. The shared site transform injects the Umami script with the institutional-domain restriction.
+- **Scope and mode.** Persuade. The Home at `/` introduces the laboratory to researchers, collaborators and students and helps them choose a next step.
+- **First viewport.** Pair the laboratory thesis and its visible University of Milano-Bicocca affiliation with the three linked questions in the Evidence Slide Tray. Stack the thesis and tray on narrow screens and preserve the wide-screen split.
+- **Story.** Lead with the research questions, then offer five routes in shared navigation order. Show the group with links to member profiles, introduce the lab spaces with sourced editorial imagery, and connect selected projects to their research records.
+- **Visual direction.** Use the established petroleum and paper fields, acid evidence markers, Newsreader questions, Manrope labels and ruled navigation rows. Use the shared header, footer and reduced-motion behavior.
+- **Constraints.** Keep the English content and routes available without JavaScript. Use `/` as the canonical URL and preserve the shared organization identity rooted at `/`.

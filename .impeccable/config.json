@@ -9,7 +9,7 @@
         "value": "*",
         "files": [
           "contact/index.html",
-          "home/index.html"
+          "index.html"
         ],
         "createdAt": "2026-11-18T16:31:35.185Z",
         "reason": "DatAI design system (DESIGN.md, Motion): the brief phosphor intro and navigation feedback are intentional site branding."
@@ -18,7 +18,7 @@
         "rule": "cramped-padding",
         "value": "*",
         "files": [
-          "home/index.html"
+          "index.html"
         ],
         "createdAt": "2026-11-18T16:31:48.879Z",
         "reason": "DatAI gallery: the outer rule frames edge-to-edge photos; the room ribbon text has its own inset."
@@ -27,7 +27,7 @@
         "rule": "flat-type-hierarchy",
         "value": "*",
         "files": [
-          "home/index.html"
+          "index.html"
         ],
         "createdAt": "2026-11-18T16:31:48.895Z",
         "reason": "Chromium verification: tray questions are 32px and section headings 48–72px; the source scan misses compiled Tailwind font-size utilities."

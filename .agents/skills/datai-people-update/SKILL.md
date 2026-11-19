@@ -10,7 +10,7 @@ Follow the [repository instructions](../../../AGENTS.md). Use institutional prof
 ## Update the canonical record
 
 - Edit `data/people.json` and set `reviewed_at` to the date of the actual review. Follow existing record fields and keep the primary institutional or scholarly link first. The first link supplies the main external profile action.
-- If the roster changes, check the manually maintained Home portraits and roster count in `home/index.html` and the count and review text in `people/index.html`. Vite replaces the marked People roster block from `data/people.json`. Check Research and archive links to any profile whose route changes. Keep historical publication attribution based on its own evidence.
+- If the roster changes, check the manually maintained Home portraits and roster count in `index.html` and the count and review text in `people/index.html`. Vite replaces the marked People roster block from `data/people.json`. Check Research and archive links to any profile whose route changes. Keep historical publication attribution based on its own evidence.
 - For portrait changes, use the [portrait and provenance rules](../../../DESIGN.md#people-and-portrait-policy) and consult [the photo source notes](../../../research/people-photos.md). Match the 4:5 series and update `data/people-photos.json` when source or rights metadata changes. Record source, transformation and rights in `public/assets/provenance.json` for the shipping asset.
 
 ## Regenerate and inspect

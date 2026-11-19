@@ -82,9 +82,9 @@ export function siteShell() {
     name: "datai-site-shell",
     transformIndexHtml(html) {
       const match = html.match(/<!-- SITE_HEADER:([a-z-]+) -->/);
-      const activePage = match?.[1] || "home";
+      if (!match) return html;
       return html
-        .replace(/<!-- SITE_HEADER:[a-z-]+ -->/, siteHeader(activePage))
+        .replace(match[0], siteHeader(match[1]))
         .replace("<!-- SITE_FOOTER -->", siteFooter())
         .replace("</head>", `    <script
       defer

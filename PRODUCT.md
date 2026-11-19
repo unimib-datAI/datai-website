@@ -45,18 +45,16 @@ Le fonti interne più recenti precisano il territorio come intersezione tra inte
 - SEO tecnica e contenutistica: titoli e descrizioni unici, URL leggibili, HTML semantico, canonical, Open Graph, dati strutturati appropriati, sitemap XML, robots.txt, immagini ottimizzate e buone prestazioni Core Web Vitals.
 - Nessun dato, numero, membro, partner, progetto, pubblicazione, premio o testimonianza può essere pubblicato senza una fonte verificabile.
 - Il precedente nome INSID&S va usato come informazione storica e come ponte SEO. DatAI resta l'identità principale.
-- Durante la fase di costruzione, `/` mostra la schermata provvisoria e `/home/` ospita la Home completa. Le due pagine sono raggiungibili direttamente.
 - Umami misura le visite senza cookie sul solo dominio istituzionale. L'integrazione rispetta Do Not Track ed esclude parametri di query e frammenti dall'URL inviato. Il footer delle pagine di contenuto descrive il servizio e il trattamento delle richieste tecniche.
-- Il roster editoriale corrente comprende dodici membri confermati e deve essere corredato da data di aggiornamento. Eventuali variazioni future di dottorandi, assegnisti, contrattisti, collaboratori ed ex membri devono essere ricontrollate prima della pubblicazione.
+- Il roster editoriale di `data/people.json` elenca membri e collaboratori confermati e riporta la data di aggiornamento. Eventuali variazioni future di dottorandi, assegnisti, contrattisti, collaboratori ed ex membri devono essere ricontrollate prima della pubblicazione.
 
 ## Information Architecture Direction
 
 - Le pagine di contenuto condividono la navigazione nell'ordine Research, Tools, People, Publications e Contact. Il logo e il link mobile Home puntano attualmente a `/`.
-- **Schermata provvisoria (`/`)** mostra il marchio DatAI e il messaggio “Under construction”.
-- **Home (`/home/`)** presenta identità, tesi del laboratorio, domande guida, gruppo e una selezione di output verificabili.
+- **Home (`/`)** presenta identità, tesi del laboratorio, domande guida, gruppo e una selezione di output verificabili. L'indirizzo precedente `/home/` reindirizza alla Home.
 - **Research** unisce le quattro linee di ricerca ai progetti e ai risultati scientifici, collegandoli al catalogo Tools.
 - **Tools** raccoglie software, framework, librerie e risorse riutilizzabili. Ogni voce presenta il sito web quando disponibile e i repository Git verificati.
-- **People** mantiene il roster completo di dodici membri con ritratti, ruoli, affiliazioni e profili autorevoli.
+- **People** mantiene il roster completo con ritratti, ruoli, affiliazioni e profili autorevoli.
 - **Publications** ospita esclusivamente l'archivio completo e ricercabile, così le altre pagine restano leggere e focalizzate.
 - **Contact** raccoglie collaborazione, opportunità per studenti, sede, affiliazione UniMiB/DISCo, nome storico INSID&S e fonti istituzionali.
 - Il footer condiviso delle pagine di contenuto ospita privacy, accessibilità e responsabilità editoriale.
